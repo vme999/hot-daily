@@ -361,8 +361,8 @@ TEMPLATE = """<!DOCTYPE html>
 <main>
   <section class="hero">
     <p class="eyebrow">每日热榜快照</p>
-    <h1>%%DATE_SHORT%%</h1>
-    <p class="sub">星期%%WEEKDAY%% · %%TIME%% 更新</p>
+    <h1>热榜日报</h1>
+    <p class="sub">%%DATE_LONG%% · %%TIME%% 更新</p>
   </section>
   <div class="grid">%%CARDS%%</div>
 </main>
@@ -524,7 +524,7 @@ def render(data: dict, archive: bool) -> str:
     replacements = {
         "%%TITLE%%": f"热榜日报 · {day.month}月{day.day}日",
         "%%DATE_SHORT%%": f"{day.month}月{day.day}日",
-        "%%WEEKDAY%%": WEEKDAYS[day.weekday()],
+        "%%DATE_LONG%%": f"{day.year} 年 {day.month} 月 {day.day} 日",
         "%%TIME%%": data.get("time", ""),
         "%%CSS%%": CSS,
         "%%THEME_INIT%%": THEME_INIT,
