@@ -16,9 +16,21 @@ SITE_DIR = os.path.join(ROOT, "site")
 ARCHIVE_DIR = os.path.join(SITE_DIR, "archive")
 WEEKDAYS = "一二三四五六日"
 
+BADGE_COLORS = {
+    "知乎热榜": "#0A84FF",
+    "澎湃新闻": "#FF9F0A",
+    "微博热搜": "#FF453A",
+    "爱范儿": "#BF5AF2",
+    "36氪": "#5E5CE6",
+    "虎嗅": "#AC8E68",
+    "GitHub 趋势": "#8E8E93",
+    "Hacker News": "#FF6A00",
+    "X 趋势": "#1F8AA8",
+}
+
 CSS = """
 :root {
-  --bg: #f5f5f7;
+  --bg: #fbfbfd;
   --surface: #ffffff;
   --text: #1d1d1f;
   --muted: #6e6e73;
@@ -31,10 +43,10 @@ CSS = """
 }
 [data-theme="dark"] {
   --bg: #000000;
-  --surface: #1d1d1f;
+  --surface: #1c1c1e;
   --text: #f5f5f7;
-  --muted: #86868b;
-  --line: rgba(255, 255, 255, .12);
+  --muted: #a1a1a6;
+  --line: rgba(255, 255, 255, .1);
   --hover: rgba(255, 255, 255, .06);
   --accent: #2997ff;
   --accent-soft: rgba(41, 151, 255, .14);
@@ -139,11 +151,15 @@ a:hover { text-decoration: underline; }
   display: grid;
   place-items: center;
   border-radius: 8px;
-  background: var(--bg);
-  color: var(--muted);
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+  color: color-mix(in srgb, var(--brand) 50%, var(--text));
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
+}
+[data-theme="dark"] .badge {
+  background: color-mix(in srgb, var(--brand) 20%, transparent);
+  color: color-mix(in srgb, var(--brand) 55%, #ffffff);
 }
 .badge.wide { font-size: 10.5px; }
 .card-head h2 {
@@ -418,6 +434,7 @@ def escape(value) -> str:
 def render_card(source: dict) -> str:
     icon = escape(source.get("icon"))
     wide = " wide" if len(str(source.get("icon") or "")) > 1 else ""
+    brand = BADGE_COLORS.get(source.get("name"), source.get("color") or "#8E8E93")
     rows = []
     for index, item in enumerate(source.get("items") or [], 1):
         hot = escape(item.get("hot"))
@@ -445,7 +462,7 @@ def render_card(source: dict) -> str:
     return (
         '<section class="card">'
         '<div class="card-head">'
-        f'<span class="badge{wide}">{icon}</span>'
+        f'<span class="badge{wide}" style="--brand:{escape(brand)}">{icon}</span>'
         f'<h2>{escape(source.get("name"))}</h2>'
         "</div>"
         f'<ol class="list">{body}</ol>'
