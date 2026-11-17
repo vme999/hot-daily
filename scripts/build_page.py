@@ -18,168 +18,191 @@ WEEKDAYS = "一二三四五六日"
 
 CSS = """
 :root {
-  --bg: #f1f2f5;
-  --card: #ffffff;
-  --text: #1c2026;
-  --muted: #8a919e;
-  --line: #edeff2;
-  --hover: #f6f7f9;
-  --accent: #e5484d;
-  --rank: #b9c0cb;
-  --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 8px 24px rgba(16, 24, 40, .045);
-  --radius: 12px;
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --line: rgba(0, 0, 0, .08);
+  --hover: rgba(0, 0, 0, .035);
+  --accent: #0071e3;
+  --accent-soft: rgba(0, 113, 227, .1);
+  --nav-bg: rgba(245, 245, 247, .78);
+  --radius: 20px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .04);
 }
 [data-theme="dark"] {
-  --bg: #14161b;
-  --card: #1e2129;
-  --text: #e7e9ee;
-  --muted: #818896;
-  --line: #2a2e38;
-  --hover: #272b35;
-  --accent: #ff5d5d;
-  --rank: #5b6270;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .2);
+  --bg: #000000;
+  --surface: #1d1d1f;
+  --text: #f5f5f7;
+  --muted: #86868b;
+  --line: rgba(255, 255, 255, .12);
+  --hover: rgba(255, 255, 255, .06);
+  --accent: #2997ff;
+  --accent-soft: rgba(41, 151, 255, .14);
+  --nav-bg: rgba(0, 0, 0, .72);
+  --shadow: none;
 }
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--bg);
-  background-image: radial-gradient(1100px 380px at 50% -120px, rgba(229, 72, 77, .07), transparent 70%);
-  background-repeat: no-repeat;
+  background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: antialiased;
-  transition: background-color .25s ease, color .25s ease;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .3s ease, color .3s ease;
 }
-.topbar {
-  max-width: 1440px;
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 24px 24px 14px;
+  height: 52px;
+  padding: 0 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
-.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.logo {
-  width: 40px; height: 40px; flex: none;
-  display: grid; place-items: center;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ff6a5e, #e5484d 55%, #c9282d);
-  color: #fff;
-  font-size: 19px; font-weight: 800;
-  box-shadow: 0 6px 16px rgba(229, 72, 77, .28);
-}
-.brand-text { min-width: 0; }
-.brand-text h1 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-.brand-text p {
-  margin: 3px 0 0;
-  font-size: 12px;
-  color: var(--muted);
-}
-.theme-toggle {
-  flex: none;
-  border: 1px solid var(--line);
-  background: var(--card);
+.brand {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
   color: var(--text);
-  font-size: 12.5px;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: border-color .18s ease, color .18s ease, background-color .25s ease;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-.grid {
-  max-width: 1440px;
+.brand:hover { text-decoration: none; opacity: .72; }
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 14px;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.theme-toggle:hover {
+  background: var(--hover);
+  color: var(--text);
+  border-color: transparent;
+}
+.hero {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 8px 24px 34px;
+  padding: 68px 28px 34px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--accent);
+}
+.hero h1 {
+  margin: 10px 0 0;
+  font-size: clamp(34px, 5.4vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -.02em;
+  font-weight: 700;
+}
+.hero .sub {
+  margin: 14px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--muted);
+  letter-spacing: -.01em;
+}
+.grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6px 28px 64px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   align-items: start;
 }
 .card {
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 13px 14px 9px;
-  transition: background-color .25s ease, border-color .18s ease,
-    transform .18s ease, box-shadow .18s ease;
-}
-.card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(229, 72, 77, .28);
+  padding: 20px 16px 12px;
+  transition: background-color .3s ease, border-color .2s ease;
 }
 .card-head {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 2px 7px;
+  gap: 10px;
+  padding: 0 8px 10px;
 }
 .badge {
-  width: 24px; height: 24px; flex: none;
-  display: grid; place-items: center;
-  border-radius: 7px;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
   background: var(--brand, var(--accent));
   color: #fff;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: -.2px;
+  letter-spacing: -.02em;
 }
-.badge.wide { font-size: 9.5px; }
+.badge.wide { font-size: 9px; }
 .card-head h2 {
   margin: 0;
-  font-size: 14px;
-  font-weight: 650;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.card-meta {
-  margin-left: auto;
-  flex: none;
-  font-size: 11px;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
 }
 .list { list-style: none; margin: 0; padding: 0; }
 .list li + li { border-top: 1px solid var(--line); }
 .list a {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 4px;
-  border-radius: 7px;
+  gap: 10px;
+  padding: 9px 8px;
+  margin: 0 -8px;
+  border-radius: 9px;
   color: var(--text);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45;
+  letter-spacing: -.006em;
   text-decoration: none;
   transition: background-color .15s ease;
 }
-.list a:hover { background: var(--hover); }
+.list a:hover { background: var(--hover); text-decoration: none; }
 .list a:hover .title { color: var(--accent); }
 .rank {
   flex: none;
-  width: 15px;
+  width: 16px;
   text-align: center;
   font-size: 12px;
-  color: var(--rank);
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.list li:nth-child(-n+3) .rank {
-  color: var(--accent);
-  font-weight: 700;
-}
+.list li:nth-child(-n+3) .rank { color: var(--text); font-weight: 600; }
 .title {
   flex: 1;
   min-width: 0;
@@ -189,112 +212,108 @@ body {
   transition: color .15s ease;
 }
 .empty {
-  padding: 20px 6px 18px;
+  padding: 22px 8px 18px;
   text-align: center;
-  font-size: 12.5px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.7;
   color: var(--muted);
 }
-.empty a { color: var(--accent); text-decoration: none; }
-.empty a:hover { text-decoration: underline; }
-.footer {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 24px 38px;
-  text-align: center;
-  font-size: 11.5px;
-  line-height: 1.9;
-  color: var(--muted);
-}
-.footer a {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px dotted currentColor;
-}
-.footer a:hover { color: var(--accent); }
+.empty a { color: var(--accent); }
 .timeline {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 10px 24px 44px;
+  padding: 0 28px 64px;
 }
-.month + .month { margin-top: 28px; }
 .month-title {
-  margin: 0 0 10px;
-  padding-left: 2px;
+  margin: 34px 0 12px;
+  padding-left: 4px;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .8px;
+  letter-spacing: .06em;
   color: var(--muted);
 }
 .entries {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-left: 2px solid var(--line);
+  display: grid;
+  gap: 10px;
 }
-.entries li { position: relative; padding-left: 16px; }
-.entries li::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: 26px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--rank);
-}
-.entries li:first-child::before { background: var(--accent); }
 .entry {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 8px;
-  padding: 13px 16px;
-  background: var(--card);
+  padding: 19px 24px;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   color: var(--text);
   text-decoration: none;
-  transition: border-color .18s ease, transform .18s ease, background-color .25s ease;
+  transition: background-color .2s ease, border-color .2s ease;
 }
 .entry:hover {
-  border-color: rgba(229, 72, 77, .32);
-  transform: translateX(3px);
+  border-color: rgba(0, 113, 227, .45);
+  text-decoration: none;
 }
-.entry-date { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.entry-date b { font-size: 15px; font-weight: 650; }
-.entry-date span { font-size: 11.5px; color: var(--muted); }
+.entry-date { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.entry-date b {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.entry-date span { font-size: 13px; color: var(--muted); }
 .entry-meta {
   margin-left: auto;
   flex: none;
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.entry-meta .tag { margin-right: 6px; color: var(--accent); font-weight: 600; }
-.entry-arrow {
+.tag {
   flex: none;
-  font-size: 13px;
-  color: var(--muted);
-  transition: color .18s ease, transform .18s ease;
+  padding: 3px 9px;
+  border-radius: 980px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .01em;
 }
-.entry:hover .entry-arrow { color: var(--accent); transform: translateX(2px); }
+.entry-chevron {
+  flex: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform .2s ease, color .2s ease;
+}
+.entry:hover .entry-chevron { color: var(--accent); transform: translateX(2px); }
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4px 28px 60px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.footer a { color: var(--accent); }
 a:focus-visible, .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1100px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (max-width: 680px) {
-  .topbar { padding: 18px 16px 10px; }
-  .brand-text h1 { font-size: 16px; }
-  .grid { grid-template-columns: 1fr; padding: 6px 16px 26px; gap: 12px; }
-  .footer { padding: 0 16px 28px; }
-  .timeline { padding: 6px 16px 30px; }
-  .entry { padding: 12px 14px; }
+@media (max-width: 700px) {
+  .nav-inner { padding: 0 20px; }
+  .hero { padding: 44px 20px 26px; }
+  .hero .sub { font-size: 15px; }
+  .grid { grid-template-columns: 1fr; padding: 4px 20px 44px; gap: 14px; }
+  .timeline { padding: 0 20px 44px; }
+  .entry { padding: 16px 18px; gap: 12px; }
   .entry-meta { display: none; }
+  .footer { padding: 4px 20px 44px; }
   .title {
     white-space: normal;
     display: -webkit-box;
@@ -316,8 +335,9 @@ THEME_INIT = """(function () {
 THEME_TOGGLE_JS = """(function () {
   var root = document.documentElement;
   var btn = document.getElementById("themeToggle");
+  if (!btn) return;
   function label() {
-    btn.textContent = root.getAttribute("data-theme") === "dark" ? "☀️ 浅色" : "🌙 深色";
+    btn.textContent = root.getAttribute("data-theme") === "dark" ? "浅色" : "深色";
   }
   btn.addEventListener("click", function () {
     var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -342,23 +362,25 @@ TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="description" content="%%DATE_SHORT%%热榜日报：12 个站点的每日热榜快照。">
 <title>%%TITLE%%</title>
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">热</div>
-    <div class="brand-text">
-      <h1>热榜日报</h1>
-      <p>%%DATE_LABEL%% · %%TIME%% 更新</p>
-    </div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">热榜日报</a>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
   </div>
-  <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">🌙 深色</button>
 </header>
-<main class="grid" aria-label="今日热榜">
-%%CARDS%%
+<main>
+  <section class="hero">
+    <p class="eyebrow">每日热榜快照</p>
+    <h1>%%DATE_SHORT%%</h1>
+    <p class="sub">星期%%WEEKDAY%% · %%TIME%% 更新 · %%COUNT%% 个板块</p>
+  </section>
+  <div class="grid">%%CARDS%%</div>
 </main>
 %%FOOTER%%
 <script>%%THEME_JS%%</script>
@@ -372,23 +394,27 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>%%TITLE%%</title>
+<meta name="description" content="热榜日报：每天 07:30 抓取 12 个站点的热榜，按日期归档。">
+<title>热榜日报</title>
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">热</div>
-    <div class="brand-text">
-      <h1>热榜日报</h1>
-      <p>共 %%COUNT%% 期 · 每日 07:30 更新</p>
-    </div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">热榜日报</a>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
   </div>
-  <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">🌙 深色</button>
 </header>
-<main class="timeline" aria-label="日报目录">
+<main>
+  <section class="hero">
+    <p class="eyebrow">每日热榜快照</p>
+    <h1>热榜日报</h1>
+    <p class="sub">聚合 12 个站点的热榜，每天 07:30 生成一份快照。共 %%COUNT%% 期。</p>
+  </section>
+  <section class="timeline" aria-label="日报目录">
 %%ENTRIES%%
+  </section>
 </main>
 <script>%%THEME_JS%%</script>
 </body>
@@ -400,7 +426,7 @@ def escape(value) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
-def render_card(source: dict, time_label: str) -> str:
+def render_card(source: dict) -> str:
     icon = escape(source.get("icon"))
     wide = " wide" if len(str(source.get("icon") or "")) > 1 else ""
     rows = []
@@ -428,7 +454,6 @@ def render_card(source: dict, time_label: str) -> str:
         '<div class="card-head">'
         f'<span class="badge{wide}" style="--brand:{escape(source.get("color"))}">{icon}</span>'
         f'<h2>{escape(source.get("name"))}</h2>'
-        f'<span class="card-meta">{escape(time_label)}</span>'
         "</div>"
         f'<ol class="list">{body}</ol>'
         "</section>"
@@ -474,8 +499,9 @@ def render_index(records: list[dict]) -> str:
                 '<li><a class="entry" href="archive/{date}.html">'
                 '<span class="entry-date"><b>{month}月{day}日</b>'
                 "<span>星期{weekday}</span></span>"
-                '<span class="entry-meta">{tag}{sources} 个板块 · {items} 条</span>'
-                '<span class="entry-arrow">→</span>'
+                '<span class="entry-meta">{sources} 个板块 · {items} 条</span>'
+                "{tag}"
+                '<span class="entry-chevron" aria-hidden="true">›</span>'
                 "</a></li>".format(tag=tag, **record)
             )
         sections.append(
@@ -484,7 +510,6 @@ def render_index(records: list[dict]) -> str:
         )
 
     replacements = {
-        "%%TITLE%%": "热榜日报 · 日报目录",
         "%%CSS%%": CSS,
         "%%THEME_INIT%%": THEME_INIT,
         "%%THEME_JS%%": THEME_TOGGLE_JS,
@@ -499,21 +524,23 @@ def render_index(records: list[dict]) -> str:
 
 def render(data: dict, archive: bool) -> str:
     day = datetime.strptime(data["date"], "%Y-%m-%d")
-    date_label = f"{day.year}年{day.month}月{day.day}日 星期{WEEKDAYS[day.weekday()]}"
-    cards = "\n".join(render_card(s, data.get("time", "")) for s in data["sources"])
-    archive_link = (
-        '<footer class="footer"><p><a href="../index.html">← 返回日报目录</a></p></footer>'
+    sources = data.get("sources") or []
+    cards = "\n".join(render_card(s) for s in sources)
+    footer = (
+        '<footer class="footer"><a href="../index.html">返回日报目录</a></footer>'
         if archive else ""
     )
     replacements = {
         "%%TITLE%%": f"热榜日报 · {day.month}月{day.day}日",
+        "%%DATE_SHORT%%": f"{day.month}月{day.day}日",
+        "%%WEEKDAY%%": WEEKDAYS[day.weekday()],
+        "%%TIME%%": data.get("time", ""),
+        "%%COUNT%%": str(len(sources)),
         "%%CSS%%": CSS,
         "%%THEME_INIT%%": THEME_INIT,
         "%%THEME_JS%%": THEME_TOGGLE_JS,
-        "%%DATE_LABEL%%": date_label,
-        "%%TIME%%": data.get("time", ""),
         "%%CARDS%%": cards,
-        "%%FOOTER%%": archive_link,
+        "%%FOOTER%%": footer,
     }
     page = TEMPLATE
     for token, value in replacements.items():
