@@ -80,10 +80,6 @@ def src_weibo() -> list[dict]:
     return codelife("KqndgxeLl9")
 
 
-def src_wechat() -> list[dict]:
-    return codelife("WnBe01o371")
-
-
 def src_zhihu() -> list[dict]:
     data = json_get("https://api.zhihu.com/topstory/hot-list?limit=50")
     items = []
@@ -153,31 +149,6 @@ def src_ifanr() -> list[dict]:
     return items
 
 
-def src_bilibili() -> list[dict]:
-    data = json_get(
-        "https://api.bilibili.com/x/web-interface/ranking/v2?rid=0&type=all")
-    videos = (data.get("data") or {}).get("list") or []
-    items = []
-    for video in videos:
-        title = clean_text(video.get("title"))
-        if not title:
-            continue
-        views = (video.get("stat") or {}).get("view") or 0
-        items.append({
-            "title": title,
-            "url": video.get("short_link_v2")
-            or f"https://www.bilibili.com/video/{video.get('bvid')}",
-            "hot": f"{views / 10000:.0f} 万" if views >= 10000 else str(views),
-        })
-        if len(items) >= LIMIT:
-            break
-    return items
-
-
-def src_douyin() -> list[dict]:
-    return codelife("DpQvNABoNE")
-
-
 def src_github() -> list[dict]:
     return codelife("rYqoXQ8vOD")
 
@@ -224,15 +195,12 @@ def src_xtrends() -> list[dict]:
 
 
 SOURCES = [
-    ("weibo", "微博热搜", "微", "#e6162d", "https://s.weibo.com/top/summary", src_weibo),
-    ("wechat", "微信热文", "信", "#07c160", "https://mp.weixin.qq.com/", src_wechat),
     ("zhihu", "知乎热榜", "知", "#0084ff", "https://www.zhihu.com/hot", src_zhihu),
     ("thepaper", "澎湃新闻", "澎", "#e60012", "https://www.thepaper.cn/", src_thepaper),
+    ("weibo", "微博热搜", "微", "#e6162d", "https://s.weibo.com/top/summary", src_weibo),
+    ("ifanr", "爱范儿", "爱", "#ff5a36", "https://www.ifanr.com/", src_ifanr),
     ("36kr", "36氪", "36", "#2f6bff", "https://36kr.com/", src_36kr),
     ("huxiu", "虎嗅", "嗅", "#ff6a00", "https://www.huxiu.com/", src_huxiu),
-    ("ifanr", "爱范儿", "爱", "#ff5a36", "https://www.ifanr.com/", src_ifanr),
-    ("bilibili", "哔哩哔哩", "B", "#00a1d6", "https://www.bilibili.com/v/popular/rank/all", src_bilibili),
-    ("douyin", "抖音热点", "抖", "#fe2c55", "https://www.douyin.com/", src_douyin),
     ("github", "GitHub 趋势", "GH", "#24292f", "https://github.com/trending", src_github),
     ("hackernews", "Hacker News", "HN", "#ff6600", "https://news.ycombinator.com/", src_hackernews),
     ("xtrends", "X 趋势", "X", "#0f1419", "https://x.com/explore", src_xtrends),
