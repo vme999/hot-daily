@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""把每日快照渲染为自包含的静态页面：site/index.html 与 site/archive/YYYY-MM-DD.html。"""
+"""把每日快照渲染为自包含的静态页面：site/index.html（日报目录）与 site/archive/YYYY-MM-DD.html。"""
 
 from __future__ import annotations
 
@@ -212,6 +212,74 @@ body {
   border-bottom: 1px dotted currentColor;
 }
 .footer a:hover { color: var(--accent); }
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 24px 44px;
+}
+.month + .month { margin-top: 28px; }
+.month-title {
+  margin: 0 0 10px;
+  padding-left: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  color: var(--muted);
+}
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--line);
+}
+.entries li { position: relative; padding-left: 16px; }
+.entries li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 26px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rank);
+}
+.entries li:first-child::before { background: var(--accent); }
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+  padding: 13px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease, background-color .25s ease;
+}
+.entry:hover {
+  border-color: rgba(229, 72, 77, .32);
+  transform: translateX(3px);
+}
+.entry-date { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.entry-date b { font-size: 15px; font-weight: 650; }
+.entry-date span { font-size: 11.5px; color: var(--muted); }
+.entry-meta {
+  margin-left: auto;
+  flex: none;
+  font-size: 11.5px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.entry-meta .tag { margin-right: 6px; color: var(--accent); font-weight: 600; }
+.entry-arrow {
+  flex: none;
+  font-size: 13px;
+  color: var(--muted);
+  transition: color .18s ease, transform .18s ease;
+}
+.entry:hover .entry-arrow { color: var(--accent); transform: translateX(2px); }
 a:focus-visible, .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -224,6 +292,9 @@ a:focus-visible, .theme-toggle:focus-visible {
   .brand-text h1 { font-size: 16px; }
   .grid { grid-template-columns: 1fr; padding: 6px 16px 26px; gap: 12px; }
   .footer { padding: 0 16px 28px; }
+  .timeline { padding: 6px 16px 30px; }
+  .entry { padding: 12px 14px; }
+  .entry-meta { display: none; }
   .title {
     white-space: normal;
     display: -webkit-box;
@@ -295,6 +366,35 @@ TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
+INDEX_TEMPLATE = """<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>%%TITLE%%</title>
+<script>%%THEME_INIT%%</script>
+<style>%%CSS%%</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">热</div>
+    <div class="brand-text">
+      <h1>热榜日报</h1>
+      <p>共 %%COUNT%% 期 · 每日 07:30 更新</p>
+    </div>
+  </div>
+  <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">🌙 深色</button>
+</header>
+<main class="timeline" aria-label="日报目录">
+%%ENTRIES%%
+</main>
+<script>%%THEME_JS%%</script>
+</body>
+</html>
+"""
+
 
 def escape(value) -> str:
     return html.escape(str(value or ""), quote=True)
@@ -335,16 +435,66 @@ def render_card(source: dict, time_label: str) -> str:
     )
 
 
-def load_data(date: str | None) -> dict:
-    if date:
-        path = os.path.join(DATA_DIR, f"{date}.json")
-    else:
-        files = sorted(glob.glob(os.path.join(DATA_DIR, "*.json")))
-        if not files:
-            raise SystemExit("没有数据文件，请先运行 scripts/fetch_data.py")
-        path = files[-1]
+def data_files() -> list[str]:
+    return sorted(glob.glob(os.path.join(DATA_DIR, "*.json")), reverse=True)
+
+
+def load_json(path: str) -> dict:
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+def archive_record(data: dict) -> dict:
+    day = datetime.strptime(data["date"], "%Y-%m-%d")
+    sources = data.get("sources") or []
+    return {
+        "date": data["date"],
+        "month": day.month,
+        "day": day.day,
+        "weekday": WEEKDAYS[day.weekday()],
+        "sources": len(sources),
+        "items": sum(len(s.get("items") or []) for s in sources),
+    }
+
+
+def render_index(records: list[dict]) -> str:
+    records = sorted(records, key=lambda r: r["date"], reverse=True)
+    newest = records[0]["date"] if records else ""
+    groups: dict[str, list[dict]] = {}
+    for record in records:
+        groups.setdefault(record["date"][:7], []).append(record)
+
+    sections = []
+    for year_month, rows in groups.items():
+        year, month = year_month.split("-")
+        entries = []
+        for record in rows:
+            tag = '<span class="tag">最新</span>' if record["date"] == newest else ""
+            entries.append(
+                '<li><a class="entry" href="archive/{date}.html">'
+                '<span class="entry-date"><b>{month}月{day}日</b>'
+                "<span>星期{weekday}</span></span>"
+                '<span class="entry-meta">{tag}{sources} 个板块 · {items} 条</span>'
+                '<span class="entry-arrow">→</span>'
+                "</a></li>".format(tag=tag, **record)
+            )
+        sections.append(
+            f'<section class="month"><h2 class="month-title">{year} 年 {int(month)} 月</h2>'
+            f'<ol class="entries">{"".join(entries)}</ol></section>'
+        )
+
+    replacements = {
+        "%%TITLE%%": "热榜日报 · 日报目录",
+        "%%CSS%%": CSS,
+        "%%THEME_INIT%%": THEME_INIT,
+        "%%THEME_JS%%": THEME_TOGGLE_JS,
+        "%%COUNT%%": str(len(records)),
+        "%%ENTRIES%%": "".join(sections),
+    }
+    page = INDEX_TEMPLATE
+    for token, value in replacements.items():
+        page = page.replace(token, value)
+    return page
 
 
 def render(data: dict, archive: bool) -> str:
@@ -352,7 +502,7 @@ def render(data: dict, archive: bool) -> str:
     date_label = f"{day.year}年{day.month}月{day.day}日 星期{WEEKDAYS[day.weekday()]}"
     cards = "\n".join(render_card(s, data.get("time", "")) for s in data["sources"])
     archive_link = (
-        '<footer class="footer"><p><a href="../index.html">查看今日最新一期 →</a></p></footer>'
+        '<footer class="footer"><p><a href="../index.html">← 返回日报目录</a></p></footer>'
         if archive else ""
     )
     replacements = {
@@ -371,27 +521,43 @@ def render(data: dict, archive: bool) -> str:
     return page
 
 
-def main() -> int:
-    date = None
-    if len(sys.argv) >= 3 and sys.argv[1] == "--date":
-        date = sys.argv[2]
-    data = load_data(date)
+def write_archive(data: dict) -> str:
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
-    archive_path = os.path.join(ARCHIVE_DIR, f'{data["date"]}.html')
-    if date:
-        with open(archive_path, "w", encoding="utf-8") as fh:
-            fh.write(render(data, archive=True))
-        print(archive_path)
-        return 0
-
-    page = render(data, archive=False)
-    index_path = os.path.join(SITE_DIR, "index.html")
-    with open(index_path, "w", encoding="utf-8") as fh:
-        fh.write(page)
-    with open(archive_path, "w", encoding="utf-8") as fh:
+    path = os.path.join(ARCHIVE_DIR, f'{data["date"]}.html')
+    with open(path, "w", encoding="utf-8") as fh:
         fh.write(render(data, archive=True))
-    print(index_path)
-    print(archive_path)
+    return path
+
+
+def write_index(records: list[dict]) -> str:
+    path = os.path.join(SITE_DIR, "index.html")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(render_index(records))
+    return path
+
+
+def main() -> int:
+    only_date = None
+    if len(sys.argv) >= 3 and sys.argv[1] == "--date":
+        only_date = sys.argv[2]
+
+    if only_date:
+        path = os.path.join(DATA_DIR, f"{only_date}.json")
+        if not os.path.exists(path):
+            raise SystemExit(f"没有找到数据文件：{path}")
+        print(write_archive(load_json(path)))
+    else:
+        files = data_files()
+        if not files:
+            raise SystemExit("没有数据文件，请先运行 scripts/fetch_data.py")
+        for path in files:
+            data = load_json(path)
+            # 以数据中的日期为准，文件名仅用于排序
+            data["date"] = data.get("date") or os.path.basename(path)[:-5]
+            print(write_archive(data))
+
+    records = [archive_record(load_json(path)) for path in data_files()]
+    print(write_index(records))
     return 0
 
 

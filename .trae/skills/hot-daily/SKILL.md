@@ -10,9 +10,10 @@ description: "Builds and maintains the hot-daily static digest of 12 Chinese tre
 ## 目录结构
 
 - `scripts/fetch_data.py`：抓取数据，写入 `data/YYYY-MM-DD.json`
-- `scripts/build_page.py`：读取 JSON，生成 `site/index.html` 与 `site/archive/YYYY-MM-DD.html`
+- `scripts/build_page.py`：读取 JSON，生成日报目录 `site/index.html` 与每日页面 `site/archive/YYYY-MM-DD.html`
 - `scripts/daily.sh`：一次完成抓取 + 生成
 - `.github/workflows/daily.yml`：每天 07:30（北京时间）自动运行并部署 GitHub Pages
+- `.github/workflows/deploy.yml`：`site/` 有变更或手动触发时部署
 - `site/`：生成结果，可直接托管或双击打开
 
 ## 常用命令
@@ -48,8 +49,9 @@ python3 scripts/build_page.py --date 2026-11-17
 
 ## 页面约定
 
-- 每张卡片固定 10 条，只显示排名 + 标题，右侧不展示热度 / 回应
-- 主题保存在 `localStorage["hot-theme"]`，默认跟随系统
+- 首页 `site/index.html` 是日报目录：按月份分组、从新到旧排列，最新一期带「最新」标记
+- 每期页面 `site/archive/YYYY-MM-DD.html` 固定 12 张卡片，每张 10 条，只显示排名 + 标题
+- 主题保存在 `localStorage["hot-theme"]`，默认跟随系统，目录页与日报页共用
 - 页面为自包含单文件（CSS / JS 内联），可直接双击打开
 - 点击条目在新标签页打开原文；iframe 预览中改为当前框架跳转
 
