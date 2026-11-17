@@ -59,21 +59,21 @@ python3 -m http.server 8123 --directory site
 │   └── archive/
 │       └── YYYY-MM-DD.html    # 每日热榜页面
 ├── .github/workflows/
-│   ├── daily.yml              # 每天 07:30 抓取、提交并部署
+│   ├── daily.yml              # 每天 09:00 / 14:00 / 19:00 抓取、提交并部署
 │   └── deploy.yml             # 推送 site/ 变更时部署
 └── .trae/skills/hot-daily/    # 维护该项目的 skill
 ```
 
 ## 每日自动更新
 
-`.github/workflows/daily.yml` 每天 07:30（北京时间）执行：抓取 → 生成页面 → 提交 `data/` 与 `site/` → 部署 GitHub Pages。
+`.github/workflows/daily.yml` 每天 09:00、14:00、19:00（北京时间）各执行一次：抓取 → 生成页面 → 提交 `data/` 与 `site/` → 部署 GitHub Pages。同一天的文件会被直接覆盖，不会产生重复条目。
 
 首次使用需在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**，然后在 Actions 中手动运行一次 `Daily hot list`。
 
 如果部署在自有服务器，用 cron 更稳定：
 
 ```cron
-30 7 * * * /path/to/hot-daily/scripts/daily.sh >> /tmp/hot-daily.log 2>&1
+0 9,14,19 * * * /path/to/hot-daily/scripts/daily.sh >> /tmp/hot-daily.log 2>&1
 ```
 
 ## 自定义
