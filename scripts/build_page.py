@@ -26,7 +26,6 @@ CSS = """
   --hover: rgba(0, 0, 0, .035);
   --accent: #0071e3;
   --accent-soft: rgba(0, 113, 227, .1);
-  --nav-bg: rgba(245, 245, 247, .78);
   --radius: 20px;
   --shadow: 0 1px 2px rgba(0, 0, 0, .04);
 }
@@ -39,7 +38,6 @@ CSS = """
   --hover: rgba(255, 255, 255, .06);
   --accent: #2997ff;
   --accent-soft: rgba(41, 151, 255, .14);
-  --nav-bg: rgba(0, 0, 0, .72);
   --shadow: none;
 }
 * { box-sizing: border-box; }
@@ -57,53 +55,34 @@ body {
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: var(--nav-bg);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid var(--line);
-}
-.nav-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  height: 52px;
-  padding: 0 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-.brand {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: -.01em;
-  color: var(--text);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.brand:hover { text-decoration: none; opacity: .72; }
 .theme-toggle {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 30;
   appearance: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--line);
-  background: transparent;
-  color: var(--muted);
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1;
-  padding: 7px 14px;
-  border-radius: 980px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
   cursor: pointer;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  transition: transform .2s ease, border-color .2s ease, background-color .25s ease;
 }
 .theme-toggle:hover {
-  background: var(--hover);
-  color: var(--text);
+  transform: scale(1.06);
   border-color: transparent;
+  background: var(--hover);
 }
+.theme-toggle svg { width: 20px; height: 20px; display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 .hero {
   max-width: 1280px;
   margin: 0 auto;
@@ -299,7 +278,7 @@ a:hover { text-decoration: underline; }
 .footer {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 4px 28px 60px;
+  padding: 4px 28px 84px;
   text-align: center;
   font-size: 12px;
   line-height: 1.8;
@@ -314,7 +293,7 @@ a:focus-visible, .theme-toggle:focus-visible {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
-  .nav-inner { padding: 0 20px; }
+  .theme-toggle { right: 16px; bottom: 16px; }
   .hero { padding: 44px 20px 26px; }
   .hero .sub { font-size: 15px; }
   .grid { grid-template-columns: 1fr; padding: 4px 20px 44px; gap: 14px; }
@@ -345,16 +324,11 @@ THEME_TOGGLE_JS = """(function () {
   var root = document.documentElement;
   var btn = document.getElementById("themeToggle");
   if (!btn) return;
-  function label() {
-    btn.textContent = root.getAttribute("data-theme") === "dark" ? "浅色" : "深色";
-  }
   btn.addEventListener("click", function () {
     var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     try { localStorage.setItem("hot-theme", next); } catch (e) {}
-    label();
   });
-  label();
 
   // 在 IDE 预览等受限 iframe 中，浏览器会拦截新标签页，改为当前框架内跳转
   document.addEventListener("click", function (event) {
@@ -377,21 +351,19 @@ TEMPLATE = """<!DOCTYPE html>
 <style>%%CSS%%</style>
 </head>
 <body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="../index.html">热榜日报</a>
-    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
-  </div>
-</header>
 <main>
   <section class="hero">
     <p class="eyebrow">每日热榜快照</p>
     <h1>%%DATE_SHORT%%</h1>
-    <p class="sub">星期%%WEEKDAY%% · %%TIME%% 更新 · %%COUNT%% 个板块</p>
+    <p class="sub">星期%%WEEKDAY%% · %%TIME%% 更新</p>
   </section>
   <div class="grid">%%CARDS%%</div>
 </main>
 %%FOOTER%%
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+</button>
 <script>%%THEME_JS%%</script>
 </body>
 </html>
@@ -409,22 +381,20 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <style>%%CSS%%</style>
 </head>
 <body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">热榜日报</a>
-    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
-  </div>
-</header>
 <main>
   <section class="hero">
     <p class="eyebrow">每日热榜快照</p>
     <h1>热榜日报</h1>
-    <p class="sub">聚合 12 个站点的热榜，每天 09:00、14:00、19:00 刷新当日快照。共 %%COUNT%% 期。</p>
+    <p class="sub">聚合全网主流平台热榜，每天自动生成热点快照。</p>
   </section>
   <section class="timeline" aria-label="日报目录">
 %%ENTRIES%%
   </section>
 </main>
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+</button>
 <script>%%THEME_JS%%</script>
 </body>
 </html>
@@ -548,7 +518,6 @@ def render(data: dict, archive: bool) -> str:
         "%%DATE_SHORT%%": f"{day.month}月{day.day}日",
         "%%WEEKDAY%%": WEEKDAYS[day.weekday()],
         "%%TIME%%": data.get("time", ""),
-        "%%COUNT%%": str(len(sources)),
         "%%CSS%%": CSS,
         "%%THEME_INIT%%": THEME_INIT,
         "%%THEME_JS%%": THEME_TOGGLE_JS,
