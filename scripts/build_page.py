@@ -434,7 +434,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="今日摘要：每天 09:00 至 19:00 每两小时聚合 9 个公开信息源，按日期归档。">
+<meta name="description" content="今日摘要：每天 09:00 至 17:00 每两小时聚合 9 个公开信息源，按日期归档。">
 <title>热榜日报</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
