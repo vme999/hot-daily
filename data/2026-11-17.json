@@ -1,8 +1,130 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T17:33:24+08:00",
-  "time": "17:33",
+  "generated_at": "2026-11-17T17:50:36+08:00",
+  "time": "17:50",
   "sources": [
+    {
+      "id": "zhihu",
+      "name": "知乎热榜",
+      "icon": "知",
+      "color": "#0084ff",
+      "home": "https://www.zhihu.com/hot",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "南京无门槛的「零元面馆」为什么招来那么多质疑与批评？",
+          "url": "https://www.zhihu.com/question/2104559437331568051",
+          "hot": "718 万热度"
+        },
+        {
+          "title": "如何看待中南大学湘雅二医院被曝医学sci论文图片为AI生成？",
+          "url": "https://www.zhihu.com/question/2104854026030522823",
+          "hot": "638 万热度"
+        },
+        {
+          "title": "中汽协将对比亚迪、小米等 17 家重点车企开展供应商账款支付情况调研评估，哪些信息值得关注？",
+          "url": "https://www.zhihu.com/question/2105956358176469828",
+          "hot": "423 万热度"
+        },
+        {
+          "title": "于东来要给管理团队安排 310 辆坦克 700，奖励创造美好的人，这背后是一套怎样的人才留存思路？",
+          "url": "https://www.zhihu.com/question/2105981347055526220",
+          "hot": "414 万热度"
+        },
+        {
+          "title": "纵观历史几千年，为什么科技才近一两百年发生了质的飞跃，有了电话、飞机、火车，那么之前的人们在干嘛去了？",
+          "url": "https://www.zhihu.com/question/46853150",
+          "hot": "348 万热度"
+        },
+        {
+          "title": "怎么看谷歌员工成功在 iPhone Duo 上运行 Windows 11 系统？",
+          "url": "https://www.zhihu.com/question/2105723098595059429",
+          "hot": "282 万热度"
+        },
+        {
+          "title": "腾讯总办发文复盘司庆讲话，号召全员AI时代再创业，并推进组织扁平化，有哪些看点？这波改革能成吗？",
+          "url": "https://www.zhihu.com/question/2105757716606084891",
+          "hot": "258 万热度"
+        },
+        {
+          "title": "为什么中国式刺身（鱼脍）在明中期被逐渐淘汰了？",
+          "url": "https://www.zhihu.com/question/470428983",
+          "hot": "236 万热度"
+        },
+        {
+          "title": "开拓者 98:106 森林狼，杨瀚森被教练要求对戈贝尔执行砍鲨战术，2分钟5犯，如何评价这场比赛？",
+          "url": "https://www.zhihu.com/question/2105951285207906216",
+          "hot": "224 万热度"
+        },
+        {
+          "title": "如何看待俞敏洪再谈南极游事件，称南极风波让自己重新思考企业应该为谁而活？",
+          "url": "https://www.zhihu.com/question/2105960985865319091",
+          "hot": "220 万热度"
+        }
+      ]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "icon": "澎",
+      "color": "#e60012",
+      "home": "https://www.thepaper.cn/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "习近平在广东中山考察",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490277",
+          "hot": ""
+        },
+        {
+          "title": "圆桌｜中俄美元首历史性首次会晤在即，三国权威学者谈大国关系新契机",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490498",
+          "hot": ""
+        },
+        {
+          "title": "APEC每日观察｜忙碌与从容之间，深圳静待历史时刻",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490260",
+          "hot": ""
+        },
+        {
+          "title": "马上评｜“方桃子”被罚，再次给AI商业化划出边界",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490388",
+          "hot": ""
+        },
+        {
+          "title": "华为“天才少年”何馥君加盟西南交通大学，担任教授、博导",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490402",
+          "hot": ""
+        },
+        {
+          "title": "分析｜怎么看10月消费、投资数据有所波动？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490327",
+          "hot": ""
+        },
+        {
+          "title": "作家余华、程永新与《巴黎评论》副主编对谈：中国作家如何被世界看见",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490477",
+          "hot": ""
+        },
+        {
+          "title": "网络招聘帖假招聘、真卖课？记者实测被推荐先买课，12家单位均称是虚假招聘信息",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490252",
+          "hot": ""
+        },
+        {
+          "title": "冷门“顶流”｜研究满语40年，一位七旬学者的紧迫感",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490375",
+          "hot": ""
+        },
+        {
+          "title": "释新闻｜拿顿巴斯换北约成员资格，乌克兰面临一道两难选择题",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34490414",
+          "hot": ""
+        }
+      ]
+    },
     {
       "id": "weibo",
       "name": "微博热搜",
@@ -65,184 +187,62 @@
       ]
     },
     {
-      "id": "wechat",
-      "name": "微信热文",
-      "icon": "信",
-      "color": "#07c160",
-      "home": "https://mp.weixin.qq.com/",
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
       "ok": true,
       "error": "",
       "items": [
         {
-          "title": "苹果最终确认！向每位用户最高赔 637 元",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzIxNjQzNTM5Mw==&mid=2247507218&idx=1&sn=b5ddaa09e4995ef5b014061de1bb5613#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "恭喜当年办了ETC的车主",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzYyMTgyMTQ0MA==&mid=2247485786&idx=1&sn=ba79dc5d680ac9de53538141a2773856#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "名古屋亚运会 | 韩国男篮67-57战胜日本拿下金牌，中国队收获第四，历史第二差战绩",
-          "url": "https://mp.weixin.qq.com/s?__biz=Mzk4ODg5MzE2Ng==&mid=2247484728&idx=1&sn=b48a0e9afac355217c836dd8e87f1cbc#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "83年，43岁，钱难挣，新的攀比风已经出现了",
-          "url": "https://mp.weixin.qq.com/s?__biz=MjM5MDA5ODg5NQ==&mid=2449662392&idx=1&sn=2ddae15ab4851c126142e9fc95397618#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "今日有梗：我今年三十五了，谈了五个男朋友，不怕你们笑话，基本都同居过。我先说一句实在话：三十五了，没结过婚，谈过五段恋爱，每一段",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzcwODM0NTk1OQ==&mid=2247485751&idx=1&sn=7c1c80e6cbb94dbdc5a6797718763a4d#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "舒服到不想脱下来的一套懒人穿搭",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzY4MTIwMjg2MQ==&mid=2247486541&idx=1&sn=0d73281a1e3fbc1722445ce6a52dbb96#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "41岁薇娅官宣二胎得子，一家四口同框太温馨",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzkzMjY4OTk4NQ==&mid=2247489460&idx=1&sn=430287701f87e9ff30885fc47ac39d3b#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "又到了一年一度家长展示手艺的时候了🏮",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzY5NzI4MDQwOQ==&mid=2247486040&idx=1&sn=30d1e2f3c69ee81d14891215d067d513#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "这么有创意，难怪生意会好",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzcwODExMzg5MQ==&mid=2247485715&idx=1&sn=dcac48db1baa54318ef8c58526bdc543#rd",
-          "hot": "10.0万"
-        },
-        {
-          "title": "江北的零号路真不错",
-          "url": "https://mp.weixin.qq.com/s?__biz=MzcwNTM3MTg4NQ==&mid=2247484223&idx=1&sn=bd65cc8daecab0839da8ce6523f3ce4c#rd",
-          "hot": "10.0万"
-        }
-      ]
-    },
-    {
-      "id": "zhihu",
-      "name": "知乎热榜",
-      "icon": "知",
-      "color": "#0084ff",
-      "home": "https://www.zhihu.com/hot",
-      "ok": true,
-      "error": "",
-      "items": [
-        {
-          "title": "南京无门槛的「零元面馆」为什么招来那么多质疑与批评？",
-          "url": "https://www.zhihu.com/question/2104559437331568051",
-          "hot": "692 万热度"
-        },
-        {
-          "title": "如何看待中南大学湘雅二医院被曝医学sci论文图片为AI生成？",
-          "url": "https://www.zhihu.com/question/2104854026030522823",
-          "hot": "626 万热度"
-        },
-        {
-          "title": "中汽协将对比亚迪、小米等 17 家重点车企开展供应商账款支付情况调研评估，哪些信息值得关注？",
-          "url": "https://www.zhihu.com/question/2105956358176469828",
-          "hot": "413 万热度"
-        },
-        {
-          "title": "于东来要给管理团队安排 310 辆坦克 700，奖励创造美好的人，这背后是一套怎样的人才留存思路？",
-          "url": "https://www.zhihu.com/question/2105981347055526220",
-          "hot": "404 万热度"
-        },
-        {
-          "title": "纵观历史几千年，为什么科技才近一两百年发生了质的飞跃，有了电话、飞机、火车，那么之前的人们在干嘛去了？",
-          "url": "https://www.zhihu.com/question/46853150",
-          "hot": "338 万热度"
-        },
-        {
-          "title": "怎么看谷歌员工成功在 iPhone Duo 上运行 Windows 11 系统？",
-          "url": "https://www.zhihu.com/question/2105723098595059429",
-          "hot": "273 万热度"
-        },
-        {
-          "title": "腾讯总办发文复盘司庆讲话，号召全员AI时代再创业，并推进组织扁平化，有哪些看点？这波改革能成吗？",
-          "url": "https://www.zhihu.com/question/2105757716606084891",
-          "hot": "249 万热度"
-        },
-        {
-          "title": "为什么中国式刺身（鱼脍）在明中期被逐渐淘汰了？",
-          "url": "https://www.zhihu.com/question/470428983",
-          "hot": "230 万热度"
-        },
-        {
-          "title": "如何看待俞敏洪再谈南极游事件，称南极风波让自己重新思考企业应该为谁而活？",
-          "url": "https://www.zhihu.com/question/2105960985865319091",
-          "hot": "220 万热度"
-        },
-        {
-          "title": "开拓者 98:106 森林狼，杨瀚森被教练要求对戈贝尔执行砍鲨战术，2分钟5犯，如何评价这场比赛？",
-          "url": "https://www.zhihu.com/question/2105951285207906216",
-          "hot": "217 万热度"
-        }
-      ]
-    },
-    {
-      "id": "thepaper",
-      "name": "澎湃新闻",
-      "icon": "澎",
-      "color": "#e60012",
-      "home": "https://www.thepaper.cn/",
-      "ok": true,
-      "error": "",
-      "items": [
-        {
-          "title": "习近平在广东中山考察",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490277",
+          "title": "DeepSeek 不限额的用法，都在这里了 | 附指南",
+          "url": "https://www.ifanr.com/1689869",
           "hot": ""
         },
         {
-          "title": "圆桌｜中俄美元首历史性首次会晤在即，三国权威学者谈大国关系新契机",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490498",
+          "title": "12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」",
+          "url": "https://www.ifanr.com/1689792",
           "hot": ""
         },
         {
-          "title": "APEC每日观察｜忙碌与从容之间，深圳静待历史时刻",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490260",
+          "title": "微软全球大宕机，AI 怎么又成了背锅侠",
+          "url": "https://www.ifanr.com/1689638",
           "hot": ""
         },
         {
-          "title": "马上评｜“方桃子”被罚，再次给AI商业化划出边界",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490388",
+          "title": "早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日",
+          "url": "https://www.ifanr.com/1689760",
           "hot": ""
         },
         {
-          "title": "华为“天才少年”何馥君加盟西南交通大学，担任教授、博导",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490402",
+          "title": "影石这张「魔法相纸」，怎么治好了我的相册吃灰症？",
+          "url": "https://www.ifanr.com/1689594",
           "hot": ""
         },
         {
-          "title": "分析｜怎么看10月消费、投资数据有所波动？",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490327",
+          "title": "苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？",
+          "url": "https://www.ifanr.com/1689712",
           "hot": ""
         },
         {
-          "title": "作家余华、程永新与《巴黎评论》副主编对谈：中国作家如何被世界看见",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490477",
+          "title": "几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！",
+          "url": "https://www.ifanr.com/1689701",
           "hot": ""
         },
         {
-          "title": "网络招聘帖假招聘、真卖课？记者实测被推荐先买课，12家单位均称是虚假招聘信息",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490252",
+          "title": "实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页",
+          "url": "https://www.ifanr.com/1689653",
           "hot": ""
         },
         {
-          "title": "冷门“顶流”｜研究满语40年，一位七旬学者的紧迫感",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490375",
+          "title": "制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验",
+          "url": "https://www.ifanr.com/1689628",
           "hot": ""
         },
         {
-          "title": "释新闻｜拿顿巴斯换北约成员资格，乌克兰面临一道两难选择题",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34490414",
+          "title": "苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods",
+          "url": "https://www.ifanr.com/1689616",
           "hot": ""
         }
       ]
@@ -360,189 +360,6 @@
       ]
     },
     {
-      "id": "ifanr",
-      "name": "爱范儿",
-      "icon": "爱",
-      "color": "#ff5a36",
-      "home": "https://www.ifanr.com/",
-      "ok": true,
-      "error": "",
-      "items": [
-        {
-          "title": "DeepSeek 不限额的用法，都在这里了 | 附指南",
-          "url": "https://www.ifanr.com/1689869",
-          "hot": ""
-        },
-        {
-          "title": "12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」",
-          "url": "https://www.ifanr.com/1689792",
-          "hot": ""
-        },
-        {
-          "title": "微软全球大宕机，AI 怎么又成了背锅侠",
-          "url": "https://www.ifanr.com/1689638",
-          "hot": ""
-        },
-        {
-          "title": "早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日",
-          "url": "https://www.ifanr.com/1689760",
-          "hot": ""
-        },
-        {
-          "title": "影石这张「魔法相纸」，怎么治好了我的相册吃灰症？",
-          "url": "https://www.ifanr.com/1689594",
-          "hot": ""
-        },
-        {
-          "title": "苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？",
-          "url": "https://www.ifanr.com/1689712",
-          "hot": ""
-        },
-        {
-          "title": "几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！",
-          "url": "https://www.ifanr.com/1689701",
-          "hot": ""
-        },
-        {
-          "title": "实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页",
-          "url": "https://www.ifanr.com/1689653",
-          "hot": ""
-        },
-        {
-          "title": "制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验",
-          "url": "https://www.ifanr.com/1689628",
-          "hot": ""
-        },
-        {
-          "title": "苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods",
-          "url": "https://www.ifanr.com/1689616",
-          "hot": ""
-        }
-      ]
-    },
-    {
-      "id": "bilibili",
-      "name": "哔哩哔哩",
-      "icon": "B",
-      "color": "#00a1d6",
-      "home": "https://www.bilibili.com/v/popular/rank/all",
-      "ok": true,
-      "error": "",
-      "items": [
-        {
-          "title": "【2026全球总决赛】11月15日 GEN vs BLG",
-          "url": "https://b23.tv/BV15es76gEgL",
-          "hot": "2742 万"
-        },
-        {
-          "title": "BLG S16夺冠赞歌《仰望星空》",
-          "url": "https://b23.tv/BV14VsJ6aEJd",
-          "hot": "303 万"
-        },
-        {
-          "title": "1穿4连斩LCK战队！恭喜BLG，加冕为王！",
-          "url": "https://b23.tv/BV1yvsj6SE6m",
-          "hot": "257 万"
-        },
-        {
-          "title": "命运让他们彼此对立，也让他们彼此靠近｜上",
-          "url": "https://b23.tv/BV1jHsp69Ekg",
-          "hot": "280 万"
-        },
-        {
-          "title": "【卜劳恩《父与子》/非凡父爱】“如果没有那一场残酷的战争，父与子的结局或许会是这样……”",
-          "url": "https://b23.tv/BV1Zos36FEZz",
-          "hot": "459 万"
-        },
-        {
-          "title": "根本没有这样的夹子",
-          "url": "https://b23.tv/BV12oWi6VEz7",
-          "hot": "610 万"
-        },
-        {
-          "title": "“成华大道没有「烂奇迹」”",
-          "url": "https://b23.tv/BV1BDsE67Eom",
-          "hot": "134 万"
-        },
-        {
-          "title": "我是Tim，我变不动了...",
-          "url": "https://b23.tv/BV1BJsV6PEek",
-          "hot": "190 万"
-        },
-        {
-          "title": "三年之期已到，恭迎世一上归位！【第18集】",
-          "url": "https://b23.tv/BV1uUsJ6BES6",
-          "hot": "247 万"
-        },
-        {
-          "title": "BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”",
-          "url": "https://b23.tv/BV1Cvsj6SENy",
-          "hot": "160 万"
-        }
-      ]
-    },
-    {
-      "id": "douyin",
-      "name": "抖音热点",
-      "icon": "抖",
-      "color": "#fe2c55",
-      "home": "https://www.douyin.com/",
-      "ok": true,
-      "error": "",
-      "items": [
-        {
-          "title": "APEC峰会有哪些领导人参加",
-          "url": "https://www.douyin.com/search/APEC峰会有哪些领导人参加",
-          "hot": "1195.1万"
-        },
-        {
-          "title": "APEC参会嘉宾陆续抵达深圳",
-          "url": "https://www.douyin.com/search/APEC参会嘉宾陆续抵达深圳",
-          "hot": "1140.7万"
-        },
-        {
-          "title": "鲲鹏乘势共赴亚太之约",
-          "url": "https://www.douyin.com/search/鲲鹏乘势共赴亚太之约",
-          "hot": "1124.1万"
-        },
-        {
-          "title": "在深圳读懂APEC中国故事",
-          "url": "https://www.douyin.com/search/在深圳读懂APEC中国故事",
-          "hot": "1110.4万"
-        },
-        {
-          "title": "76人135:123战胜篮网",
-          "url": "https://www.douyin.com/search/76人135:123战胜篮网",
-          "hot": "1048.8万"
-        },
-        {
-          "title": "APEC普通人秒懂指南",
-          "url": "https://www.douyin.com/search/APEC普通人秒懂指南",
-          "hot": "1047.2万"
-        },
-        {
-          "title": "东营观鸟浪全攻略",
-          "url": "https://www.douyin.com/search/东营观鸟浪全攻略",
-          "hot": "936.5万"
-        },
-        {
-          "title": "APEC媒体中心餐食出圈",
-          "url": "https://www.douyin.com/search/APEC媒体中心餐食出圈",
-          "hot": "922.6万"
-        },
-        {
-          "title": "APEC区域经济增长高于预期",
-          "url": "https://www.douyin.com/search/APEC区域经济增长高于预期",
-          "hot": "916.2万"
-        },
-        {
-          "title": "非遗暖居过冬仪式感",
-          "url": "https://www.douyin.com/search/非遗暖居过冬仪式感",
-          "hot": "876.2万"
-        }
-      ]
-    },
-    {
       "id": "github",
       "name": "GitHub 趋势",
       "icon": "GH",
@@ -569,27 +386,27 @@
         {
           "title": "tradermonty / claude-trading-skills",
           "url": "https://github.com/tradermonty/claude-trading-skills",
-          "hot": "6649"
+          "hot": "6661"
         },
         {
           "title": "elementalsouls / Claude-BugHunter",
           "url": "https://github.com/elementalsouls/Claude-BugHunter",
-          "hot": "7871"
+          "hot": "7891"
         },
         {
           "title": "getarcaneapp / arcane",
           "url": "https://github.com/getarcaneapp/arcane",
-          "hot": "8977"
+          "hot": "8988"
         },
         {
           "title": "DeanChensj / jiangshan-map",
           "url": "https://github.com/DeanChensj/jiangshan-map",
-          "hot": "7462"
+          "hot": "7489"
         },
         {
           "title": "google-labs-code / stitch-skills",
           "url": "https://github.com/google-labs-code/stitch-skills",
-          "hot": "9875"
+          "hot": "9878"
         },
         {
           "title": "mvanhorn / last30days-skill",
@@ -599,7 +416,7 @@
         {
           "title": "NVIDIA / SkillEvaluator",
           "url": "https://github.com/NVIDIA/SkillEvaluator",
-          "hot": "3082"
+          "hot": "3093"
         }
       ]
     },
@@ -615,27 +432,27 @@
         {
           "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
           "url": "https://www.cs.cmu.edu/learn/",
-          "hot": "1485 分"
+          "hot": "1497 分"
         },
         {
           "title": "Technical issue at JPMorgan Chase triggers online banking delays for US banks",
           "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
-          "hot": "773 分"
+          "hot": "774 分"
         },
         {
           "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
           "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
-          "hot": "593 分"
+          "hot": "598 分"
         },
         {
           "title": "BugMeNot has closed",
           "url": "https://www.bugmenot.com/",
-          "hot": "532 分"
+          "hot": "537 分"
         },
         {
           "title": "Frame – 31.5\" color ePaper display",
           "url": "https://trmnl.com/blog/introducing-frame",
-          "hot": "409 分"
+          "hot": "414 分"
         },
         {
           "title": "Jiff 1.0: A datetime library for Rust",
@@ -650,12 +467,12 @@
         {
           "title": "Optimizely compromised, served malware on Zoom, GitLab",
           "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
-          "hot": "327 分"
+          "hot": "335 分"
         },
         {
           "title": "Microsoft blames monster email outage on software defect introduced in July fix",
           "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
-          "hot": "320 分"
+          "hot": "321 分"
         },
         {
           "title": "Grazing sheep in fields with solar arrays",

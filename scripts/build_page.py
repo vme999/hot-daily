@@ -351,7 +351,7 @@ TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="%%DATE_SHORT%%热榜日报：12 个站点的每日热榜快照。">
+<meta name="description" content="%%DATE_SHORT%%热榜日报：9 个站点的每日热榜快照。">
 <title>%%TITLE%%</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
@@ -382,7 +382,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 12 个站点的热榜，按日期归档。">
+<meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 9 个站点的热榜，按日期归档。">
 <title>热榜日报</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
