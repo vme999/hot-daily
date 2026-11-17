@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="description" content="11月17日热榜日报：12 个站点的每日热榜快照。">
 <title>热榜日报 · 11月17日</title>
 <script>(function () {
   try {
@@ -14,168 +15,191 @@
 })();</script>
 <style>
 :root {
-  --bg: #f1f2f5;
-  --card: #ffffff;
-  --text: #1c2026;
-  --muted: #8a919e;
-  --line: #edeff2;
-  --hover: #f6f7f9;
-  --accent: #e5484d;
-  --rank: #b9c0cb;
-  --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 8px 24px rgba(16, 24, 40, .045);
-  --radius: 12px;
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --line: rgba(0, 0, 0, .08);
+  --hover: rgba(0, 0, 0, .035);
+  --accent: #0071e3;
+  --accent-soft: rgba(0, 113, 227, .1);
+  --nav-bg: rgba(245, 245, 247, .78);
+  --radius: 20px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .04);
 }
 [data-theme="dark"] {
-  --bg: #14161b;
-  --card: #1e2129;
-  --text: #e7e9ee;
-  --muted: #818896;
-  --line: #2a2e38;
-  --hover: #272b35;
-  --accent: #ff5d5d;
-  --rank: #5b6270;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .2);
+  --bg: #000000;
+  --surface: #1d1d1f;
+  --text: #f5f5f7;
+  --muted: #86868b;
+  --line: rgba(255, 255, 255, .12);
+  --hover: rgba(255, 255, 255, .06);
+  --accent: #2997ff;
+  --accent-soft: rgba(41, 151, 255, .14);
+  --nav-bg: rgba(0, 0, 0, .72);
+  --shadow: none;
 }
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--bg);
-  background-image: radial-gradient(1100px 380px at 50% -120px, rgba(229, 72, 77, .07), transparent 70%);
-  background-repeat: no-repeat;
+  background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: antialiased;
-  transition: background-color .25s ease, color .25s ease;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .3s ease, color .3s ease;
 }
-.topbar {
-  max-width: 1440px;
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 24px 24px 14px;
+  height: 52px;
+  padding: 0 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
-.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.logo {
-  width: 40px; height: 40px; flex: none;
-  display: grid; place-items: center;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ff6a5e, #e5484d 55%, #c9282d);
-  color: #fff;
-  font-size: 19px; font-weight: 800;
-  box-shadow: 0 6px 16px rgba(229, 72, 77, .28);
-}
-.brand-text { min-width: 0; }
-.brand-text h1 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-.brand-text p {
-  margin: 3px 0 0;
-  font-size: 12px;
-  color: var(--muted);
-}
-.theme-toggle {
-  flex: none;
-  border: 1px solid var(--line);
-  background: var(--card);
+.brand {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
   color: var(--text);
-  font-size: 12.5px;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: border-color .18s ease, color .18s ease, background-color .25s ease;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-.grid {
-  max-width: 1440px;
+.brand:hover { text-decoration: none; opacity: .72; }
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 14px;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.theme-toggle:hover {
+  background: var(--hover);
+  color: var(--text);
+  border-color: transparent;
+}
+.hero {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 8px 24px 34px;
+  padding: 68px 28px 34px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--accent);
+}
+.hero h1 {
+  margin: 10px 0 0;
+  font-size: clamp(34px, 5.4vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -.02em;
+  font-weight: 700;
+}
+.hero .sub {
+  margin: 14px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--muted);
+  letter-spacing: -.01em;
+}
+.grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6px 28px 64px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   align-items: start;
 }
 .card {
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 13px 14px 9px;
-  transition: background-color .25s ease, border-color .18s ease,
-    transform .18s ease, box-shadow .18s ease;
-}
-.card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(229, 72, 77, .28);
+  padding: 20px 16px 12px;
+  transition: background-color .3s ease, border-color .2s ease;
 }
 .card-head {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 2px 7px;
+  gap: 10px;
+  padding: 0 8px 10px;
 }
 .badge {
-  width: 24px; height: 24px; flex: none;
-  display: grid; place-items: center;
-  border-radius: 7px;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
   background: var(--brand, var(--accent));
   color: #fff;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: -.2px;
+  letter-spacing: -.02em;
 }
-.badge.wide { font-size: 9.5px; }
+.badge.wide { font-size: 9px; }
 .card-head h2 {
   margin: 0;
-  font-size: 14px;
-  font-weight: 650;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.card-meta {
-  margin-left: auto;
-  flex: none;
-  font-size: 11px;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
 }
 .list { list-style: none; margin: 0; padding: 0; }
 .list li + li { border-top: 1px solid var(--line); }
 .list a {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 4px;
-  border-radius: 7px;
+  gap: 10px;
+  padding: 9px 8px;
+  margin: 0 -8px;
+  border-radius: 9px;
   color: var(--text);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45;
+  letter-spacing: -.006em;
   text-decoration: none;
   transition: background-color .15s ease;
 }
-.list a:hover { background: var(--hover); }
+.list a:hover { background: var(--hover); text-decoration: none; }
 .list a:hover .title { color: var(--accent); }
 .rank {
   flex: none;
-  width: 15px;
+  width: 16px;
   text-align: center;
   font-size: 12px;
-  color: var(--rank);
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.list li:nth-child(-n+3) .rank {
-  color: var(--accent);
-  font-weight: 700;
-}
+.list li:nth-child(-n+3) .rank { color: var(--text); font-weight: 600; }
 .title {
   flex: 1;
   min-width: 0;
@@ -185,112 +209,108 @@ body {
   transition: color .15s ease;
 }
 .empty {
-  padding: 20px 6px 18px;
+  padding: 22px 8px 18px;
   text-align: center;
-  font-size: 12.5px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.7;
   color: var(--muted);
 }
-.empty a { color: var(--accent); text-decoration: none; }
-.empty a:hover { text-decoration: underline; }
-.footer {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 24px 38px;
-  text-align: center;
-  font-size: 11.5px;
-  line-height: 1.9;
-  color: var(--muted);
-}
-.footer a {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px dotted currentColor;
-}
-.footer a:hover { color: var(--accent); }
+.empty a { color: var(--accent); }
 .timeline {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 10px 24px 44px;
+  padding: 0 28px 64px;
 }
-.month + .month { margin-top: 28px; }
 .month-title {
-  margin: 0 0 10px;
-  padding-left: 2px;
+  margin: 34px 0 12px;
+  padding-left: 4px;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .8px;
+  letter-spacing: .06em;
   color: var(--muted);
 }
 .entries {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-left: 2px solid var(--line);
+  display: grid;
+  gap: 10px;
 }
-.entries li { position: relative; padding-left: 16px; }
-.entries li::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: 26px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--rank);
-}
-.entries li:first-child::before { background: var(--accent); }
 .entry {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 8px;
-  padding: 13px 16px;
-  background: var(--card);
+  padding: 19px 24px;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   color: var(--text);
   text-decoration: none;
-  transition: border-color .18s ease, transform .18s ease, background-color .25s ease;
+  transition: background-color .2s ease, border-color .2s ease;
 }
 .entry:hover {
-  border-color: rgba(229, 72, 77, .32);
-  transform: translateX(3px);
+  border-color: rgba(0, 113, 227, .45);
+  text-decoration: none;
 }
-.entry-date { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.entry-date b { font-size: 15px; font-weight: 650; }
-.entry-date span { font-size: 11.5px; color: var(--muted); }
+.entry-date { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.entry-date b {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.entry-date span { font-size: 13px; color: var(--muted); }
 .entry-meta {
   margin-left: auto;
   flex: none;
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.entry-meta .tag { margin-right: 6px; color: var(--accent); font-weight: 600; }
-.entry-arrow {
+.tag {
   flex: none;
-  font-size: 13px;
-  color: var(--muted);
-  transition: color .18s ease, transform .18s ease;
+  padding: 3px 9px;
+  border-radius: 980px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .01em;
 }
-.entry:hover .entry-arrow { color: var(--accent); transform: translateX(2px); }
+.entry-chevron {
+  flex: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform .2s ease, color .2s ease;
+}
+.entry:hover .entry-chevron { color: var(--accent); transform: translateX(2px); }
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4px 28px 60px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.footer a { color: var(--accent); }
 a:focus-visible, .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1100px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (max-width: 680px) {
-  .topbar { padding: 18px 16px 10px; }
-  .brand-text h1 { font-size: 16px; }
-  .grid { grid-template-columns: 1fr; padding: 6px 16px 26px; gap: 12px; }
-  .footer { padding: 0 16px 28px; }
-  .timeline { padding: 6px 16px 30px; }
-  .entry { padding: 12px 14px; }
+@media (max-width: 700px) {
+  .nav-inner { padding: 0 20px; }
+  .hero { padding: 44px 20px 26px; }
+  .hero .sub { font-size: 15px; }
+  .grid { grid-template-columns: 1fr; padding: 4px 20px 44px; gap: 14px; }
+  .timeline { padding: 0 20px 44px; }
+  .entry { padding: 16px 18px; gap: 12px; }
   .entry-meta { display: none; }
+  .footer { padding: 4px 20px 44px; }
   .title {
     white-space: normal;
     display: -webkit-box;
@@ -302,36 +322,38 @@ a:focus-visible, .theme-toggle:focus-visible {
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">热</div>
-    <div class="brand-text">
-      <h1>热榜日报</h1>
-      <p>2026年11月17日 星期二 · 15:53 更新</p>
-    </div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">热榜日报</a>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
   </div>
-  <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">🌙 深色</button>
 </header>
-<main class="grid" aria-label="今日热榜">
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#0084ff">知</span><h2>知乎热榜</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://www.zhihu.com/question/2104559437331568051" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="南京无门槛的「零元面馆」为什么招来那么多质疑与批评？">南京无门槛的「零元面馆」为什么招来那么多质疑与批评？</span></a></li><li><a href="https://www.zhihu.com/question/2105477478731067979" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="北大新款羽绒服 399 元含鹅绒量 90%卖断货，校外人士求代购，这类高校文创比商业品牌更有性价比吗？">北大新款羽绒服 399 元含鹅绒量 90%卖断货，校外人士求代购，这类高校文创比商业品牌更有性价比吗？</span></a></li><li><a href="https://www.zhihu.com/question/2104854026030522823" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="如何看待中南大学湘雅二医院被曝医学sci论文图片为AI生成？">如何看待中南大学湘雅二医院被曝医学sci论文图片为AI生成？</span></a></li><li><a href="https://www.zhihu.com/question/2105956358176469828" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="中汽协将对比亚迪、小米等 17 家重点车企开展供应商账款支付情况调研评估，哪些信息值得关注？">中汽协将对比亚迪、小米等 17 家重点车企开展供应商账款支付情况调研评估，哪些信息值得关注？</span></a></li><li><a href="https://www.zhihu.com/question/46853150" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="纵观历史几千年，为什么科技才近一两百年发生了质的飞跃，有了电话、飞机、火车，那么之前的人们在干嘛去了？">纵观历史几千年，为什么科技才近一两百年发生了质的飞跃，有了电话、飞机、火车，那么之前的人们在干嘛去了？</span></a></li><li><a href="https://www.zhihu.com/question/2105757716606084891" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="腾讯总办发文复盘司庆讲话，号召全员AI时代再创业，并推进组织扁平化，有哪些看点？这波改革能成吗？">腾讯总办发文复盘司庆讲话，号召全员AI时代再创业，并推进组织扁平化，有哪些看点？这波改革能成吗？</span></a></li><li><a href="https://www.zhihu.com/question/2105723098595059429" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="怎么看谷歌员工成功在 iPhone Duo 上运行 Windows 11 系统？">怎么看谷歌员工成功在 iPhone Duo 上运行 Windows 11 系统？</span></a></li><li><a href="https://www.zhihu.com/question/2105981347055526220" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="于东来要给管理团队安排 310 辆坦克 700，奖励创造美好的人，这背后是一套怎样的人才留存思路？">于东来要给管理团队安排 310 辆坦克 700，奖励创造美好的人，这背后是一套怎样的人才留存思路？</span></a></li><li><a href="https://www.zhihu.com/question/2105686582837748403" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="《哈利波特：魔法觉醒》官宣 2027 年 3 月停服，授权到期，怎么看待这款手游落幕？">《哈利波特：魔法觉醒》官宣 2027 年 3 月停服，授权到期，怎么看待这款手游落幕？</span></a></li><li><a href="https://www.zhihu.com/question/470428983" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="为什么中国式刺身（鱼脍）在明中期被逐渐淘汰了？">为什么中国式刺身（鱼脍）在明中期被逐渐淘汰了？</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#2f9c46">豆</span><h2>豆瓣热点</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://www.douban.com/group/topic/504668192/" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="有没有那种看完感觉很震撼的电影">有没有那种看完感觉很震撼的电影</span></a></li><li><a href="https://www.douban.com/group/topic/505436897/" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="固收理财入门级攻略">固收理财入门级攻略</span></a></li><li><a href="https://www.douban.com/group/topic/504513741/" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="求情感浓度非常高的电影">求情感浓度非常高的电影</span></a></li><li><a href="https://www.douban.com/group/topic/504461898/" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="秋天的树上挂满了彩色的星星⭐🌳🍂">秋天的树上挂满了彩色的星星⭐🌳🍂</span></a></li><li><a href="https://www.douban.com/group/topic/505325679/" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="35岁打工人65万存款">35岁打工人65万存款</span></a></li><li><a href="https://www.douban.com/group/topic/505135024/" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="162/98 📝 短发🍐每天穿什么">162/98 📝 短发🍐每天穿什么</span></a></li><li><a href="https://www.douban.com/group/topic/505094184/" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="明年年初攒到40w,能买一个macbook吗？">明年年初攒到40w,能买一个macbook吗？</span></a></li><li><a href="https://www.douban.com/group/topic/504339570/" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="总感觉差了点什么">总感觉差了点什么</span></a></li><li><a href="https://www.douban.com/group/topic/505030585/" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="被物价惊到了">被物价惊到了</span></a></li><li><a href="https://www.douban.com/group/topic/504518283/" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="这一身有没有问题">这一身有没有问题</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#e6162d">微</span><h2>微博热搜</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://s.weibo.com/weibo?q=%E4%BA%8E%E4%B8%9C%E6%9D%A5%E5%A5%96%E5%8A%B1%E5%91%98%E5%B7%A5310%E8%BE%86%E5%9D%A6%E5%85%8B700" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="于东来奖励员工310辆坦克700">于东来奖励员工310辆坦克700</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%B7%B1%E5%9C%B3APEC%E4%B8%BB%E6%8C%81%E4%BA%BA%E9%98%B5%E5%AE%B9%E6%8B%89%E6%BB%A1" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="深圳APEC主持人阵容拉满">深圳APEC主持人阵容拉满</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%95%B0%E8%AF%B4APEC%E4%B8%AD%E5%9B%BD%E5%B9%B4%E7%BB%8F%E8%B4%B8%E6%88%90%E6%9E%9C" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="数说APEC中国年经贸成果">数说APEC中国年经贸成果</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%B2%88%E5%A5%95%E6%96%90%E8%81%8A%E5%85%BB%E5%A8%83%E5%A6%82%E4%BD%95%E4%B8%8D%E7%84%A6%E8%99%91" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="沈奕斐聊养娃如何不焦虑">沈奕斐聊养娃如何不焦虑</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%9D%A8%E7%80%9A%E6%A3%AE%E7%A0%8D%E9%B2%A8%E6%88%98%E6%9C%AF" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="杨瀚森砍鲨战术">杨瀚森砍鲨战术</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E4%BF%A1%E5%B0%8F%E5%91%86%E5%85%91%E5%A5%96%E8%A1%8C%E7%A8%8B%E5%8F%97%E9%99%90%E9%95%BF%E6%9C%9F%E9%80%8F%E6%94%AF%E8%BA%AB%E4%BD%93" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="信小呆兑奖行程受限长期透支身体">信小呆兑奖行程受限长期透支身体</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E5%A4%AA%E9%98%B3%E9%9B%A8%E5%BE%B7%E5%9B%BD%E7%AF%87+%E5%89%A7%E6%83%85%E4%BA%BA%E8%AE%BEOOC" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="太阳雨德国篇 剧情人设OOC">太阳雨德国篇 剧情人设OOC</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E8%AD%A6%E6%83%95%E5%81%87%E9%93%B6%E9%94%AD%E8%97%8F%E5%93%81%E9%AA%97%E5%B1%80" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="警惕假银锭藏品骗局">警惕假银锭藏品骗局</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E4%BF%A1%E5%B0%8F%E5%91%86%E4%B8%AD%E5%A5%96%E5%90%8E%E6%8A%91%E9%83%81%E4%BA%86" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="信小呆中奖后抑郁了">信小呆中奖后抑郁了</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E4%BB%8E100%E6%96%A4%E7%98%A6%E5%88%B080%E6%96%A4%E5%A0%AA%E6%AF%94%E6%95%B4%E5%AE%B9" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="从100斤瘦到80斤堪比整容">从100斤瘦到80斤堪比整容</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#f04142">头</span><h2>今日头条</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://www.toutiao.com/trending/7707948669395599396/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227707948669395599396%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%B7%B1%E5%9C%B3APEC%E4%B8%BB%E6%8C%81%E4%BA%BA%E9%98%B5%E5%AE%B9%E6%8B%89%E6%BB%A1%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7707948669395599396" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="深圳APEC主持人阵容拉满">深圳APEC主持人阵容拉满</span></a></li><li><a href="https://www.toutiao.com/trending/7708751854922498098/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708751854922498098%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E8%B8%A9%E7%BA%A2%E6%AF%AF%E5%B7%AE%E7%82%B9%E6%91%94%E5%80%92%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708751854922498098" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="高市早苗踩红毯差点摔倒">高市早苗踩红毯差点摔倒</span></a></li><li><a href="https://www.toutiao.com/trending/7709032517701062153/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227709032517701062153%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22APEC%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%B9%B4%E2%80%9D%E7%B3%BB%E5%88%97%E4%BC%9A%E8%AE%AE%E6%B4%BB%E5%8A%A8%E4%B8%B0%E7%A1%95%E6%88%90%E6%9E%9C%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7709032517701062153" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="APEC“中国年”系列会议活动丰硕成果">APEC“中国年”系列会议活动丰硕成果</span></a></li><li><a href="https://www.toutiao.com/trending/7708727968373145650/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708727968373145650%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%BA%8E%E4%B8%9C%E6%9D%A5%E5%A5%96%E5%8A%B1%E5%91%98%E5%B7%A5310%E8%BE%86%E5%9D%A6%E5%85%8B700%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708727968373145650" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="于东来奖励员工310辆坦克700">于东来奖励员工310辆坦克700</span></a></li><li><a href="https://www.toutiao.com/trending/7709024863414943785/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227709024863414943785%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%80%81%E4%B8%A4%E5%8F%A3%E5%85%88%E5%90%8E%E5%BF%83%E6%A2%97+%E5%84%BF%E5%AD%901%E5%B9%B4%E5%89%8D%E5%9B%A0%E5%BF%83%E6%A2%97%E7%A6%BB%E4%B8%96%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7709024863414943785" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="老两口先后心梗 儿子1年前因心梗离世">老两口先后心梗 儿子1年前因心梗离世</span></a></li><li><a href="https://www.toutiao.com/trending/7708657375682707483/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708657375682707483%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%BF%84%E7%BE%8E%E8%BF%90%E8%BE%93%E6%9C%BA%E5%B7%B2%E7%8E%87%E5%85%88%E6%8A%B5%E8%BE%BE%E6%B7%B1%E5%9C%B3%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708657375682707483" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="俄美运输机已率先抵达深圳">俄美运输机已率先抵达深圳</span></a></li><li><a href="https://www.toutiao.com/trending/7708313407783796779/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%224%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708313407783796779%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%8E%E4%B8%BA%E9%98%94%E7%9B%B4%E6%9D%BF%E5%87%AD%E4%BB%80%E4%B9%88%E5%8D%96%E7%88%86%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708313407783796779" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="华为阔直板凭什么卖爆">华为阔直板凭什么卖爆</span></a></li><li><a href="https://www.toutiao.com/trending/7708982349085704754/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2215%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708982349085704754%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22APEC%E5%B7%A5%E5%95%86%E9%A2%86%E5%AF%BC%E4%BA%BA%E5%B3%B0%E4%BC%9A%E6%9D%8E%E5%BD%A6%E5%AE%8F%E6%9B%BE%E6%AF%93%E7%BE%A4%E5%90%8C%E5%8F%B0%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708982349085704754" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="APEC工商领导人峰会李彦宏曾毓群同台">APEC工商领导人峰会李彦宏曾毓群同台</span></a></li><li><a href="https://www.toutiao.com/trending/7709032599787671067/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227709032599787671067%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%B8%80%E7%BB%84%E6%95%B0%E5%AD%97%EF%BC%8C%E7%9C%8B%E6%B7%B1%E5%9C%B3%E4%B8%8EAPEC%E2%80%9C%E5%8F%8C%E5%90%91%E5%A5%94%E8%B5%B4%E2%80%9D%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7709032599787671067" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="一组数字，看深圳与APEC“双向奔赴”">一组数字，看深圳与APEC“双向奔赴”</span></a></li><li><a href="https://www.toutiao.com/trending/7708221528491478569/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708221528491478569%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A2%A8%E8%A5%BF%E5%93%A5%E6%80%BB%E7%BB%9F%E4%B9%98%E7%BA%A2%E6%97%97%E8%BD%A6%E5%9C%A8%E6%B7%B1%E5%9C%B3%E5%90%83%E5%AE%B6%E4%B9%A1%E8%8F%9C%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708221528491478569" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="墨西哥总统乘红旗车在深圳吃家乡菜">墨西哥总统乘红旗车在深圳吃家乡菜</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#00a1d6">B</span><h2>B站日榜</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://b23.tv/BV15es76gEgL" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="【2026全球总决赛】11月15日 GEN vs BLG">【2026全球总决赛】11月15日 GEN vs BLG</span></a></li><li><a href="https://b23.tv/BV14VsJ6aEJd" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="BLG S16夺冠赞歌《仰望星空》">BLG S16夺冠赞歌《仰望星空》</span></a></li><li><a href="https://b23.tv/BV1yvsj6SE6m" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="1穿4连斩LCK战队！恭喜BLG，加冕为王！">1穿4连斩LCK战队！恭喜BLG，加冕为王！</span></a></li><li><a href="https://b23.tv/BV1jHsp69Ekg" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="命运让他们彼此对立，也让他们彼此靠近｜上">命运让他们彼此对立，也让他们彼此靠近｜上</span></a></li><li><a href="https://b23.tv/BV1Zos36FEZz" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="【卜劳恩《父与子》/非凡父爱】“如果没有那一场残酷的战争，父与子的结局或许会是这样……”">【卜劳恩《父与子》/非凡父爱】“如果没有那一场残酷的战争，父与子的结局或许会是这样……”</span></a></li><li><a href="https://b23.tv/BV12oWi6VEz7" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="根本没有这样的夹子">根本没有这样的夹子</span></a></li><li><a href="https://b23.tv/BV1BDsE67Eom" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="“成华大道没有「烂奇迹」”">“成华大道没有「烂奇迹」”</span></a></li><li><a href="https://b23.tv/BV1BJsV6PEek" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="我是Tim，我变不动了...">我是Tim，我变不动了...</span></a></li><li><a href="https://b23.tv/BV1uUsJ6BES6" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="三年之期已到，恭迎世一上归位！【第18集】">三年之期已到，恭迎世一上归位！【第18集】</span></a></li><li><a href="https://b23.tv/BV1Cvsj6SENy" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”">BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge wide" style="--brand:#d22222">IT</span><h2>IT之家</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://m.ithome.com/html/1027992.htm" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="华为 WATCH Air 新款智能手表外观曝光：圆润机身 + 超轻薄设计，预装鸿蒙 HarmonyOS 系统">华为 WATCH Air 新款智能手表外观曝光：圆润机身 + 超轻薄设计，预装鸿蒙 HarmonyOS 系统</span></a></li><li><a href="https://m.ithome.com/html/1027958.htm" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="华为星芒 OSTA O1 Pro 新机更多配置信息曝光：新增无充电器版本，黑白紫三色可选">华为星芒 OSTA O1 Pro 新机更多配置信息曝光：新增无充电器版本，黑白紫三色可选</span></a></li><li><a href="https://m.ithome.com/html/1027966.htm" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="5499 → 4499 元：苹果 iPad mini（A20 Pro）国补后立减 1000 元">5499 → 4499 元：苹果 iPad mini（A20 Pro）国补后立减 1000 元</span></a></li><li><a href="https://m.ithome.com/html/1028025.htm" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="“里程碑式设计”：苹果 iPhone 20 Pro 屏幕盖板再曝，让边框淡出视野">“里程碑式设计”：苹果 iPhone 20 Pro 屏幕盖板再曝，让边框淡出视野</span></a></li><li><a href="https://m.ithome.com/html/1027830.htm" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="打破苹果软件更新限制！博主全球首发为 iPhone 6 Plus 刷入 iOS 14 系统">打破苹果软件更新限制！博主全球首发为 iPhone 6 Plus 刷入 iOS 14 系统</span></a></li><li><a href="https://m.ithome.com/html/1028090.htm" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="华为星芒 OSTA O1 Pro 阔直板手机主要配置曝光：麒麟 9030S，保留无线充电，不带充电头">华为星芒 OSTA O1 Pro 阔直板手机主要配置曝光：麒麟 9030S，保留无线充电，不带充电头</span></a></li><li><a href="https://m.ithome.com/html/1028006.htm" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="华为全新子品牌星芒 OSTA O1 Pro 真机紫色款外观曝光：后置双摄，预计搭载麒麟 9030S 处理器">华为全新子品牌星芒 OSTA O1 Pro 真机紫色款外观曝光：后置双摄，预计搭载麒麟 9030S 处理器</span></a></li><li><a href="https://m.ithome.com/html/1027856.htm" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="中汽协会将对比亚迪、赛力斯、蔚小理、小米等 17 家重点汽车企业的供应商账款支付情况开展调研评估">中汽协会将对比亚迪、赛力斯、蔚小理、小米等 17 家重点汽车企业的供应商账款支付情况开展调研评估</span></a></li><li><a href="https://m.ithome.com/html/1027965.htm" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="华为徐直军回忆分布式基站诞生：2003 年余承东发现痛点，最终成为今天 3G、4G、5G 基站标准形态">华为徐直军回忆分布式基站诞生：2003 年余承东发现痛点，最终成为今天 3G、4G、5G 基站标准形态</span></a></li><li><a href="https://m.ithome.com/html/1028013.htm" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="苹果 iOS / iPadOS 27.3 开发者预览版 Beta 2 发布：为 iPhone Duo 加入外屏面部解锁功能">苹果 iOS / iPadOS 27.3 开发者预览版 Beta 2 发布：为 iPhone Duo 加入外屏面部解锁功能</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#0b6fc2">Z</span><h2>中关村在线</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://news.zol.com.cn/1273/12730698.html" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="30岁男子将SUV改装为床车居住半年，低成本通勤引发热议">30岁男子将SUV改装为床车居住半年，低成本通勤引发热议</span></a></li><li><a href="https://news.zol.com.cn/1273/12730185.html" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="妻子送丈夫PS5主机，惊喜瞬间引爆网络温情共鸣">妻子送丈夫PS5主机，惊喜瞬间引爆网络温情共鸣</span></a></li><li><a href="https://news.zol.com.cn/1274/12740265.html" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="胖东来羽绒服价格透明引热议，高充绒低定价重塑消费信任">胖东来羽绒服价格透明引热议，高充绒低定价重塑消费信任</span></a></li><li><a href="https://news.zol.com.cn/1273/12730068.html" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="天津大学突破零功耗自发光技术，量产全球最薄0.01毫米柔性透明显示屏">天津大学突破零功耗自发光技术，量产全球最薄0.01毫米柔性透明显示屏</span></a></li><li><a href="https://news.zol.com.cn/1273/12730688.html" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="PS5被幼童蓝笔涂满引热议：家长如何借涂鸦事件培养孩子物品责任意识">PS5被幼童蓝笔涂满引热议：家长如何借涂鸦事件培养孩子物品责任意识</span></a></li><li><a href="https://news.zol.com.cn/1274/12740264.html" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="NVIDIA RTX 4090 Ti工程样品曝光：非公版定制验证卡现身二手平台">NVIDIA RTX 4090 Ti工程样品曝光：非公版定制验证卡现身二手平台</span></a></li><li><a href="https://news.zol.com.cn/1274/12741626.html" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="黄仁勋卸任英伟达CEO，RTX 5090/5080日本降价超两成，系价格理性回归">黄仁勋卸任英伟达CEO，RTX 5090/5080日本降价超两成，系价格理性回归</span></a></li><li><a href="https://news.zol.com.cn/1274/12742357.html" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="影石发布Insta360 Toast墨水屏相纸：6色显示、195天续航、远程换图">影石发布Insta360 Toast墨水屏相纸：6色显示、195天续航、远程换图</span></a></li><li><a href="https://news.zol.com.cn/1273/12733150.html" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="GTA6全新实拍地图曝光：莱昂尼达州全貌首次完整呈现">GTA6全新实拍地图曝光：莱昂尼达州全貌首次完整呈现</span></a></li><li><a href="https://news.zol.com.cn/1274/12741600.html" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="AMD确认锐龙处理器安全结温上限：主流95℃，X3D系列89℃">AMD确认锐龙处理器安全结温上限：主流95℃，X3D系列89℃</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#ff5a36">爱</span><h2>爱范儿</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://www.ifanr.com/1689792" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」">12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」</span></a></li><li><a href="https://www.ifanr.com/1689638" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="微软全球大宕机，AI 怎么又成了背锅侠">微软全球大宕机，AI 怎么又成了背锅侠</span></a></li><li><a href="https://www.ifanr.com/1689760" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日">早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日</span></a></li><li><a href="https://www.ifanr.com/1689594" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="影石这张「魔法相纸」，怎么治好了我的相册吃灰症？">影石这张「魔法相纸」，怎么治好了我的相册吃灰症？</span></a></li><li><a href="https://www.ifanr.com/1689712" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？">苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？</span></a></li><li><a href="https://www.ifanr.com/1689701" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！">几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！</span></a></li><li><a href="https://www.ifanr.com/1689653" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页">实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页</span></a></li><li><a href="https://www.ifanr.com/1689628" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验">制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验</span></a></li><li><a href="https://www.ifanr.com/1689616" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods">苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods</span></a></li><li><a href="https://www.ifanr.com/1689559" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="超 16 万人请愿，黄仁勋准备「回宫」">超 16 万人请愿，黄仁勋准备「回宫」</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#fc5531">C</span><h2>CSDN</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://blog.csdn.net/zhangcongyi420/article/details/169847875" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="【AI智能体】Codex + Harness Engineering 实战开发ChatBot 项目详解">【AI智能体】Codex + Harness Engineering 实战开发ChatBot 项目详解</span></a></li><li><a href="https://blog.csdn.net/say_fall/article/details/170779250" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="【CUDA编程】GPU通用计算：CPU与GPU的设计差异、线程网格与Warp执行、内存层次与合并访问、架构演进与工具链优化">【CUDA编程】GPU通用计算：CPU与GPU的设计差异、线程网格与Warp执行、内存层次与合并访问、架构演进与工具链优化</span></a></li><li><a href="https://blog.csdn.net/2401_87629362/article/details/170777858" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="从文档入库到售后问答，让AI的回答有据可查：Nexent知识库与RAG深度实测">从文档入库到售后问答，让AI的回答有据可查：Nexent知识库与RAG深度实测</span></a></li><li><a href="https://blog.csdn.net/2402_87731470/article/details/170444769" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="【Linux网络】TCP 半包粘包怎么解决？从长度报头、JSON 拆包到网络计算器完整实战">【Linux网络】TCP 半包粘包怎么解决？从长度报头、JSON 拆包到网络计算器完整实战</span></a></li><li><a href="https://blog.csdn.net/aiclaws/article/details/170859593" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="临时电脑上什么办公软件都没有？我把GodoOS放进浏览器，打开就是一套办公桌面">临时电脑上什么办公软件都没有？我把GodoOS放进浏览器，打开就是一套办公桌面</span></a></li><li><a href="https://blog.csdn.net/Rqaqedamancy/article/details/170859844" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="演示网页时不想共享整台电脑？我在NAS里放了一个多人共用的隔离浏览器">演示网页时不想共享整台电脑？我在NAS里放了一个多人共用的隔离浏览器</span></a></li><li><a href="https://blog.csdn.net/sinat_41617212/article/details/170821581" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="用 Spring AI 做文本分类/摘要：落地到后台工作流（无人值守批处理实战）">用 Spring AI 做文本分类/摘要：落地到后台工作流（无人值守批处理实战）</span></a></li><li><a href="https://blog.csdn.net/2401_89899187/article/details/170771570" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="【AI大模型接入SDK】历史消息时间戳问题与时间戳问题">【AI大模型接入SDK】历史消息时间戳问题与时间戳问题</span></a></li><li><a href="https://blog.csdn.net/2502_93799892/article/details/170776868" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="一篇看懂 Spring AOP：核心概念 + 五种通知 + 切点表达式 + 动态代理（附案例和流程图）">一篇看懂 Spring AOP：核心概念 + 五种通知 + 切点表达式 + 动态代理（附案例和流程图）</span></a></li><li><a href="https://blog.csdn.net/2302_78391795/article/details/170859168" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="Constitutional_AI_Claude背后的安全对齐方法">Constitutional_AI_Claude背后的安全对齐方法</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#ff6a00">嗅</span><h2>虎嗅</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://www.huxiu.com/article/4905656.html" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="人生回报率最高的20件小事">人生回报率最高的20件小事</span></a></li><li><a href="https://www.huxiu.com/article/4904620.html" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="“零元面馆”终将成闹剧，因为慈善有边界、人性无下限">“零元面馆”终将成闹剧，因为慈善有边界、人性无下限</span></a></li><li><a href="https://www.huxiu.com/article/4904580.html" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="赛博义父终于扛不住了">赛博义父终于扛不住了</span></a></li><li><a href="https://www.huxiu.com/article/4902431.html" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="字节旧部创业，在海外杀疯了">字节旧部创业，在海外杀疯了</span></a></li><li><a href="https://www.huxiu.com/article/4904447.html" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="越来越多的中国人，正在花钱买别人的命">越来越多的中国人，正在花钱买别人的命</span></a></li><li><a href="https://www.huxiu.com/article/4905762.html" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="达里奥为什么要整黄仁勋？">达里奥为什么要整黄仁勋？</span></a></li><li><a href="https://www.huxiu.com/article/4905198.html" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="一朝天子一朝臣，激流勇退且藏身">一朝天子一朝臣，激流勇退且藏身</span></a></li><li><a href="https://www.huxiu.com/article/4904685.html" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="最快女护士辞职一年，编制神话碎了一地">最快女护士辞职一年，编制神话碎了一地</span></a></li><li><a href="https://www.huxiu.com/article/4904673.html" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="在中国车市无人注意的角落里，日系车快烂完了">在中国车市无人注意的角落里，日系车快烂完了</span></a></li><li><a href="https://www.huxiu.com/article/4904821.html" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="你再小众文艺，你逃得过红果引力吗？">你再小众文艺，你逃得过红果引力吗？</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#e93b3d">值</span><h2>值得买热门</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://www.smzdm.com/p/186270191/" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="今日必买：酷态科 10000毫安 移动电源 口袋版套装A">今日必买：酷态科 10000毫安 移动电源 口袋版套装A</span></a></li><li><a href="https://www.smzdm.com/p/186173997/" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="九眼桥 多功能牛油火锅底料 50g*20袋">九眼桥 多功能牛油火锅底料 50g*20袋</span></a></li><li><a href="https://www.smzdm.com/p/186264844/" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="百亿补贴、今日必买：中兴 AX3000T 满血WiFi6 千兆无线路由器">百亿补贴、今日必买：中兴 AX3000T 满血WiFi6 千兆无线路由器</span></a></li><li><a href="https://www.smzdm.com/p/186273936/" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="国家补贴、今日必买：小米 智能中控屏 内置网关AI大模型 全屋智能中枢控制家庭面板411">国家补贴、今日必买：小米 智能中控屏 内置网关AI大模型 全屋智能中枢控制家庭面板411</span></a></li><li><a href="https://www.smzdm.com/p/186283550/" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="今日必买：欧普照明 隐形风扇灯 冰风2 高亮 呵护光 36寸 24瓦 （免费安装）">今日必买：欧普照明 隐形风扇灯 冰风2 高亮 呵护光 36寸 24瓦 （免费安装）</span></a></li><li><a href="https://www.smzdm.com/p/186247693/" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="爱丽思 抽屉式收纳箱 37L BC-450 磨砂白色">爱丽思 抽屉式收纳箱 37L BC-450 磨砂白色</span></a></li><li><a href="https://www.smzdm.com/p/186168851/" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="喜之郎 蒟蒻果冻桶 520克*1桶（任选）">喜之郎 蒟蒻果冻桶 520克*1桶（任选）</span></a></li><li><a href="https://www.smzdm.com/p/186205837/" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="今日必买：京鲜生 尝鲜好价！丹东99红颜奶油草莓 净重1.8斤（新季上市）">今日必买：京鲜生 尝鲜好价！丹东99红颜奶油草莓 净重1.8斤（新季上市）</span></a></li><li><a href="https://www.smzdm.com/p/186231142/" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="今日必买：阿克苏苹果 新疆阿克苏冰糖心 带箱10斤">今日必买：阿克苏苹果 新疆阿克苏冰糖心 带箱10斤</span></a></li><li><a href="https://www.smzdm.com/p/186270909/" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="今日必买：金典 伊利金典纯牛奶250ml*24盒整箱环保装随机发货9月产">今日必买：金典 伊利金典纯牛奶250ml*24盒整箱环保装随机发货9月产</span></a></li></ol></section>
-<section class="card"><div class="card-head"><span class="badge" style="--brand:#1e80ff">掘</span><h2>掘金</h2><span class="card-meta">15:53</span></div><ol class="list"><li><a href="https://juejin.cn/post/7655245911811784750" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="面试官问你：“AI 能写 80% 的代码了，公司为什么还需要你？”">面试官问你：“AI 能写 80% 的代码了，公司为什么还需要你？”</span></a></li><li><a href="https://juejin.cn/post/7684460980934049807" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="从codex转战workbuddy使用一周的感受">从codex转战workbuddy使用一周的感受</span></a></li><li><a href="https://juejin.cn/post/7691030977348108351" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="一个人+AI做情侣食谱小程序，30天纯赚">一个人+AI做情侣食谱小程序，30天纯赚</span></a></li><li><a href="https://juejin.cn/post/7702866392132337718" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="我用workBuddy开发了自己的第一个小程序并成功上线了">我用workBuddy开发了自己的第一个小程序并成功上线了</span></a></li><li><a href="https://juejin.cn/post/7692440533922971667" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="副业搞起来，小说，漫画，漫剧的成本优化思路">副业搞起来，小说，漫画，漫剧的成本优化思路</span></a></li><li><a href="https://juejin.cn/post/7695999629460029466" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="2028编程圈很火的10个Skills">2028编程圈很火的10个Skills</span></a></li><li><a href="https://juejin.cn/post/7706534471420461098" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="你们公司有 35 岁以上的前端吗？">你们公司有 35 岁以上的前端吗？</span></a></li><li><a href="https://juejin.cn/post/7693821701955567670" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="Spring AI Alibaba已停更了，Java还有希望吗？">Spring AI Alibaba已停更了，Java还有希望吗？</span></a></li><li><a href="https://juejin.cn/post/7683353819855077412" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="每天白嫖 WorkBuddy 100 积分，我让WorkBuddy自己领">每天白嫖 WorkBuddy 100 积分，我让WorkBuddy自己领</span></a></li><li><a href="https://juejin.cn/post/7698382188488048649" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="手机到底有没有偷听我们？我抓包了 72 小时，抓到了真凶">手机到底有没有偷听我们？我抓包了 72 小时，抓到了真凶</span></a></li></ol></section>
+<main>
+  <section class="hero">
+    <p class="eyebrow">每日热榜快照</p>
+    <h1>11月17日</h1>
+    <p class="sub">星期二 · 15:53 更新 · 12 个板块</p>
+  </section>
+  <div class="grid"><section class="card"><div class="card-head"><span class="badge" style="--brand:#0084ff">知</span><h2>知乎热榜</h2></div><ol class="list"><li><a href="https://www.zhihu.com/question/2104559437331568051" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="南京无门槛的「零元面馆」为什么招来那么多质疑与批评？">南京无门槛的「零元面馆」为什么招来那么多质疑与批评？</span></a></li><li><a href="https://www.zhihu.com/question/2105477478731067979" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="北大新款羽绒服 399 元含鹅绒量 90%卖断货，校外人士求代购，这类高校文创比商业品牌更有性价比吗？">北大新款羽绒服 399 元含鹅绒量 90%卖断货，校外人士求代购，这类高校文创比商业品牌更有性价比吗？</span></a></li><li><a href="https://www.zhihu.com/question/2104854026030522823" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="如何看待中南大学湘雅二医院被曝医学sci论文图片为AI生成？">如何看待中南大学湘雅二医院被曝医学sci论文图片为AI生成？</span></a></li><li><a href="https://www.zhihu.com/question/2105956358176469828" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="中汽协将对比亚迪、小米等 17 家重点车企开展供应商账款支付情况调研评估，哪些信息值得关注？">中汽协将对比亚迪、小米等 17 家重点车企开展供应商账款支付情况调研评估，哪些信息值得关注？</span></a></li><li><a href="https://www.zhihu.com/question/46853150" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="纵观历史几千年，为什么科技才近一两百年发生了质的飞跃，有了电话、飞机、火车，那么之前的人们在干嘛去了？">纵观历史几千年，为什么科技才近一两百年发生了质的飞跃，有了电话、飞机、火车，那么之前的人们在干嘛去了？</span></a></li><li><a href="https://www.zhihu.com/question/2105757716606084891" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="腾讯总办发文复盘司庆讲话，号召全员AI时代再创业，并推进组织扁平化，有哪些看点？这波改革能成吗？">腾讯总办发文复盘司庆讲话，号召全员AI时代再创业，并推进组织扁平化，有哪些看点？这波改革能成吗？</span></a></li><li><a href="https://www.zhihu.com/question/2105723098595059429" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="怎么看谷歌员工成功在 iPhone Duo 上运行 Windows 11 系统？">怎么看谷歌员工成功在 iPhone Duo 上运行 Windows 11 系统？</span></a></li><li><a href="https://www.zhihu.com/question/2105981347055526220" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="于东来要给管理团队安排 310 辆坦克 700，奖励创造美好的人，这背后是一套怎样的人才留存思路？">于东来要给管理团队安排 310 辆坦克 700，奖励创造美好的人，这背后是一套怎样的人才留存思路？</span></a></li><li><a href="https://www.zhihu.com/question/2105686582837748403" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="《哈利波特：魔法觉醒》官宣 2027 年 3 月停服，授权到期，怎么看待这款手游落幕？">《哈利波特：魔法觉醒》官宣 2027 年 3 月停服，授权到期，怎么看待这款手游落幕？</span></a></li><li><a href="https://www.zhihu.com/question/470428983" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="为什么中国式刺身（鱼脍）在明中期被逐渐淘汰了？">为什么中国式刺身（鱼脍）在明中期被逐渐淘汰了？</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#2f9c46">豆</span><h2>豆瓣热点</h2></div><ol class="list"><li><a href="https://www.douban.com/group/topic/504668192/" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="有没有那种看完感觉很震撼的电影">有没有那种看完感觉很震撼的电影</span></a></li><li><a href="https://www.douban.com/group/topic/505436897/" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="固收理财入门级攻略">固收理财入门级攻略</span></a></li><li><a href="https://www.douban.com/group/topic/504513741/" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="求情感浓度非常高的电影">求情感浓度非常高的电影</span></a></li><li><a href="https://www.douban.com/group/topic/504461898/" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="秋天的树上挂满了彩色的星星⭐🌳🍂">秋天的树上挂满了彩色的星星⭐🌳🍂</span></a></li><li><a href="https://www.douban.com/group/topic/505325679/" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="35岁打工人65万存款">35岁打工人65万存款</span></a></li><li><a href="https://www.douban.com/group/topic/505135024/" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="162/98 📝 短发🍐每天穿什么">162/98 📝 短发🍐每天穿什么</span></a></li><li><a href="https://www.douban.com/group/topic/505094184/" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="明年年初攒到40w,能买一个macbook吗？">明年年初攒到40w,能买一个macbook吗？</span></a></li><li><a href="https://www.douban.com/group/topic/504339570/" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="总感觉差了点什么">总感觉差了点什么</span></a></li><li><a href="https://www.douban.com/group/topic/505030585/" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="被物价惊到了">被物价惊到了</span></a></li><li><a href="https://www.douban.com/group/topic/504518283/" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="这一身有没有问题">这一身有没有问题</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#e6162d">微</span><h2>微博热搜</h2></div><ol class="list"><li><a href="https://s.weibo.com/weibo?q=%E4%BA%8E%E4%B8%9C%E6%9D%A5%E5%A5%96%E5%8A%B1%E5%91%98%E5%B7%A5310%E8%BE%86%E5%9D%A6%E5%85%8B700" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="于东来奖励员工310辆坦克700">于东来奖励员工310辆坦克700</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%B7%B1%E5%9C%B3APEC%E4%B8%BB%E6%8C%81%E4%BA%BA%E9%98%B5%E5%AE%B9%E6%8B%89%E6%BB%A1" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="深圳APEC主持人阵容拉满">深圳APEC主持人阵容拉满</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%95%B0%E8%AF%B4APEC%E4%B8%AD%E5%9B%BD%E5%B9%B4%E7%BB%8F%E8%B4%B8%E6%88%90%E6%9E%9C" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="数说APEC中国年经贸成果">数说APEC中国年经贸成果</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%B2%88%E5%A5%95%E6%96%90%E8%81%8A%E5%85%BB%E5%A8%83%E5%A6%82%E4%BD%95%E4%B8%8D%E7%84%A6%E8%99%91" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="沈奕斐聊养娃如何不焦虑">沈奕斐聊养娃如何不焦虑</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E6%9D%A8%E7%80%9A%E6%A3%AE%E7%A0%8D%E9%B2%A8%E6%88%98%E6%9C%AF" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="杨瀚森砍鲨战术">杨瀚森砍鲨战术</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E4%BF%A1%E5%B0%8F%E5%91%86%E5%85%91%E5%A5%96%E8%A1%8C%E7%A8%8B%E5%8F%97%E9%99%90%E9%95%BF%E6%9C%9F%E9%80%8F%E6%94%AF%E8%BA%AB%E4%BD%93" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="信小呆兑奖行程受限长期透支身体">信小呆兑奖行程受限长期透支身体</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E5%A4%AA%E9%98%B3%E9%9B%A8%E5%BE%B7%E5%9B%BD%E7%AF%87+%E5%89%A7%E6%83%85%E4%BA%BA%E8%AE%BEOOC" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="太阳雨德国篇 剧情人设OOC">太阳雨德国篇 剧情人设OOC</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E8%AD%A6%E6%83%95%E5%81%87%E9%93%B6%E9%94%AD%E8%97%8F%E5%93%81%E9%AA%97%E5%B1%80" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="警惕假银锭藏品骗局">警惕假银锭藏品骗局</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E4%BF%A1%E5%B0%8F%E5%91%86%E4%B8%AD%E5%A5%96%E5%90%8E%E6%8A%91%E9%83%81%E4%BA%86" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="信小呆中奖后抑郁了">信小呆中奖后抑郁了</span></a></li><li><a href="https://s.weibo.com/weibo?q=%E4%BB%8E100%E6%96%A4%E7%98%A6%E5%88%B080%E6%96%A4%E5%A0%AA%E6%AF%94%E6%95%B4%E5%AE%B9" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="从100斤瘦到80斤堪比整容">从100斤瘦到80斤堪比整容</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#f04142">头</span><h2>今日头条</h2></div><ol class="list"><li><a href="https://www.toutiao.com/trending/7707948669395599396/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227707948669395599396%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%B7%B1%E5%9C%B3APEC%E4%B8%BB%E6%8C%81%E4%BA%BA%E9%98%B5%E5%AE%B9%E6%8B%89%E6%BB%A1%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7707948669395599396" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="深圳APEC主持人阵容拉满">深圳APEC主持人阵容拉满</span></a></li><li><a href="https://www.toutiao.com/trending/7708751854922498098/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708751854922498098%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E8%B8%A9%E7%BA%A2%E6%AF%AF%E5%B7%AE%E7%82%B9%E6%91%94%E5%80%92%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708751854922498098" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="高市早苗踩红毯差点摔倒">高市早苗踩红毯差点摔倒</span></a></li><li><a href="https://www.toutiao.com/trending/7709032517701062153/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227709032517701062153%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22APEC%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%B9%B4%E2%80%9D%E7%B3%BB%E5%88%97%E4%BC%9A%E8%AE%AE%E6%B4%BB%E5%8A%A8%E4%B8%B0%E7%A1%95%E6%88%90%E6%9E%9C%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7709032517701062153" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="APEC“中国年”系列会议活动丰硕成果">APEC“中国年”系列会议活动丰硕成果</span></a></li><li><a href="https://www.toutiao.com/trending/7708727968373145650/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708727968373145650%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%BA%8E%E4%B8%9C%E6%9D%A5%E5%A5%96%E5%8A%B1%E5%91%98%E5%B7%A5310%E8%BE%86%E5%9D%A6%E5%85%8B700%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708727968373145650" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="于东来奖励员工310辆坦克700">于东来奖励员工310辆坦克700</span></a></li><li><a href="https://www.toutiao.com/trending/7709024863414943785/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227709024863414943785%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%80%81%E4%B8%A4%E5%8F%A3%E5%85%88%E5%90%8E%E5%BF%83%E6%A2%97+%E5%84%BF%E5%AD%901%E5%B9%B4%E5%89%8D%E5%9B%A0%E5%BF%83%E6%A2%97%E7%A6%BB%E4%B8%96%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7709024863414943785" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="老两口先后心梗 儿子1年前因心梗离世">老两口先后心梗 儿子1年前因心梗离世</span></a></li><li><a href="https://www.toutiao.com/trending/7708657375682707483/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708657375682707483%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%BF%84%E7%BE%8E%E8%BF%90%E8%BE%93%E6%9C%BA%E5%B7%B2%E7%8E%87%E5%85%88%E6%8A%B5%E8%BE%BE%E6%B7%B1%E5%9C%B3%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708657375682707483" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="俄美运输机已率先抵达深圳">俄美运输机已率先抵达深圳</span></a></li><li><a href="https://www.toutiao.com/trending/7708313407783796779/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%224%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708313407783796779%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%8E%E4%B8%BA%E9%98%94%E7%9B%B4%E6%9D%BF%E5%87%AD%E4%BB%80%E4%B9%88%E5%8D%96%E7%88%86%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708313407783796779" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="华为阔直板凭什么卖爆">华为阔直板凭什么卖爆</span></a></li><li><a href="https://www.toutiao.com/trending/7708982349085704754/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2215%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708982349085704754%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22APEC%E5%B7%A5%E5%95%86%E9%A2%86%E5%AF%BC%E4%BA%BA%E5%B3%B0%E4%BC%9A%E6%9D%8E%E5%BD%A6%E5%AE%8F%E6%9B%BE%E6%AF%93%E7%BE%A4%E5%90%8C%E5%8F%B0%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708982349085704754" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="APEC工商领导人峰会李彦宏曾毓群同台">APEC工商领导人峰会李彦宏曾毓群同台</span></a></li><li><a href="https://www.toutiao.com/trending/7709032599787671067/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227709032599787671067%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%B8%80%E7%BB%84%E6%95%B0%E5%AD%97%EF%BC%8C%E7%9C%8B%E6%B7%B1%E5%9C%B3%E4%B8%8EAPEC%E2%80%9C%E5%8F%8C%E5%90%91%E5%A5%94%E8%B5%B4%E2%80%9D%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7709032599787671067" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="一组数字，看深圳与APEC“双向奔赴”">一组数字，看深圳与APEC“双向奔赴”</span></a></li><li><a href="https://www.toutiao.com/trending/7708221528491478569/?category_name=topic_innerflow&amp;event_type=hot_board&amp;log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227708221528491478569%22%2C%22hot_board_impr_id%22%3A%2220261117155312FCAB0819F855A2E9BCA1%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A2%A8%E8%A5%BF%E5%93%A5%E6%80%BB%E7%BB%9F%E4%B9%98%E7%BA%A2%E6%97%97%E8%BD%A6%E5%9C%A8%E6%B7%B1%E5%9C%B3%E5%90%83%E5%AE%B6%E4%B9%A1%E8%8F%9C%22%7D&amp;rank=&amp;style_id=40132&amp;topic_id=7708221528491478569" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="墨西哥总统乘红旗车在深圳吃家乡菜">墨西哥总统乘红旗车在深圳吃家乡菜</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#00a1d6">B</span><h2>B站日榜</h2></div><ol class="list"><li><a href="https://b23.tv/BV15es76gEgL" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="【2026全球总决赛】11月15日 GEN vs BLG">【2026全球总决赛】11月15日 GEN vs BLG</span></a></li><li><a href="https://b23.tv/BV14VsJ6aEJd" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="BLG S16夺冠赞歌《仰望星空》">BLG S16夺冠赞歌《仰望星空》</span></a></li><li><a href="https://b23.tv/BV1yvsj6SE6m" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="1穿4连斩LCK战队！恭喜BLG，加冕为王！">1穿4连斩LCK战队！恭喜BLG，加冕为王！</span></a></li><li><a href="https://b23.tv/BV1jHsp69Ekg" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="命运让他们彼此对立，也让他们彼此靠近｜上">命运让他们彼此对立，也让他们彼此靠近｜上</span></a></li><li><a href="https://b23.tv/BV1Zos36FEZz" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="【卜劳恩《父与子》/非凡父爱】“如果没有那一场残酷的战争，父与子的结局或许会是这样……”">【卜劳恩《父与子》/非凡父爱】“如果没有那一场残酷的战争，父与子的结局或许会是这样……”</span></a></li><li><a href="https://b23.tv/BV12oWi6VEz7" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="根本没有这样的夹子">根本没有这样的夹子</span></a></li><li><a href="https://b23.tv/BV1BDsE67Eom" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="“成华大道没有「烂奇迹」”">“成华大道没有「烂奇迹」”</span></a></li><li><a href="https://b23.tv/BV1BJsV6PEek" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="我是Tim，我变不动了...">我是Tim，我变不动了...</span></a></li><li><a href="https://b23.tv/BV1uUsJ6BES6" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="三年之期已到，恭迎世一上归位！【第18集】">三年之期已到，恭迎世一上归位！【第18集】</span></a></li><li><a href="https://b23.tv/BV1Cvsj6SENy" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”">BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge wide" style="--brand:#d22222">IT</span><h2>IT之家</h2></div><ol class="list"><li><a href="https://m.ithome.com/html/1027992.htm" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="华为 WATCH Air 新款智能手表外观曝光：圆润机身 + 超轻薄设计，预装鸿蒙 HarmonyOS 系统">华为 WATCH Air 新款智能手表外观曝光：圆润机身 + 超轻薄设计，预装鸿蒙 HarmonyOS 系统</span></a></li><li><a href="https://m.ithome.com/html/1027958.htm" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="华为星芒 OSTA O1 Pro 新机更多配置信息曝光：新增无充电器版本，黑白紫三色可选">华为星芒 OSTA O1 Pro 新机更多配置信息曝光：新增无充电器版本，黑白紫三色可选</span></a></li><li><a href="https://m.ithome.com/html/1027966.htm" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="5499 → 4499 元：苹果 iPad mini（A20 Pro）国补后立减 1000 元">5499 → 4499 元：苹果 iPad mini（A20 Pro）国补后立减 1000 元</span></a></li><li><a href="https://m.ithome.com/html/1028025.htm" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="“里程碑式设计”：苹果 iPhone 20 Pro 屏幕盖板再曝，让边框淡出视野">“里程碑式设计”：苹果 iPhone 20 Pro 屏幕盖板再曝，让边框淡出视野</span></a></li><li><a href="https://m.ithome.com/html/1027830.htm" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="打破苹果软件更新限制！博主全球首发为 iPhone 6 Plus 刷入 iOS 14 系统">打破苹果软件更新限制！博主全球首发为 iPhone 6 Plus 刷入 iOS 14 系统</span></a></li><li><a href="https://m.ithome.com/html/1028090.htm" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="华为星芒 OSTA O1 Pro 阔直板手机主要配置曝光：麒麟 9030S，保留无线充电，不带充电头">华为星芒 OSTA O1 Pro 阔直板手机主要配置曝光：麒麟 9030S，保留无线充电，不带充电头</span></a></li><li><a href="https://m.ithome.com/html/1028006.htm" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="华为全新子品牌星芒 OSTA O1 Pro 真机紫色款外观曝光：后置双摄，预计搭载麒麟 9030S 处理器">华为全新子品牌星芒 OSTA O1 Pro 真机紫色款外观曝光：后置双摄，预计搭载麒麟 9030S 处理器</span></a></li><li><a href="https://m.ithome.com/html/1027856.htm" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="中汽协会将对比亚迪、赛力斯、蔚小理、小米等 17 家重点汽车企业的供应商账款支付情况开展调研评估">中汽协会将对比亚迪、赛力斯、蔚小理、小米等 17 家重点汽车企业的供应商账款支付情况开展调研评估</span></a></li><li><a href="https://m.ithome.com/html/1027965.htm" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="华为徐直军回忆分布式基站诞生：2003 年余承东发现痛点，最终成为今天 3G、4G、5G 基站标准形态">华为徐直军回忆分布式基站诞生：2003 年余承东发现痛点，最终成为今天 3G、4G、5G 基站标准形态</span></a></li><li><a href="https://m.ithome.com/html/1028013.htm" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="苹果 iOS / iPadOS 27.3 开发者预览版 Beta 2 发布：为 iPhone Duo 加入外屏面部解锁功能">苹果 iOS / iPadOS 27.3 开发者预览版 Beta 2 发布：为 iPhone Duo 加入外屏面部解锁功能</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#0b6fc2">Z</span><h2>中关村在线</h2></div><ol class="list"><li><a href="https://news.zol.com.cn/1273/12730698.html" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="30岁男子将SUV改装为床车居住半年，低成本通勤引发热议">30岁男子将SUV改装为床车居住半年，低成本通勤引发热议</span></a></li><li><a href="https://news.zol.com.cn/1273/12730185.html" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="妻子送丈夫PS5主机，惊喜瞬间引爆网络温情共鸣">妻子送丈夫PS5主机，惊喜瞬间引爆网络温情共鸣</span></a></li><li><a href="https://news.zol.com.cn/1274/12740265.html" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="胖东来羽绒服价格透明引热议，高充绒低定价重塑消费信任">胖东来羽绒服价格透明引热议，高充绒低定价重塑消费信任</span></a></li><li><a href="https://news.zol.com.cn/1273/12730068.html" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="天津大学突破零功耗自发光技术，量产全球最薄0.01毫米柔性透明显示屏">天津大学突破零功耗自发光技术，量产全球最薄0.01毫米柔性透明显示屏</span></a></li><li><a href="https://news.zol.com.cn/1273/12730688.html" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="PS5被幼童蓝笔涂满引热议：家长如何借涂鸦事件培养孩子物品责任意识">PS5被幼童蓝笔涂满引热议：家长如何借涂鸦事件培养孩子物品责任意识</span></a></li><li><a href="https://news.zol.com.cn/1274/12740264.html" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="NVIDIA RTX 4090 Ti工程样品曝光：非公版定制验证卡现身二手平台">NVIDIA RTX 4090 Ti工程样品曝光：非公版定制验证卡现身二手平台</span></a></li><li><a href="https://news.zol.com.cn/1274/12741626.html" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="黄仁勋卸任英伟达CEO，RTX 5090/5080日本降价超两成，系价格理性回归">黄仁勋卸任英伟达CEO，RTX 5090/5080日本降价超两成，系价格理性回归</span></a></li><li><a href="https://news.zol.com.cn/1274/12742357.html" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="影石发布Insta360 Toast墨水屏相纸：6色显示、195天续航、远程换图">影石发布Insta360 Toast墨水屏相纸：6色显示、195天续航、远程换图</span></a></li><li><a href="https://news.zol.com.cn/1273/12733150.html" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="GTA6全新实拍地图曝光：莱昂尼达州全貌首次完整呈现">GTA6全新实拍地图曝光：莱昂尼达州全貌首次完整呈现</span></a></li><li><a href="https://news.zol.com.cn/1274/12741600.html" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="AMD确认锐龙处理器安全结温上限：主流95℃，X3D系列89℃">AMD确认锐龙处理器安全结温上限：主流95℃，X3D系列89℃</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#ff5a36">爱</span><h2>爱范儿</h2></div><ol class="list"><li><a href="https://www.ifanr.com/1689792" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」">12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」</span></a></li><li><a href="https://www.ifanr.com/1689638" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="微软全球大宕机，AI 怎么又成了背锅侠">微软全球大宕机，AI 怎么又成了背锅侠</span></a></li><li><a href="https://www.ifanr.com/1689760" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日">早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日</span></a></li><li><a href="https://www.ifanr.com/1689594" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="影石这张「魔法相纸」，怎么治好了我的相册吃灰症？">影石这张「魔法相纸」，怎么治好了我的相册吃灰症？</span></a></li><li><a href="https://www.ifanr.com/1689712" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？">苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？</span></a></li><li><a href="https://www.ifanr.com/1689701" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！">几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！</span></a></li><li><a href="https://www.ifanr.com/1689653" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页">实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页</span></a></li><li><a href="https://www.ifanr.com/1689628" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验">制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验</span></a></li><li><a href="https://www.ifanr.com/1689616" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods">苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods</span></a></li><li><a href="https://www.ifanr.com/1689559" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="超 16 万人请愿，黄仁勋准备「回宫」">超 16 万人请愿，黄仁勋准备「回宫」</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#fc5531">C</span><h2>CSDN</h2></div><ol class="list"><li><a href="https://blog.csdn.net/zhangcongyi420/article/details/169847875" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="【AI智能体】Codex + Harness Engineering 实战开发ChatBot 项目详解">【AI智能体】Codex + Harness Engineering 实战开发ChatBot 项目详解</span></a></li><li><a href="https://blog.csdn.net/say_fall/article/details/170779250" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="【CUDA编程】GPU通用计算：CPU与GPU的设计差异、线程网格与Warp执行、内存层次与合并访问、架构演进与工具链优化">【CUDA编程】GPU通用计算：CPU与GPU的设计差异、线程网格与Warp执行、内存层次与合并访问、架构演进与工具链优化</span></a></li><li><a href="https://blog.csdn.net/2401_87629362/article/details/170777858" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="从文档入库到售后问答，让AI的回答有据可查：Nexent知识库与RAG深度实测">从文档入库到售后问答，让AI的回答有据可查：Nexent知识库与RAG深度实测</span></a></li><li><a href="https://blog.csdn.net/2402_87731470/article/details/170444769" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="【Linux网络】TCP 半包粘包怎么解决？从长度报头、JSON 拆包到网络计算器完整实战">【Linux网络】TCP 半包粘包怎么解决？从长度报头、JSON 拆包到网络计算器完整实战</span></a></li><li><a href="https://blog.csdn.net/aiclaws/article/details/170859593" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="临时电脑上什么办公软件都没有？我把GodoOS放进浏览器，打开就是一套办公桌面">临时电脑上什么办公软件都没有？我把GodoOS放进浏览器，打开就是一套办公桌面</span></a></li><li><a href="https://blog.csdn.net/Rqaqedamancy/article/details/170859844" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="演示网页时不想共享整台电脑？我在NAS里放了一个多人共用的隔离浏览器">演示网页时不想共享整台电脑？我在NAS里放了一个多人共用的隔离浏览器</span></a></li><li><a href="https://blog.csdn.net/sinat_41617212/article/details/170821581" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="用 Spring AI 做文本分类/摘要：落地到后台工作流（无人值守批处理实战）">用 Spring AI 做文本分类/摘要：落地到后台工作流（无人值守批处理实战）</span></a></li><li><a href="https://blog.csdn.net/2401_89899187/article/details/170771570" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="【AI大模型接入SDK】历史消息时间戳问题与时间戳问题">【AI大模型接入SDK】历史消息时间戳问题与时间戳问题</span></a></li><li><a href="https://blog.csdn.net/2502_93799982/article/details/170776868" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="一篇看懂 Spring AOP：核心概念 + 五种通知 + 切点表达式 + 动态代理（附案例和流程图）">一篇看懂 Spring AOP：核心概念 + 五种通知 + 切点表达式 + 动态代理（附案例和流程图）</span></a></li><li><a href="https://blog.csdn.net/2302_78391795/article/details/170859168" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="Constitutional_AI_Claude背后的安全对齐方法">Constitutional_AI_Claude背后的安全对齐方法</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#ff6a00">嗅</span><h2>虎嗅</h2></div><ol class="list"><li><a href="https://www.huxiu.com/article/4905656.html" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="人生回报率最高的20件小事">人生回报率最高的20件小事</span></a></li><li><a href="https://www.huxiu.com/article/4904620.html" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="“零元面馆”终将成闹剧，因为慈善有边界、人性无下限">“零元面馆”终将成闹剧，因为慈善有边界、人性无下限</span></a></li><li><a href="https://www.huxiu.com/article/4904580.html" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="赛博义父终于扛不住了">赛博义父终于扛不住了</span></a></li><li><a href="https://www.huxiu.com/article/4902431.html" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="字节旧部创业，在海外杀疯了">字节旧部创业，在海外杀疯了</span></a></li><li><a href="https://www.huxiu.com/article/4904447.html" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="越来越多的中国人，正在花钱买别人的命">越来越多的中国人，正在花钱买别人的命</span></a></li><li><a href="https://www.huxiu.com/article/4905762.html" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="达里奥为什么要整黄仁勋？">达里奥为什么要整黄仁勋？</span></a></li><li><a href="https://www.huxiu.com/article/4905198.html" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="一朝天子一朝臣，激流勇退且藏身">一朝天子一朝臣，激流勇退且藏身</span></a></li><li><a href="https://www.huxiu.com/article/4904685.html" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="最快女护士辞职一年，编制神话碎了一地">最快女护士辞职一年，编制神话碎了一地</span></a></li><li><a href="https://www.huxiu.com/article/4904673.html" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="在中国车市无人注意的角落里，日系车快烂完了">在中国车市无人注意的角落里，日系车快烂完了</span></a></li><li><a href="https://www.huxiu.com/article/4904821.html" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="你再小众文艺，你逃得过红果引力吗？">你再小众文艺，你逃得过红果引力吗？</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#e93b3d">值</span><h2>值得买热门</h2></div><ol class="list"><li><a href="https://www.smzdm.com/p/186270191/" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="今日必买：酷态科 10000毫安 移动电源 口袋版套装A">今日必买：酷态科 10000毫安 移动电源 口袋版套装A</span></a></li><li><a href="https://www.smzdm.com/p/186173997/" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="九眼桥 多功能牛油火锅底料 50g*20袋">九眼桥 多功能牛油火锅底料 50g*20袋</span></a></li><li><a href="https://www.smzdm.com/p/186264844/" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="百亿补贴、今日必买：中兴 AX3000T 满血WiFi6 千兆无线路由器">百亿补贴、今日必买：中兴 AX3000T 满血WiFi6 千兆无线路由器</span></a></li><li><a href="https://www.smzdm.com/p/186273936/" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="国家补贴、今日必买：小米 智能中控屏 内置网关AI大模型 全屋智能中枢控制家庭面板411">国家补贴、今日必买：小米 智能中控屏 内置网关AI大模型 全屋智能中枢控制家庭面板411</span></a></li><li><a href="https://www.smzdm.com/p/186283550/" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="今日必买：欧普照明 隐形风扇灯 冰风2 高亮 呵护光 36寸 24瓦 （免费安装）">今日必买：欧普照明 隐形风扇灯 冰风2 高亮 呵护光 36寸 24瓦 （免费安装）</span></a></li><li><a href="https://www.smzdm.com/p/186247693/" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="爱丽思 抽屉式收纳箱 37L BC-450 磨砂白色">爱丽思 抽屉式收纳箱 37L BC-450 磨砂白色</span></a></li><li><a href="https://www.smzdm.com/p/186168851/" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="喜之郎 蒟蒻果冻桶 520克*1桶（任选）">喜之郎 蒟蒻果冻桶 520克*1桶（任选）</span></a></li><li><a href="https://www.smzdm.com/p/186205837/" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="今日必买：京鲜生 尝鲜好价！丹东99红颜奶油草莓 净重1.8斤（新季上市）">今日必买：京鲜生 尝鲜好价！丹东99红颜奶油草莓 净重1.8斤（新季上市）</span></a></li><li><a href="https://www.smzdm.com/p/186231142/" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="今日必买：阿克苏苹果 新疆阿克苏冰糖心 带箱10斤">今日必买：阿克苏苹果 新疆阿克苏冰糖心 带箱10斤</span></a></li><li><a href="https://www.smzdm.com/p/186270909/" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="今日必买：金典 伊利金典纯牛奶250ml*24盒整箱环保装随机发货9月产">今日必买：金典 伊利金典纯牛奶250ml*24盒整箱环保装随机发货9月产</span></a></li></ol></section>
+<section class="card"><div class="card-head"><span class="badge" style="--brand:#1e80ff">掘</span><h2>掘金</h2></div><ol class="list"><li><a href="https://juejin.cn/post/7655245911811784750" target="_blank" rel="noopener noreferrer"><span class="rank">1</span><span class="title" title="面试官问你：“AI 能写 80% 的代码了，公司为什么还需要你？”">面试官问你：“AI 能写 80% 的代码了，公司为什么还需要你？”</span></a></li><li><a href="https://juejin.cn/post/7684460980934049807" target="_blank" rel="noopener noreferrer"><span class="rank">2</span><span class="title" title="从codex转战workbuddy使用一周的感受">从codex转战workbuddy使用一周的感受</span></a></li><li><a href="https://juejin.cn/post/7691030977348108351" target="_blank" rel="noopener noreferrer"><span class="rank">3</span><span class="title" title="一个人+AI做情侣食谱小程序，30天纯赚">一个人+AI做情侣食谱小程序，30天纯赚</span></a></li><li><a href="https://juejin.cn/post/7702866392132337718" target="_blank" rel="noopener noreferrer"><span class="rank">4</span><span class="title" title="我用workBuddy开发了自己的第一个小程序并成功上线了">我用workBuddy开发了自己的第一个小程序并成功上线了</span></a></li><li><a href="https://juejin.cn/post/7692440533922971667" target="_blank" rel="noopener noreferrer"><span class="rank">5</span><span class="title" title="副业搞起来，小说，漫画，漫剧的成本优化思路">副业搞起来，小说，漫画，漫剧的成本优化思路</span></a></li><li><a href="https://juejin.cn/post/7695999629460029466" target="_blank" rel="noopener noreferrer"><span class="rank">6</span><span class="title" title="2028编程圈很火的10个Skills">2028编程圈很火的10个Skills</span></a></li><li><a href="https://juejin.cn/post/7706534471420461098" target="_blank" rel="noopener noreferrer"><span class="rank">7</span><span class="title" title="你们公司有 35 岁以上的前端吗？">你们公司有 35 岁以上的前端吗？</span></a></li><li><a href="https://juejin.cn/post/7693821701955567670" target="_blank" rel="noopener noreferrer"><span class="rank">8</span><span class="title" title="Spring AI Alibaba已停更了，Java还有希望吗？">Spring AI Alibaba已停更了，Java还有希望吗？</span></a></li><li><a href="https://juejin.cn/post/7683353819855077412" target="_blank" rel="noopener noreferrer"><span class="rank">9</span><span class="title" title="每天白嫖 WorkBuddy 100 积分，我让WorkBuddy自己领">每天白嫖 WorkBuddy 100 积分，我让WorkBuddy自己领</span></a></li><li><a href="https://juejin.cn/post/7698382188488048649" target="_blank" rel="noopener noreferrer"><span class="rank">10</span><span class="title" title="手机到底有没有偷听我们？我抓包了 72 小时，抓到了真凶">手机到底有没有偷听我们？我抓包了 72 小时，抓到了真凶</span></a></li></ol></section></div>
 </main>
-<footer class="footer"><p><a href="../index.html">← 返回日报目录</a></p></footer>
+<footer class="footer"><a href="../index.html">返回日报目录</a></footer>
 <script>(function () {
   var root = document.documentElement;
   var btn = document.getElementById("themeToggle");
+  if (!btn) return;
   function label() {
-    btn.textContent = root.getAttribute("data-theme") === "dark" ? "☀️ 浅色" : "🌙 深色";
+    btn.textContent = root.getAttribute("data-theme") === "dark" ? "浅色" : "深色";
   }
   btn.addEventListener("click", function () {
     var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
