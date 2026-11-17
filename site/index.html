@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 9 个站点的热榜，按日期归档。">
-<title>热榜日报</title>
+<meta name="description" content="今日摘要：每天 09:00、14:00、19:00 聚合 9 个公开信息源，按日期归档。">
+<title>今日摘要</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>(function () {
   try {
@@ -131,19 +131,19 @@ a:hover { text-decoration: underline; }
   padding: 0 8px 10px;
 }
 .badge {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   flex: none;
   display: grid;
   place-items: center;
   border-radius: 8px;
-  background: var(--brand, var(--accent));
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: -.02em;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
 }
-.badge.wide { font-size: 9px; }
+.badge.wide { font-size: 10.5px; }
 .card-head h2 {
   margin: 0;
   font-size: 15px;
@@ -313,9 +313,9 @@ a:focus-visible, .theme-toggle:focus-visible {
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">每日热榜快照</p>
-    <h1>热榜日报</h1>
-    <p class="sub">聚合全网主流平台热榜，每天自动生成热点快照。</p>
+    <p class="eyebrow">每日更新</p>
+    <h1>今日摘要</h1>
+    <p class="sub">聚合公开信息源，每天自动生成内容摘要。</p>
   </section>
   <section class="timeline" aria-label="日报目录">
 <section class="month"><h2 class="month-title">2026 年 11 月</h2><ol class="entries"><li><a class="entry" href="archive/2026-11-17.html"><span class="entry-date"><b>11月17日</b><span>星期二</span></span><span class="entry-meta">9 个板块 · 88 条</span><span class="tag">最新</span><span class="entry-chevron" aria-hidden="true">›</span></a></li></ol></section>
