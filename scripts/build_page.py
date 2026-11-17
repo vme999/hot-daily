@@ -339,6 +339,12 @@ THEME_TOGGLE_JS = """(function () {
   });
 })();"""
 
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="15" fill="#e5484d"/>
+  <text x="32" y="44" text-anchor="middle" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="36" font-weight="700" fill="#ffffff">热</text>
+</svg>
+"""
+
 TEMPLATE = """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -347,6 +353,7 @@ TEMPLATE = """<!DOCTYPE html>
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="%%DATE_SHORT%%热榜日报：12 个站点的每日热榜快照。">
 <title>%%TITLE%%</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
 </head>
@@ -377,6 +384,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 12 个站点的热榜，按日期归档。">
 <title>热榜日报</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
 </head>
@@ -545,6 +553,13 @@ def write_index(records: list[dict]) -> str:
     return path
 
 
+def write_favicon() -> str:
+    path = os.path.join(SITE_DIR, "favicon.svg")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(FAVICON)
+    return path
+
+
 def write_latest(records: list[dict]) -> str:
     """生成固定地址 latest.html，始终跳到最新一期。"""
     target = f'archive/{records[0]["date"]}.html' if records else "index.html"
@@ -554,6 +569,7 @@ def write_latest(records: list[dict]) -> str:
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
         f'<meta http-equiv="refresh" content="0; url={target}">\n'
         f'<link rel="canonical" href="{target}">\n'
+        '<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
         "<title>热榜日报 · 最新一期</title>\n"
         f'<script>location.replace("{target}");</script>\n'
         "</head>\n<body>\n"
@@ -587,6 +603,7 @@ def main() -> int:
             print(write_archive(data))
 
     records = [archive_record(load_json(path)) for path in data_files()]
+    print(write_favicon())
     print(write_index(records))
     print(write_latest(records))
     return 0
