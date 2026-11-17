@@ -2,8 +2,8 @@ name: Daily hot list
 
 on:
   schedule:
-    # 23:30 UTC = 次日 07:30 Asia/Shanghai
-    - cron: "30 23 * * *"
+    # 01:00 / 06:00 / 11:00 UTC = 09:00 / 14:00 / 19:00 Asia/Shanghai
+    - cron: "0 1,6,11 * * *"
   workflow_dispatch:
 
 permissions:

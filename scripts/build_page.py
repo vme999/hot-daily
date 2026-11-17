@@ -394,7 +394,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="热榜日报：每天 07:30 抓取 12 个站点的热榜，按日期归档。">
+<meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 12 个站点的热榜，按日期归档。">
 <title>热榜日报</title>
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
@@ -410,7 +410,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   <section class="hero">
     <p class="eyebrow">每日热榜快照</p>
     <h1>热榜日报</h1>
-    <p class="sub">聚合 12 个站点的热榜，每天 07:30 生成一份快照。共 %%COUNT%% 期。</p>
+    <p class="sub">聚合 12 个站点的热榜，每天 09:00、14:00、19:00 刷新当日快照。共 %%COUNT%% 期。</p>
   </section>
   <section class="timeline" aria-label="日报目录">
 %%ENTRIES%%
