@@ -23,7 +23,7 @@ BADGE_COLORS = {
     "爱范儿": "#BF5AF2",
     "36氪": "#5E5CE6",
     "虎嗅": "#34C759",
-    "GitHub 趋势": "#3A3A3C",
+    "GitHub 趋势": "#FF2D92",
     "Hacker News": "#FF6A00",
     "X 趋势": "#1F8AA8",
 }
@@ -57,13 +57,24 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(42% 42% at 14% 6%, rgba(10, 132, 255, .16), transparent 70%),
+    radial-gradient(36% 36% at 86% 14%, rgba(191, 90, 242, .12), transparent 70%),
+    radial-gradient(46% 46% at 50% 104%, rgba(255, 159, 10, .10), transparent 70%);
+  background-attachment: fixed;
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color .3s ease, color .3s ease;
+}
+[data-theme="dark"] body {
+  background-image:
+    radial-gradient(42% 42% at 14% 6%, rgba(10, 132, 255, .22), transparent 70%),
+    radial-gradient(36% 36% at 86% 14%, rgba(191, 90, 242, .18), transparent 70%),
+    radial-gradient(46% 46% at 50% 104%, rgba(255, 159, 10, .12), transparent 70%);
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -73,23 +84,37 @@ a:hover { text-decoration: underline; }
   top: 24px;
   z-index: 30;
   appearance: none;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   display: grid;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, .6);
   border-radius: 50%;
-  background: var(--surface);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .42));
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
   color: var(--text);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .12),
+    inset 0 1px 0 rgba(255, 255, 255, .85);
   cursor: pointer;
   transition: transform .2s ease, border-color .2s ease, background-color .25s ease;
 }
+[data-theme="dark"] .theme-toggle {
+  border-color: rgba(255, 255, 255, .16);
+  background: linear-gradient(135deg, rgba(58, 58, 60, .66), rgba(28, 28, 30, .45));
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .5),
+    inset 0 1px 0 rgba(255, 255, 255, .18);
+}
 .theme-toggle:hover {
   transform: scale(1.06);
-  border-color: transparent;
-  background: var(--hover);
+  border-color: rgba(255, 255, 255, .8);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .theme-toggle,
+  [data-theme="dark"] .theme-toggle { background: var(--surface); }
 }
 .theme-toggle svg { width: 20px; height: 20px; display: none; }
 .theme-toggle .icon-moon { display: block; }
@@ -133,10 +158,17 @@ a:hover { text-decoration: underline; }
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 26px;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, .08),
+    inset 0 1px 0 rgba(255, 255, 255, .9);
   padding: 20px 16px 12px;
   transition: background-color .3s ease, border-color .2s ease;
+}
+[data-theme="dark"] .card {
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, .5),
+    inset 0 1px 0 rgba(255, 255, 255, .07);
 }
 .card-head {
   display: flex;
