@@ -435,7 +435,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="今日摘要：每天 09:00 至 19:00 每两小时聚合 9 个公开信息源，按日期归档。">
-<title>今日摘要</title>
+<title>热榜日报</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
@@ -444,7 +444,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <main>
   <section class="hero">
     <p class="eyebrow">每日更新</p>
-    <h1>今日摘要</h1>
+    <h1>热榜日报</h1>
     <p class="sub">聚合公开信息源，每天自动生成内容摘要。</p>
   </section>
   <section class="timeline" aria-label="日报目录">
