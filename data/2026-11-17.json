@@ -246,6 +246,484 @@
           "hot": ""
         }
       ]
+    },
+    {
+      "id": "36kr",
+      "name": "36氪",
+      "icon": "36",
+      "color": "#2f6bff",
+      "home": "https://36kr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "8点1氪丨黄仁勋考虑回归担任英伟达CEO；129万/支的“天价抗癌药”进医保了；美国罕见全国停飞超4小时",
+          "url": "https://www.36kr.com/p/4071682515817605",
+          "hot": ""
+        },
+        {
+          "title": "一张图吓得研究员当场辞职，Anthropic最疯神图流出",
+          "url": "https://www.36kr.com/p/4071615621977222",
+          "hot": ""
+        },
+        {
+          "title": "美联储报告拆解AI算力债务：6800亿美元发行、3万亿美元表外承诺，循环融资何解？",
+          "url": "https://www.36kr.com/p/4071919873922948",
+          "hot": ""
+        },
+        {
+          "title": "“早7晚12”、一场只赚十几块，农村女性为何还要做直播",
+          "url": "https://www.36kr.com/p/4068882284024963",
+          "hot": ""
+        },
+        {
+          "title": "“易中天”又反向暴涨，Nike、阿迪的代工商也进来抢生意",
+          "url": "https://www.36kr.com/p/4072268997842816",
+          "hot": ""
+        },
+        {
+          "title": "黄仁勋想回来，AI却回不去了",
+          "url": "https://www.36kr.com/p/4071888870953860",
+          "hot": ""
+        },
+        {
+          "title": "暴涨889%、半年破百亿，字节阿里百度火拼新战场",
+          "url": "https://www.36kr.com/p/4071619818574976",
+          "hot": ""
+        },
+        {
+          "title": "文科最体面的职业，劝退中国年轻人",
+          "url": "https://www.36kr.com/p/4071905615484035",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "icon": "嗅",
+      "color": "#ff6a00",
+      "home": "https://www.huxiu.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "人生回报率最高的20件小事",
+          "url": "https://www.huxiu.com/article/4905656.html",
+          "hot": "76.4万"
+        },
+        {
+          "title": "“零元面馆”终将成闹剧，因为慈善有边界、人性无下限",
+          "url": "https://www.huxiu.com/article/4904620.html",
+          "hot": "48.7万"
+        },
+        {
+          "title": "赛博义父终于扛不住了",
+          "url": "https://www.huxiu.com/article/4904580.html",
+          "hot": "45.8万"
+        },
+        {
+          "title": "字节旧部创业，在海外杀疯了",
+          "url": "https://www.huxiu.com/article/4902431.html",
+          "hot": "45.1万"
+        },
+        {
+          "title": "达里奥为什么要整黄仁勋？",
+          "url": "https://www.huxiu.com/article/4905762.html",
+          "hot": "50.0万"
+        },
+        {
+          "title": "一朝天子一朝臣，激流勇退且藏身",
+          "url": "https://www.huxiu.com/article/4905198.html",
+          "hot": "34.3万"
+        },
+        {
+          "title": "最快女护士辞职一年，编制神话碎了一地",
+          "url": "https://www.huxiu.com/article/4904685.html",
+          "hot": "32.4万"
+        },
+        {
+          "title": "在中国车市无人注意的角落里，日系车快烂完了",
+          "url": "https://www.huxiu.com/article/4904673.html",
+          "hot": "30.5万"
+        },
+        {
+          "title": "你再小众文艺，你逃得过红果引力吗？",
+          "url": "https://www.huxiu.com/article/4904821.html",
+          "hot": "32.8万"
+        },
+        {
+          "title": "为什么黄仁勋出轨直接下台，马斯克孩子都生了4个了也没事？",
+          "url": "https://www.huxiu.com/article/4905308.html",
+          "hot": "27.7万"
+        }
+      ]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "DeepSeek 不限额的用法，都在这里了 | 附指南",
+          "url": "https://www.ifanr.com/1689869",
+          "hot": ""
+        },
+        {
+          "title": "12.69 万的「穷人版卫士」，成了中国汽车出海的「老鼠屎」",
+          "url": "https://www.ifanr.com/1689792",
+          "hot": ""
+        },
+        {
+          "title": "微软全球大宕机，AI 怎么又成了背锅侠",
+          "url": "https://www.ifanr.com/1689638",
+          "hot": ""
+        },
+        {
+          "title": "早报｜iPhone Duo新增外屏人脸解锁/曝英伟达董事会无意请回黄仁勋/华为Mate X8定档11月24日",
+          "url": "https://www.ifanr.com/1689760",
+          "hot": ""
+        },
+        {
+          "title": "影石这张「魔法相纸」，怎么治好了我的相册吃灰症？",
+          "url": "https://www.ifanr.com/1689594",
+          "hot": ""
+        },
+        {
+          "title": "苹果眼镜明年见：没有屏幕，全靠 Siri 撑场面？",
+          "url": "https://www.ifanr.com/1689712",
+          "hot": ""
+        },
+        {
+          "title": "几乎每家国产新能源都在营销的「6 人 12 箱」，原来根本就是违法的！",
+          "url": "https://www.ifanr.com/1689701",
+          "hot": ""
+        },
+        {
+          "title": "实测腾讯 Hy4 flash：花两毛钱，就能让 AI 从零做个 3D 交互网页",
+          "url": "https://www.ifanr.com/1689653",
+          "hot": ""
+        },
+        {
+          "title": "制糖工厂推出 EdgeTie 边边线，以转角贴边设计改善车内充电体验",
+          "url": "https://www.ifanr.com/1689628",
+          "hot": ""
+        },
+        {
+          "title": "苹果智能眼镜细节曝光，居然是戴在脸上的 AirPods",
+          "url": "https://www.ifanr.com/1689616",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "bilibili",
+      "name": "哔哩哔哩",
+      "icon": "B",
+      "color": "#00a1d6",
+      "home": "https://www.bilibili.com/v/popular/rank/all",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "【2026全球总决赛】11月15日 GEN vs BLG",
+          "url": "https://b23.tv/BV15es76gEgL",
+          "hot": "2742 万"
+        },
+        {
+          "title": "BLG S16夺冠赞歌《仰望星空》",
+          "url": "https://b23.tv/BV14VsJ6aEJd",
+          "hot": "303 万"
+        },
+        {
+          "title": "1穿4连斩LCK战队！恭喜BLG，加冕为王！",
+          "url": "https://b23.tv/BV1yvsj6SE6m",
+          "hot": "257 万"
+        },
+        {
+          "title": "命运让他们彼此对立，也让他们彼此靠近｜上",
+          "url": "https://b23.tv/BV1jHsp69Ekg",
+          "hot": "280 万"
+        },
+        {
+          "title": "【卜劳恩《父与子》/非凡父爱】“如果没有那一场残酷的战争，父与子的结局或许会是这样……”",
+          "url": "https://b23.tv/BV1Zos36FEZz",
+          "hot": "459 万"
+        },
+        {
+          "title": "根本没有这样的夹子",
+          "url": "https://b23.tv/BV12oWi6VEz7",
+          "hot": "610 万"
+        },
+        {
+          "title": "“成华大道没有「烂奇迹」”",
+          "url": "https://b23.tv/BV1BDsE67Eom",
+          "hot": "134 万"
+        },
+        {
+          "title": "我是Tim，我变不动了...",
+          "url": "https://b23.tv/BV1BJsV6PEek",
+          "hot": "190 万"
+        },
+        {
+          "title": "三年之期已到，恭迎世一上归位！【第18集】",
+          "url": "https://b23.tv/BV1uUsJ6BES6",
+          "hot": "247 万"
+        },
+        {
+          "title": "BLG夺冠单曲《十年人间》——“旧时梦魇，今日高声唱！”",
+          "url": "https://b23.tv/BV1Cvsj6SENy",
+          "hot": "160 万"
+        }
+      ]
+    },
+    {
+      "id": "douyin",
+      "name": "抖音热点",
+      "icon": "抖",
+      "color": "#fe2c55",
+      "home": "https://www.douyin.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "APEC峰会有哪些领导人参加",
+          "url": "https://www.douyin.com/search/APEC峰会有哪些领导人参加",
+          "hot": "1195.1万"
+        },
+        {
+          "title": "APEC参会嘉宾陆续抵达深圳",
+          "url": "https://www.douyin.com/search/APEC参会嘉宾陆续抵达深圳",
+          "hot": "1140.7万"
+        },
+        {
+          "title": "鲲鹏乘势共赴亚太之约",
+          "url": "https://www.douyin.com/search/鲲鹏乘势共赴亚太之约",
+          "hot": "1124.1万"
+        },
+        {
+          "title": "在深圳读懂APEC中国故事",
+          "url": "https://www.douyin.com/search/在深圳读懂APEC中国故事",
+          "hot": "1110.4万"
+        },
+        {
+          "title": "76人135:123战胜篮网",
+          "url": "https://www.douyin.com/search/76人135:123战胜篮网",
+          "hot": "1048.8万"
+        },
+        {
+          "title": "APEC普通人秒懂指南",
+          "url": "https://www.douyin.com/search/APEC普通人秒懂指南",
+          "hot": "1047.2万"
+        },
+        {
+          "title": "东营观鸟浪全攻略",
+          "url": "https://www.douyin.com/search/东营观鸟浪全攻略",
+          "hot": "936.5万"
+        },
+        {
+          "title": "APEC媒体中心餐食出圈",
+          "url": "https://www.douyin.com/search/APEC媒体中心餐食出圈",
+          "hot": "922.6万"
+        },
+        {
+          "title": "APEC区域经济增长高于预期",
+          "url": "https://www.douyin.com/search/APEC区域经济增长高于预期",
+          "hot": "916.2万"
+        },
+        {
+          "title": "非遗暖居过冬仪式感",
+          "url": "https://www.douyin.com/search/非遗暖居过冬仪式感",
+          "hot": "876.2万"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub 趋势",
+      "icon": "GH",
+      "color": "#24292f",
+      "home": "https://github.com/trending",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "ag-ui-protocol / ag-ui",
+          "url": "https://github.com/ag-ui-protocol/ag-ui",
+          "hot": "2.0万"
+        },
+        {
+          "title": "backnotprop / plannotator",
+          "url": "https://github.com/backnotprop/plannotator",
+          "hot": "1.3万"
+        },
+        {
+          "title": "dream-num / univer",
+          "url": "https://github.com/dream-num/univer",
+          "hot": "2.9万"
+        },
+        {
+          "title": "tradermonty / claude-trading-skills",
+          "url": "https://github.com/tradermonty/claude-trading-skills",
+          "hot": "6649"
+        },
+        {
+          "title": "elementalsouls / Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "hot": "7871"
+        },
+        {
+          "title": "getarcaneapp / arcane",
+          "url": "https://github.com/getarcaneapp/arcane",
+          "hot": "8977"
+        },
+        {
+          "title": "DeanChensj / jiangshan-map",
+          "url": "https://github.com/DeanChensj/jiangshan-map",
+          "hot": "7462"
+        },
+        {
+          "title": "google-labs-code / stitch-skills",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "hot": "9875"
+        },
+        {
+          "title": "mvanhorn / last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "hot": "6.8万"
+        },
+        {
+          "title": "NVIDIA / SkillEvaluator",
+          "url": "https://github.com/NVIDIA/SkillEvaluator",
+          "hot": "3082"
+        }
+      ]
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "icon": "HN",
+      "color": "#ff6600",
+      "home": "https://news.ycombinator.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+          "url": "https://www.cs.cmu.edu/learn/",
+          "hot": "1485 分"
+        },
+        {
+          "title": "Technical issue at JPMorgan Chase triggers online banking delays for US banks",
+          "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
+          "hot": "773 分"
+        },
+        {
+          "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+          "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+          "hot": "593 分"
+        },
+        {
+          "title": "BugMeNot has closed",
+          "url": "https://www.bugmenot.com/",
+          "hot": "532 分"
+        },
+        {
+          "title": "Frame – 31.5\" color ePaper display",
+          "url": "https://trmnl.com/blog/introducing-frame",
+          "hot": "409 分"
+        },
+        {
+          "title": "Jiff 1.0: A datetime library for Rust",
+          "url": "https://burntsushi.net/jiff/",
+          "hot": "376 分"
+        },
+        {
+          "title": "What is w2rt6byl5nf1opmc-a.com?",
+          "url": "https://jack.cab/blog/siterate",
+          "hot": "344 分"
+        },
+        {
+          "title": "Optimizely compromised, served malware on Zoom, GitLab",
+          "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+          "hot": "327 分"
+        },
+        {
+          "title": "Microsoft blames monster email outage on software defect introduced in July fix",
+          "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026",
+          "hot": "320 分"
+        },
+        {
+          "title": "Grazing sheep in fields with solar arrays",
+          "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
+          "hot": "272 分"
+        }
+      ]
+    },
+    {
+      "id": "xtrends",
+      "name": "X 趋势",
+      "icon": "X",
+      "color": "#0f1419",
+      "home": "https://x.com/explore",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Chargers",
+          "url": "https://x.com/search?q=Chargers",
+          "hot": ""
+        },
+        {
+          "title": "Ravens",
+          "url": "https://x.com/search?q=Ravens",
+          "hot": ""
+        },
+        {
+          "title": "zay flowers",
+          "url": "https://x.com/search?q=zay%20flowers",
+          "hot": ""
+        },
+        {
+          "title": "derrick henry",
+          "url": "https://x.com/search?q=derrick%20henry",
+          "hot": ""
+        },
+        {
+          "title": "#LamansionVIP2",
+          "url": "https://x.com/search?q=%23LamansionVIP2",
+          "hot": ""
+        },
+        {
+          "title": "Lamar",
+          "url": "https://x.com/search?q=Lamar",
+          "hot": ""
+        },
+        {
+          "title": "#WWERAW",
+          "url": "https://x.com/search?q=%23WWERAW",
+          "hot": ""
+        },
+        {
+          "title": "#Dragula",
+          "url": "https://x.com/search?q=%23Dragula",
+          "hot": ""
+        },
+        {
+          "title": "Itati",
+          "url": "https://x.com/search?q=Itati",
+          "hot": ""
+        },
+        {
+          "title": "Minter",
+          "url": "https://x.com/search?q=Minter",
+          "hot": ""
+        }
+      ]
     }
   ]
 }
