@@ -22,8 +22,8 @@ BADGE_COLORS = {
     "微博热搜": "#FF453A",
     "爱范儿": "#BF5AF2",
     "36氪": "#5E5CE6",
-    "虎嗅": "#AC8E68",
-    "GitHub 趋势": "#8E8E93",
+    "虎嗅": "#34C759",
+    "GitHub 趋势": "#3A3A3C",
     "Hacker News": "#FF6A00",
     "X 趋势": "#1F8AA8",
 }
@@ -145,21 +145,21 @@ a:hover { text-decoration: underline; }
   padding: 0 8px 10px;
 }
 .badge {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   flex: none;
   display: grid;
   place-items: center;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--brand) 12%, transparent);
-  color: color-mix(in srgb, var(--brand) 50%, var(--text));
+  background: color-mix(in srgb, var(--brand) 20%, transparent);
+  color: color-mix(in srgb, var(--brand) 88%, var(--text));
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
 }
 [data-theme="dark"] .badge {
-  background: color-mix(in srgb, var(--brand) 20%, transparent);
-  color: color-mix(in srgb, var(--brand) 55%, #ffffff);
+  background: color-mix(in srgb, var(--brand) 28%, transparent);
+  color: color-mix(in srgb, var(--brand) 78%, #ffffff);
 }
 .badge.wide { font-size: 10.5px; }
 .card-head h2 {
@@ -198,9 +198,9 @@ a:hover { text-decoration: underline; }
   font-variant-numeric: tabular-nums;
 }
 .list li:nth-child(-n+3) .rank { font-weight: 600; }
-.list li:nth-child(1) .rank { color: color-mix(in srgb, var(--brand) 60%, var(--text)); }
-.list li:nth-child(2) .rank { color: color-mix(in srgb, var(--brand) 42%, var(--text)); }
-.list li:nth-child(3) .rank { color: color-mix(in srgb, var(--brand) 28%, var(--text)); }
+.list li:nth-child(1) .rank { color: color-mix(in srgb, var(--brand) 82%, var(--text)); }
+.list li:nth-child(2) .rank { color: color-mix(in srgb, var(--brand) 64%, var(--text)); }
+.list li:nth-child(3) .rank { color: color-mix(in srgb, var(--brand) 46%, var(--text)); }
 .title {
   flex: 1;
   min-width: 0;
