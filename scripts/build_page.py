@@ -197,7 +197,10 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.list li:nth-child(-n+3) .rank { color: var(--text); font-weight: 600; }
+.list li:nth-child(-n+3) .rank { font-weight: 600; }
+.list li:nth-child(1) .rank { color: color-mix(in srgb, var(--brand) 60%, var(--text)); }
+.list li:nth-child(2) .rank { color: color-mix(in srgb, var(--brand) 42%, var(--text)); }
+.list li:nth-child(3) .rank { color: color-mix(in srgb, var(--brand) 28%, var(--text)); }
 .title {
   flex: 1;
   min-width: 0;
@@ -460,9 +463,9 @@ def render_card(source: dict) -> str:
             'rel="noopener noreferrer">去原站看看 →</a></li>'
         )
     return (
-        '<section class="card">'
+        f'<section class="card" style="--brand:{escape(brand)}">'
         '<div class="card-head">'
-        f'<span class="badge{wide}" style="--brand:{escape(brand)}">{icon}</span>'
+        f'<span class="badge{wide}">{icon}</span>'
         f'<h2>{escape(source.get("name"))}</h2>'
         "</div>"
         f'<ol class="list">{body}</ol>'
