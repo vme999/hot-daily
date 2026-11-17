@@ -15,3 +15,591 @@ DATA_DIR = os.path.join(ROOT, "data")
 SITE_DIR = os.path.join(ROOT, "site")
 ARCHIVE_DIR = os.path.join(SITE_DIR, "archive")
 WEEKDAYS = "一二三四五六日"
+
+CSS = """
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --line: rgba(0, 0, 0, .08);
+  --hover: rgba(0, 0, 0, .035);
+  --accent: #0071e3;
+  --accent-soft: rgba(0, 113, 227, .1);
+  --nav-bg: rgba(245, 245, 247, .78);
+  --radius: 20px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+[data-theme="dark"] {
+  --bg: #000000;
+  --surface: #1d1d1f;
+  --text: #f5f5f7;
+  --muted: #86868b;
+  --line: rgba(255, 255, 255, .12);
+  --hover: rgba(255, 255, 255, .06);
+  --accent: #2997ff;
+  --accent-soft: rgba(41, 151, 255, .14);
+  --nav-bg: rgba(0, 0, 0, .72);
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .3s ease, color .3s ease;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 52px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand:hover { text-decoration: none; opacity: .72; }
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 14px;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.theme-toggle:hover {
+  background: var(--hover);
+  color: var(--text);
+  border-color: transparent;
+}
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 68px 28px 34px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--accent);
+}
+.hero h1 {
+  margin: 10px 0 0;
+  font-size: clamp(34px, 5.4vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -.02em;
+  font-weight: 700;
+}
+.hero .sub {
+  margin: 14px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--muted);
+  letter-spacing: -.01em;
+}
+.grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6px 28px 64px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 16px 12px;
+  transition: background-color .3s ease, border-color .2s ease;
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px 10px;
+}
+.badge {
+  width: 26px;
+  height: 26px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--brand, var(--accent));
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.badge.wide { font-size: 9px; }
+.card-head h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list { list-style: none; margin: 0; padding: 0; }
+.list li + li { border-top: 1px solid var(--line); }
+.list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  margin: 0 -8px;
+  border-radius: 9px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+  letter-spacing: -.006em;
+  text-decoration: none;
+  transition: background-color .15s ease;
+}
+.list a:hover { background: var(--hover); text-decoration: none; }
+.list a:hover .title { color: var(--accent); }
+.rank {
+  flex: none;
+  width: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.list li:nth-child(-n+3) .rank { color: var(--text); font-weight: 600; }
+.title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: color .15s ease;
+}
+.hot {
+  flex: none;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.empty {
+  padding: 22px 8px 18px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.empty a { color: var(--accent); }
+.timeline {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 28px 64px;
+}
+.month-title {
+  margin: 34px 0 12px;
+  padding-left: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.entry:hover {
+  border-color: rgba(0, 113, 227, .45);
+  text-decoration: none;
+}
+.entry-date { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.entry-date b {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.entry-date span { font-size: 13px; color: var(--muted); }
+.entry-meta {
+  margin-left: auto;
+  flex: none;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tag {
+  flex: none;
+  padding: 3px 9px;
+  border-radius: 980px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+.entry-chevron {
+  flex: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform .2s ease, color .2s ease;
+}
+.entry:hover .entry-chevron { color: var(--accent); transform: translateX(2px); }
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4px 28px 60px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.footer a { color: var(--accent); }
+a:focus-visible, .theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .nav-inner { padding: 0 20px; }
+  .hero { padding: 44px 20px 26px; }
+  .hero .sub { font-size: 15px; }
+  .grid { grid-template-columns: 1fr; padding: 4px 20px 44px; gap: 14px; }
+  .timeline { padding: 0 20px 44px; }
+  .entry { padding: 16px 18px; gap: 12px; }
+  .entry-meta { display: none; }
+  .footer { padding: 4px 20px 44px; }
+  .title {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .hot { font-size: 11px; }
+  .list a { align-items: flex-start; }
+}
+"""
+
+THEME_INIT = """(function () {
+  try {
+    var saved = localStorage.getItem("hot-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();"""
+
+THEME_TOGGLE_JS = """(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById("themeToggle");
+  if (!btn) return;
+  function label() {
+    btn.textContent = root.getAttribute("data-theme") === "dark" ? "浅色" : "深色";
+  }
+  btn.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("hot-theme", next); } catch (e) {}
+    label();
+  });
+  label();
+
+  // 在 IDE 预览等受限 iframe 中，浏览器会拦截新标签页，改为当前框架内跳转
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest && event.target.closest("a[href^='http']");
+    if (!link || window.self === window.top) return;
+    event.preventDefault();
+    window.location.href = link.href;
+  });
+})();"""
+
+TEMPLATE = """<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="%%DATE_SHORT%%热榜日报：12 个站点的每日热榜快照。">
+<title>%%TITLE%%</title>
+<script>%%THEME_INIT%%</script>
+<style>%%CSS%%</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">热榜日报</a>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">每日热榜快照</p>
+    <h1>%%DATE_SHORT%%</h1>
+    <p class="sub">星期%%WEEKDAY%% · %%TIME%% 更新 · %%COUNT%% 个板块</p>
+  </section>
+  <div class="grid">%%CARDS%%</div>
+</main>
+%%FOOTER%%
+<script>%%THEME_JS%%</script>
+</body>
+</html>
+"""
+
+INDEX_TEMPLATE = """<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 12 个站点的热榜，按日期归档。">
+<title>热榜日报</title>
+<script>%%THEME_INIT%%</script>
+<style>%%CSS%%</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">热榜日报</a>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">深色</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">每日热榜快照</p>
+    <h1>热榜日报</h1>
+    <p class="sub">聚合 12 个站点的热榜，每天 09:00、14:00、19:00 刷新当日快照。共 %%COUNT%% 期。</p>
+  </section>
+  <section class="timeline" aria-label="日报目录">
+%%ENTRIES%%
+  </section>
+</main>
+<script>%%THEME_JS%%</script>
+</body>
+</html>
+"""
+
+
+def escape(value) -> str:
+    return html.escape(str(value or ""), quote=True)
+
+
+def render_card(source: dict) -> str:
+    icon = escape(source.get("icon"))
+    wide = " wide" if len(str(source.get("icon") or "")) > 1 else ""
+    rows = []
+    for index, item in enumerate(source.get("items") or [], 1):
+        hot = escape(item.get("hot"))
+        hot_html = f'<span class="hot">{hot}</span>' if hot else ""
+        rows.append(
+            '<li><a href="{url}" target="_blank" rel="noopener noreferrer">'
+            '<span class="rank">{rank}</span>'
+            '<span class="title" title="{title}">{title}</span>'
+            "{hot}"
+            "</a></li>".format(
+                url=escape(item.get("url")),
+                rank=index,
+                title=escape(item.get("title")),
+                hot=hot_html,
+            )
+        )
+    if rows:
+        body = "".join(rows)
+    else:
+        body = (
+            '<li class="empty">今天没有抓到内容<br>'
+            f'<a href="{escape(source.get("home"))}" target="_blank" '
+            'rel="noopener noreferrer">去原站看看 →</a></li>'
+        )
+    return (
+        '<section class="card">'
+        '<div class="card-head">'
+        f'<span class="badge{wide}" style="--brand:{escape(source.get("color"))}">{icon}</span>'
+        f'<h2>{escape(source.get("name"))}</h2>'
+        "</div>"
+        f'<ol class="list">{body}</ol>'
+        "</section>"
+    )
+
+
+def data_files() -> list[str]:
+    return sorted(glob.glob(os.path.join(DATA_DIR, "*.json")), reverse=True)
+
+
+def load_json(path: str) -> dict:
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def archive_record(data: dict) -> dict:
+    day = datetime.strptime(data["date"], "%Y-%m-%d")
+    sources = data.get("sources") or []
+    return {
+        "date": data["date"],
+        "month": day.month,
+        "day": day.day,
+        "weekday": WEEKDAYS[day.weekday()],
+        "sources": len(sources),
+        "items": sum(len(s.get("items") or []) for s in sources),
+    }
+
+
+def render_index(records: list[dict]) -> str:
+    records = sorted(records, key=lambda r: r["date"], reverse=True)
+    newest = records[0]["date"] if records else ""
+    groups: dict[str, list[dict]] = {}
+    for record in records:
+        groups.setdefault(record["date"][:7], []).append(record)
+
+    sections = []
+    for year_month, rows in groups.items():
+        year, month = year_month.split("-")
+        entries = []
+        for record in rows:
+            tag = '<span class="tag">最新</span>' if record["date"] == newest else ""
+            entries.append(
+                '<li><a class="entry" href="archive/{date}.html">'
+                '<span class="entry-date"><b>{month}月{day}日</b>'
+                "<span>星期{weekday}</span></span>"
+                '<span class="entry-meta">{sources} 个板块 · {items} 条</span>'
+                "{tag}"
+                '<span class="entry-chevron" aria-hidden="true">›</span>'
+                "</a></li>".format(tag=tag, **record)
+            )
+        sections.append(
+            f'<section class="month"><h2 class="month-title">{year} 年 {int(month)} 月</h2>'
+            f'<ol class="entries">{"".join(entries)}</ol></section>'
+        )
+
+    replacements = {
+        "%%CSS%%": CSS,
+        "%%THEME_INIT%%": THEME_INIT,
+        "%%THEME_JS%%": THEME_TOGGLE_JS,
+        "%%COUNT%%": str(len(records)),
+        "%%ENTRIES%%": "".join(sections),
+    }
+    page = INDEX_TEMPLATE
+    for token, value in replacements.items():
+        page = page.replace(token, value)
+    return page
+
+
+def render(data: dict, archive: bool) -> str:
+    day = datetime.strptime(data["date"], "%Y-%m-%d")
+    sources = data.get("sources") or []
+    cards = "\n".join(render_card(s) for s in sources)
+    footer = (
+        '<footer class="footer"><a href="../index.html">返回日报目录</a></footer>'
+        if archive else ""
+    )
+    replacements = {
+        "%%TITLE%%": f"热榜日报 · {day.month}月{day.day}日",
+        "%%DATE_SHORT%%": f"{day.month}月{day.day}日",
+        "%%WEEKDAY%%": WEEKDAYS[day.weekday()],
+        "%%TIME%%": data.get("time", ""),
+        "%%COUNT%%": str(len(sources)),
+        "%%CSS%%": CSS,
+        "%%THEME_INIT%%": THEME_INIT,
+        "%%THEME_JS%%": THEME_TOGGLE_JS,
+        "%%CARDS%%": cards,
+        "%%FOOTER%%": footer,
+    }
+    page = TEMPLATE
+    for token, value in replacements.items():
+        page = page.replace(token, value)
+    return page
+
+
+def write_archive(data: dict) -> str:
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    path = os.path.join(ARCHIVE_DIR, f'{data["date"]}.html')
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(render(data, archive=True))
+    return path
+
+
+def write_index(records: list[dict]) -> str:
+    path = os.path.join(SITE_DIR, "index.html")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(render_index(records))
+    return path
+
+
+def main() -> int:
+    only_date = None
+    if len(sys.argv) >= 3 and sys.argv[1] == "--date":
+        only_date = sys.argv[2]
+
+    if only_date:
+        path = os.path.join(DATA_DIR, f"{only_date}.json")
+        if not os.path.exists(path):
+            raise SystemExit(f"没有找到数据文件：{path}")
+        print(write_archive(load_json(path)))
+    else:
+        files = data_files()
+        if not files:
+            raise SystemExit("没有数据文件，请先运行 scripts/fetch_data.py")
+        for path in files:
+            data = load_json(path)
+            # 以数据中的日期为准，文件名仅用于排序
+            data["date"] = data.get("date") or os.path.basename(path)[:-5]
+            print(write_archive(data))
+
+    records = [archive_record(load_json(path)) for path in data_files()]
+    print(write_index(records))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
