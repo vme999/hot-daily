@@ -133,19 +133,19 @@ a:hover { text-decoration: underline; }
   padding: 0 8px 10px;
 }
 .badge {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   flex: none;
   display: grid;
   place-items: center;
   border-radius: 8px;
-  background: var(--brand, var(--accent));
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: -.02em;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
 }
-.badge.wide { font-size: 9px; }
+.badge.wide { font-size: 10.5px; }
 .card-head h2 {
   margin: 0;
   font-size: 15px;
@@ -340,8 +340,10 @@ THEME_TOGGLE_JS = """(function () {
 })();"""
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#e5484d"/>
-  <text x="32" y="44" text-anchor="middle" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="36" font-weight="700" fill="#ffffff">热</text>
+  <rect width="64" height="64" rx="14" fill="#8e8e93"/>
+  <path d="M22 15h13l9 9v25a2 2 0 0 1-2 2H22a2 2 0 0 1-2-2V17a2 2 0 0 1 2-2Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M35 15v9h9" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M26 34h12M26 41h12" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
 </svg>
 """
 
@@ -351,7 +353,7 @@ TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="%%DATE_SHORT%%热榜日报：9 个站点的每日热榜快照。">
+<meta name="description" content="%%DATE_SHORT%%今日摘要：9 个信息源的每日内容摘要。">
 <title>%%TITLE%%</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
@@ -360,8 +362,8 @@ TEMPLATE = """<!DOCTYPE html>
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">每日热榜快照</p>
-    <h1>热榜日报</h1>
+    <p class="eyebrow">阅读列表</p>
+    <h1>今日摘要</h1>
     <p class="sub">%%DATE_LONG%% · %%TIME%% 更新</p>
   </section>
   <div class="grid">%%CARDS%%</div>
@@ -382,8 +384,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="热榜日报：每天 09:00、14:00、19:00 抓取 9 个站点的热榜，按日期归档。">
-<title>热榜日报</title>
+<meta name="description" content="今日摘要：每天 09:00、14:00、19:00 聚合 9 个公开信息源，按日期归档。">
+<title>今日摘要</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
@@ -391,9 +393,9 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">每日热榜快照</p>
-    <h1>热榜日报</h1>
-    <p class="sub">聚合全网主流平台热榜，每天自动生成热点快照。</p>
+    <p class="eyebrow">每日更新</p>
+    <h1>今日摘要</h1>
+    <p class="sub">聚合公开信息源，每天自动生成内容摘要。</p>
   </section>
   <section class="timeline" aria-label="日报目录">
 %%ENTRIES%%
@@ -443,7 +445,7 @@ def render_card(source: dict) -> str:
     return (
         '<section class="card">'
         '<div class="card-head">'
-        f'<span class="badge{wide}" style="--brand:{escape(source.get("color"))}">{icon}</span>'
+        f'<span class="badge{wide}">{icon}</span>'
         f'<h2>{escape(source.get("name"))}</h2>'
         "</div>"
         f'<ol class="list">{body}</ol>'
@@ -522,7 +524,7 @@ def render(data: dict, archive: bool) -> str:
         if archive else ""
     )
     replacements = {
-        "%%TITLE%%": f"热榜日报 · {day.month}月{day.day}日",
+        "%%TITLE%%": f"今日摘要 · {day.month}月{day.day}日",
         "%%DATE_SHORT%%": f"{day.month}月{day.day}日",
         "%%DATE_LONG%%": f"{day.year} 年 {day.month} 月 {day.day} 日",
         "%%TIME%%": data.get("time", ""),
@@ -570,10 +572,10 @@ def write_latest(records: list[dict]) -> str:
         f'<meta http-equiv="refresh" content="0; url={target}">\n'
         f'<link rel="canonical" href="{target}">\n'
         '<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
-        "<title>热榜日报 · 最新一期</title>\n"
+        "<title>今日摘要 · 最新一期</title>\n"
         f'<script>location.replace("{target}");</script>\n'
         "</head>\n<body>\n"
-        f'<p>正在打开最新一期：<a href="{target}">热榜日报</a></p>\n'
+        f'<p>正在打开最新一期：<a href="{target}">今日摘要</a></p>\n'
         "</body>\n</html>\n"
     )
     path = os.path.join(SITE_DIR, "latest.html")
