@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
 .theme-toggle {
   position: fixed;
   right: 24px;
-  bottom: 24px;
+  top: 24px;
   z-index: 30;
   appearance: none;
   width: 46px;
@@ -86,7 +86,7 @@ a:hover { text-decoration: underline; }
 .hero {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 68px 28px 34px;
+  padding: 84px 28px 34px;
 }
 .eyebrow {
   margin: 0;
@@ -293,8 +293,8 @@ a:focus-visible, .theme-toggle:focus-visible {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
-  .theme-toggle { right: 16px; bottom: 16px; }
-  .hero { padding: 44px 20px 26px; }
+  .theme-toggle { right: 16px; top: 16px; }
+  .hero { padding: 64px 20px 26px; }
   .hero .sub { font-size: 15px; }
   .grid { grid-template-columns: 1fr; padding: 4px 20px 44px; gap: 14px; }
   .timeline { padding: 0 20px 44px; }
@@ -545,6 +545,27 @@ def write_index(records: list[dict]) -> str:
     return path
 
 
+def write_latest(records: list[dict]) -> str:
+    """生成固定地址 latest.html，始终跳到最新一期。"""
+    target = f'archive/{records[0]["date"]}.html' if records else "index.html"
+    page = (
+        "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n"
+        '<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        f'<meta http-equiv="refresh" content="0; url={target}">\n'
+        f'<link rel="canonical" href="{target}">\n'
+        "<title>热榜日报 · 最新一期</title>\n"
+        f'<script>location.replace("{target}");</script>\n'
+        "</head>\n<body>\n"
+        f'<p>正在打开最新一期：<a href="{target}">热榜日报</a></p>\n'
+        "</body>\n</html>\n"
+    )
+    path = os.path.join(SITE_DIR, "latest.html")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(page)
+    return path
+
+
 def main() -> int:
     only_date = None
     if len(sys.argv) >= 3 and sys.argv[1] == "--date":
@@ -567,6 +588,7 @@ def main() -> int:
 
     records = [archive_record(load_json(path)) for path in data_files()]
     print(write_index(records))
+    print(write_latest(records))
     return 0
 
 
