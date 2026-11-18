@@ -1,10 +1,8 @@
 name: Daily hot list
 
 on:
-  schedule:
-    # 01:18 / 05:18 / 09:18 UTC
-    # = 09:18 / 13:18 / 17:18 Asia/Shanghai
-    - cron: "18 1,5,9 * * *"
+  # 定时由外部 cron 服务调用 workflow_dispatch 触发（北京时间 09:18 / 13:18 / 17:18）。
+  # GitHub 自带 schedule 在本仓库从未生效，已移除。
   workflow_dispatch:
 
 permissions:
@@ -13,8 +11,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: daily-hot
+  cancel-in-progress: false
 
 jobs:
   build:
