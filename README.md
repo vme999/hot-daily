@@ -10,7 +10,7 @@
 
 - 9 个板块，每个取前 10 条，点击跳转原文
 - 有热度数据时显示在标题右侧，没有则自动隐藏
-- 每天 09:18、13:18、17:18（北京时间）抓取，同日快照直接覆盖
+- 每天 09:18、13:18、17:18（北京时间）更新，同日快照直接覆盖
 - 纯 Python 标准库，页面自包含，可双击打开或托管到任意静态服务器
 
 ## 数据源
@@ -44,18 +44,22 @@ scripts/fetch_data.py   # 抓取，写入 data/YYYY-MM-DD.json
 scripts/build_page.py   # 生成 site/index.html 与 site/archive/YYYY-MM-DD.html
 data/                   # 每日数据快照
 site/                   # 生成的页面
-.github/workflows/      # daily.yml 定时任务，deploy.yml 部署
+.github/workflows/      # daily.yml 抓取任务，deploy.yml 部署，schedule-test.yml 调度探针
 ```
 
 ## 自动部署
 
 `daily.yml` 每天 3 次执行：抓取 → 生成 → 提交 → 部署。首次需在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**，再手动运行一次 `Daily hot list`。
 
+定时由外部 cron 服务（cron-job.org）调用 GitHub 的 `workflow_dispatch` 接口触发，北京时间 09:18 / 13:18 / 17:18 各一次。GitHub 自带 `schedule` 在本仓库历史上从未生效，已从 `daily.yml` 移除。
+
 自有服务器可用 cron：
 
 ```cron
 18 9,13,17 * * * /path/to/hot-daily/scripts/daily.sh >> /tmp/hot-daily.log 2>&1
 ```
+
+`schedule-test.yml` 每小时 17 分触发一次，只打印时间，用于观察 GitHub `schedule` 何时恢复，不影响日报。
 
 ## 说明
 
