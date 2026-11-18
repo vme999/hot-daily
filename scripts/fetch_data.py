@@ -127,8 +127,18 @@ def src_thepaper() -> list[dict]:
     return items
 
 
-def src_36kr() -> list[dict]:
-    return codelife("Q1Vd5Ko85R")
+def src_sspai() -> list[dict]:
+    root = ET.fromstring(request("https://sspai.com/feed"))
+    items = []
+    for node in root.findall("./channel/item"):
+        title = clean_text(node.findtext("title"))
+        link = (node.findtext("link") or "").split("?")[0]
+        if not title or not link:
+            continue
+        items.append({"title": title, "url": link, "hot": ""})
+        if len(items) >= LIMIT:
+            break
+    return items
 
 
 def src_huxiu() -> list[dict]:
@@ -173,21 +183,22 @@ def src_hackernews() -> list[dict]:
     return items
 
 
-def src_xtrends() -> list[dict]:
-    page = request("https://getdaytrends.com/united-states/",
-                   {"Accept-Language": "en-US,en;q=0.9"})
-    items, seen = [], set()
-    for name in re.findall(
-            r'class="pos">\d+</th><td class="main"><a[^>]*>([^<]{1,120})</a>',
-            page):
-        title = clean_text(name)
-        if not title or title in seen:
+def src_devto() -> list[dict]:
+    data = json_get(
+        "https://dev.to/api/articles?top=1&per_page=20",
+        {"Accept": "application/json"},
+    )
+    items = []
+    for row in data if isinstance(data, list) else []:
+        title = clean_text(row.get("title"))
+        url = row.get("url") or ""
+        if not title or not url:
             continue
-        seen.add(title)
+        reactions = row.get("public_reactions_count") or 0
         items.append({
             "title": title,
-            "url": "https://x.com/search?q=" + urllib.parse.quote(title),
-            "hot": "",
+            "url": url,
+            "hot": f"{reactions} 赞" if reactions else "",
         })
         if len(items) >= LIMIT:
             break
@@ -199,11 +210,11 @@ SOURCES = [
     ("thepaper", "澎湃新闻", "澎", "#e60012", "https://www.thepaper.cn/", src_thepaper),
     ("weibo", "微博热搜", "微", "#e6162d", "https://s.weibo.com/top/summary", src_weibo),
     ("ifanr", "爱范儿", "爱", "#ff5a36", "https://www.ifanr.com/", src_ifanr),
-    ("36kr", "36氪", "36", "#2f6bff", "https://36kr.com/", src_36kr),
+    ("sspai", "少数派", "少", "#1f8aa8", "https://sspai.com/", src_sspai),
     ("huxiu", "虎嗅", "嗅", "#ff6a00", "https://www.huxiu.com/", src_huxiu),
     ("github", "GitHub 趋势", "GH", "#24292f", "https://github.com/trending", src_github),
     ("hackernews", "Hacker News", "HN", "#ff6600", "https://news.ycombinator.com/", src_hackernews),
-    ("xtrends", "X 趋势", "X", "#0f1419", "https://x.com/explore", src_xtrends),
+    ("devto", "dev.to", "dev", "#6366f1", "https://dev.to/", src_devto),
 ]
 
 

@@ -21,11 +21,11 @@
 | 澎湃新闻 | 澎湃 `rightSidebar` 热榜接口 |
 | 微博热搜 | codelife 聚合接口 |
 | 爱范儿 | 官方 RSS |
-| 36氪 | codelife 聚合接口（上游通常返回 8 条） |
+| 少数派 | 官方 RSS（最新文章） |
 | 虎嗅 | codelife 聚合接口 |
 | GitHub 趋势 | codelife 聚合接口（Trending Today） |
 | Hacker News | HN Algolia `front_page` 接口 |
-| X 趋势 | getdaytrends 美国区，点击跳 X 搜索 |
+| dev.to | dev.to 官方 API（近 1 天热门，显示点赞数） |
 
 ## 使用
 
