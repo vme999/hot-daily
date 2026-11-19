@@ -44,7 +44,7 @@ scripts/fetch_data.py   # 抓取，写入 data/YYYY-MM-DD.json
 scripts/build_page.py   # 生成 site/index.html 与 site/archive/YYYY-MM-DD.html
 data/                   # 每日数据快照
 site/                   # 生成的页面
-.github/workflows/      # daily.yml 抓取任务，deploy.yml 部署，schedule-test.yml 调度探针
+.github/workflows/      # daily.yml 抓取任务，deploy.yml 部署
 ```
 
 ## 自动部署
@@ -58,8 +58,6 @@ site/                   # 生成的页面
 ```cron
 18 9,13,17 * * * /path/to/hot-daily/scripts/daily.sh >> /tmp/hot-daily.log 2>&1
 ```
-
-`schedule-test.yml` 每小时 17 分触发一次，只打印时间，用于观察 GitHub `schedule` 何时恢复，不影响日报。
 
 ## 说明
 
