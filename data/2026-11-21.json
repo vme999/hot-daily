@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T09:00:50+08:00",
+  "time": "09:00",
+  "sources": [
+    {
+      "id": "zhihu",
+      "name": "知乎热榜",
+      "icon": "知",
+      "color": "#0084ff",
+      "home": "https://www.zhihu.com/hot",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "数学家称与 AI 合作证明了黎曼猜想，证明稿超 25 万页，黎曼猜想真的被解决了吗？",
+          "url": "https://www.zhihu.com/question/2107239235015263538",
+          "hot": "6565 万热度"
+        },
+        {
+          "title": "韩国首次用「紧急灾难通知」让全国手机响铃 10.5 秒防高考作弊，此举合理吗？",
+          "url": "https://www.zhihu.com/question/2106706684672471150",
+          "hot": "459 万热度"
+        },
+        {
+          "title": "为什么欧美使用壁炉的普遍性这么高，而中国却没有？",
+          "url": "https://www.zhihu.com/question/20796435",
+          "hot": "184 万热度"
+        },
+        {
+          "title": "发达国家中，日本人出国旅游意愿为何那么低？",
+          "url": "https://www.zhihu.com/question/2062065010873054969",
+          "hot": "124 万热度"
+        },
+        {
+          "title": "中俄美三方的和平宣言发布后，将会为俄乌局势带来哪些变量？",
+          "url": "https://www.zhihu.com/question/2106847799899678337",
+          "hot": "123 万热度"
+        },
+        {
+          "title": "特朗普称如果满分 10 分，可以为中俄美元首会晤打 12 分，此次会晤对他有多重要？美方有哪些收获？",
+          "url": "https://www.zhihu.com/question/2107079876813353010",
+          "hot": "120 万热度"
+        },
+        {
+          "title": "信用卡近一年减少 3400 万张，信用卡为何逐渐失去吸引力？背后反映出消费者支付习惯发生了哪些变化？",
+          "url": "https://www.zhihu.com/question/2107163928622887904",
+          "hot": "117 万热度"
+        },
+        {
+          "title": "U17 世界杯小组赛，国少 0-5 西班牙，尾声 12 分钟丢三球，如何评价本场比赛？",
+          "url": "https://www.zhihu.com/question/2107245763558209161",
+          "hot": "109 万热度"
+        },
+        {
+          "title": "为什么我感觉自己做饭并没有比点外卖省钱？",
+          "url": "https://www.zhihu.com/question/438496778",
+          "hot": "102 万热度"
+        },
+        {
+          "title": "神秘模型 Gestalt 横空出世，设计基准上大幅超越 Claude、GPT，这款模型到底是啥来历？",
+          "url": "https://www.zhihu.com/question/2106839067346350136",
+          "hot": "86 万热度"
+        }
+      ]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "icon": "澎",
+      "color": "#e60012",
+      "home": "https://www.thepaper.cn/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "见微知沪丨两项停车新举措，是对民生难题的探索性解法",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34520908",
+          "hot": ""
+        },
+        {
+          "title": "沪指终结日线6连阴，估值修复窗口何时开启？头部券商、基金密集发声",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34521359",
+          "hot": ""
+        },
+        {
+          "title": "言短意长｜“东鹏饮料”被捐进高中校牌，何必这样直白",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34522347",
+          "hot": ""
+        },
+        {
+          "title": "经纬度｜锚定品质化消费需求，培育银发经济新增长点",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34517959",
+          "hot": ""
+        },
+        {
+          "title": "从“双头虾”到一万张鸟类贴纸，“AI泔水”正在污染知识",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34511494",
+          "hot": ""
+        },
+        {
+          "title": "环球时报快评：高市是时候收回“台湾有事就是日本有事”错误言论了",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34518683",
+          "hot": ""
+        },
+        {
+          "title": "余承东：用L3开车能睡觉，别睡过去就行",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34521221",
+          "hot": ""
+        },
+        {
+          "title": "马上评｜“93年奶奶97年大爷”的闹剧为何一再重演？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34518691",
+          "hot": ""
+        },
+        {
+          "title": "警方回应“女子在商场遭陌生男子砸脸”：嫌疑人已被送医做精神疾病诊断",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34519812",
+          "hot": ""
+        },
+        {
+          "title": "刘诗诗解读《醉梦》：沈乐水不是英雄，是勇于直面真相的普通人",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34520224",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "weibo",
+      "name": "微博热搜",
+      "icon": "微",
+      "color": "#e6162d",
+      "home": "https://s.weibo.com/top/summary",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "DeepSeek付费体验直线上升",
+          "url": "https://s.weibo.com/weibo?q=DeepSeek%E4%BB%98%E8%B4%B9%E4%BD%93%E9%AA%8C%E7%9B%B4%E7%BA%BF%E4%B8%8A%E5%8D%87",
+          "hot": "54万"
+        },
+        {
+          "title": "后会友期黄焖鸡事件原声视频",
+          "url": "https://s.weibo.com/weibo?q=%E5%90%8E%E4%BC%9A%E5%8F%8B%E6%9C%9F%E9%BB%84%E7%84%96%E9%B8%A1%E4%BA%8B%E4%BB%B6%E5%8E%9F%E5%A3%B0%E8%A7%86%E9%A2%91",
+          "hot": "39万"
+        },
+        {
+          "title": "APEC盛会效应拉满",
+          "url": "https://s.weibo.com/weibo?q=APEC%E7%9B%9B%E4%BC%9A%E6%95%88%E5%BA%94%E6%8B%89%E6%BB%A1",
+          "hot": "31万"
+        },
+        {
+          "title": "王子璇问马天宇你不会爱上我",
+          "url": "https://s.weibo.com/weibo?q=%E7%8E%8B%E5%AD%90%E7%92%87%E9%97%AE%E9%A9%AC%E5%A4%A9%E5%AE%87%E4%BD%A0%E4%B8%8D%E4%BC%9A%E7%88%B1%E4%B8%8A%E6%88%91",
+          "hot": "23万"
+        },
+        {
+          "title": "金价",
+          "url": "https://s.weibo.com/weibo?q=%E9%87%91%E4%BB%B7",
+          "hot": "17万"
+        },
+        {
+          "title": "成毅两京十五日演技表现",
+          "url": "https://s.weibo.com/weibo?q=%E6%88%90%E6%AF%85%E4%B8%A4%E4%BA%AC%E5%8D%81%E4%BA%94%E6%97%A5%E6%BC%94%E6%8A%80%E8%A1%A8%E7%8E%B0",
+          "hot": "16万"
+        },
+        {
+          "title": "张萌回应青稚打听式安慰",
+          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E8%90%8C%E5%9B%9E%E5%BA%94%E9%9D%92%E7%A8%9A%E6%89%93%E5%90%AC%E5%BC%8F%E5%AE%89%E6%85%B0",
+          "hot": "12万"
+        },
+        {
+          "title": "深圳人又开始原装出街了",
+          "url": "https://s.weibo.com/weibo?q=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E5%8F%88%E5%BC%80%E5%A7%8B%E5%8E%9F%E8%A3%85%E5%87%BA%E8%A1%97%E4%BA%86",
+          "hot": "11万"
+        },
+        {
+          "title": "AI证明黎曼猜想传闻",
+          "url": "https://s.weibo.com/weibo?q=AI%E8%AF%81%E6%98%8E%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3%E4%BC%A0%E9%97%BB",
+          "hot": "10万"
+        },
+        {
+          "title": "余承东称现在L2开车不能睡觉",
+          "url": "https://s.weibo.com/weibo?q=%E4%BD%99%E6%89%BF%E4%B8%9C%E7%A7%B0%E7%8E%B0%E5%9C%A8L2%E5%BC%80%E8%BD%A6%E4%B8%8D%E8%83%BD%E7%9D%A1%E8%A7%89",
+          "hot": "8万"
+        }
+      ]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "早报｜曝Claude证明黎曼猜想，陶哲轩回应/余承东更正发布会表述：开车不能睡觉/五月天公布Vision Pro演唱会，Apple Store可预约体验",
+          "url": "https://www.ifanr.com/1690759",
+          "hot": ""
+        },
+        {
+          "title": "理想造了一颗登上台积电讲台的芯片，却希望你在开车时彻底忘掉它",
+          "url": "https://www.ifanr.com/1690596",
+          "hot": ""
+        },
+        {
+          "title": "首款鸿蒙 AI 手机发布：华为全新子品牌 OSTA 星芒有一个「增援未来计划」",
+          "url": "https://www.ifanr.com/1690642",
+          "hot": ""
+        },
+        {
+          "title": "给 Gemini 道歉，请自觉排队",
+          "url": "https://www.ifanr.com/1690572",
+          "hot": ""
+        },
+        {
+          "title": "触屏只是它最不起眼的升级｜MacBook PROLED 评测",
+          "url": "https://www.ifanr.com/1690404",
+          "hot": ""
+        },
+        {
+          "title": "AI Agent 元年，苹果是最后一个入局的巨头",
+          "url": "https://www.ifanr.com/1690510",
+          "hot": ""
+        },
+        {
+          "title": "早报｜苹果招人打造「接管电脑」的AI智能体/史上最大IPO，Anthropic上市/华为官宣Mate 90 Air主打轻薄",
+          "url": "https://www.ifanr.com/1690473",
+          "hot": ""
+        },
+        {
+          "title": "比亚迪发布折叠方向盘！首搭方程豹钛 9，27.99 万元起！",
+          "url": "https://www.ifanr.com/1690430",
+          "hot": ""
+        },
+        {
+          "title": "刚刚，Anthropic 敲钟上市！史上最大IPO却让硅谷吵翻了",
+          "url": "https://www.ifanr.com/1690375",
+          "hot": ""
+        },
+        {
+          "title": "今年是阔屏的元年，阔屏是手机的今后十年",
+          "url": "https://www.ifanr.com/1690322",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "sspai",
+      "name": "少数派",
+      "icon": "少",
+      "color": "#1f8aa8",
+      "home": "https://sspai.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "本周看什么 | 最近值得一看的 10 部作品",
+          "url": "https://sspai.com/post/119337",
+          "hot": ""
+        },
+        {
+          "title": "游戏史最高分，不负 13 年的等待：《GTA 6》游玩体验",
+          "url": "https://sspai.com/post/119327",
+          "hot": ""
+        },
+        {
+          "title": "浮屏：截图即可「上岛」，还能帮你记录生活",
+          "url": "https://sspai.com/post/118879",
+          "hot": ""
+        },
+        {
+          "title": "派早报：Google 推出 Gemini 4 Neon 模型，网易 UU 远程将于 12 月推出付费会员等",
+          "url": "https://sspai.com/post/119311",
+          "hot": ""
+        },
+        {
+          "title": "给 Apple 的 2026 年打分，请你一起参与",
+          "url": "https://sspai.com/post/119191",
+          "hot": ""
+        },
+        {
+          "title": "新玩意 256｜少数派的编辑们最近买了啥？",
+          "url": "https://sspai.com/post/119287",
+          "hot": ""
+        },
+        {
+          "title": "有必要但欠平衡：浅评 macOS 27.3 新版权限控制机制",
+          "url": "https://sspai.com/prime/story/system-app-protection-override-macos-27-3",
+          "hot": ""
+        },
+        {
+          "title": "徒步旅行指南 | 玉龙虎跳峡与天堂雨崩",
+          "url": "https://sspai.com/post/119039",
+          "hot": ""
+        },
+        {
+          "title": "派早报：Apple 年度应用、TGA 2026 分别公布入围名单等",
+          "url": "https://sspai.com/post/119239",
+          "hot": ""
+        },
+        {
+          "title": "10 月音乐精选：音乐丰收季，必听这 7 张新专辑",
+          "url": "https://sspai.com/post/118985",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "icon": "嗅",
+      "color": "#ff6a00",
+      "home": "https://www.huxiu.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "人生回报率最高的20件小事",
+          "url": "https://www.huxiu.com/article/4905656.html",
+          "hot": "106.4万"
+        },
+        {
+          "title": "达里奥为什么要整黄仁勋？",
+          "url": "https://www.huxiu.com/article/4905762.html",
+          "hot": "74.9万"
+        },
+        {
+          "title": "天崩开局，印度和中国的差距究竟有多大？",
+          "url": "https://www.huxiu.com/article/4906031.html",
+          "hot": "62.8万"
+        },
+        {
+          "title": "第一性原理正在失效：当最聪明的一群人突然穿起了同一双跑鞋",
+          "url": "https://www.huxiu.com/article/4906383.html",
+          "hot": "46.3万"
+        },
+        {
+          "title": "14年深圳老酒店，凭啥接下特朗普？",
+          "url": "https://www.huxiu.com/article/4906698.html",
+          "hot": "45.5万"
+        },
+        {
+          "title": "十家车企压了近万亿账款，中国车圈背着连环债的雷",
+          "url": "https://www.huxiu.com/article/4896154.html",
+          "hot": "44.3万"
+        },
+        {
+          "title": "耐克的中场战事",
+          "url": "https://www.huxiu.com/article/4906401.html",
+          "hot": "40.7万"
+        },
+        {
+          "title": "你再小众文艺，你逃得过红果引力吗？",
+          "url": "https://www.huxiu.com/article/4904821.html",
+          "hot": "38.7万"
+        },
+        {
+          "title": "黄仁勋开口想回来，英伟达反手就是三记耳光",
+          "url": "https://www.huxiu.com/article/4906512.html",
+          "hot": "37.0万"
+        },
+        {
+          "title": "奇瑞被低估了",
+          "url": "https://www.huxiu.com/article/4905368.html",
+          "hot": "35.8万"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub 趋势",
+      "icon": "GH",
+      "color": "#24292f",
+      "home": "https://github.com/trending",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "elementalsouls / Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "hot": "1.4万"
+        },
+        {
+          "title": "obra / superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "hot": "32.3万"
+        },
+        {
+          "title": "HKUDS / CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "hot": "6.1万"
+        },
+        {
+          "title": "jingyaogong / minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "hot": "6.8万"
+        },
+        {
+          "title": "cursor / plugins",
+          "url": "https://github.com/cursor/plugins",
+          "hot": "1.8万"
+        },
+        {
+          "title": "firecrawl / firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "hot": "20.5万"
+        },
+        {
+          "title": "nginx / nginx",
+          "url": "https://github.com/nginx/nginx",
+          "hot": "3.3万"
+        },
+        {
+          "title": "openvinotoolkit / openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "hot": "1.2万"
+        },
+        {
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "hot": "6.9万"
+        },
+        {
+          "title": "mvanhorn / last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "hot": "7.1万"
+        }
+      ]
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "icon": "HN",
+      "color": "#ff6600",
+      "home": "https://news.ycombinator.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
+          "url": "https://alpo.ge/remark.pdf",
+          "hot": "2329 分"
+        },
+        {
+          "title": "Hurried Announcement: Alessandro Masullo GRH",
+          "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
+          "hot": "1491 分"
+        },
+        {
+          "title": "Inkling 2 Mini",
+          "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+          "hot": "621 分"
+        },
+        {
+          "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+          "url": "https://architectlabs.com/blog/frostbite",
+          "hot": "618 分"
+        },
+        {
+          "title": "If you can't explain something in simple terms, you don't understand it (2017)",
+          "url": "https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it",
+          "hot": "618 分"
+        },
+        {
+          "title": "Signal Is Serious About Protecting Your Privacy",
+          "url": "https://signal.org/blog/protecting-your-privacy/",
+          "hot": "501 分"
+        },
+        {
+          "title": "Language Models Can Rewrite Their Own Weights",
+          "url": "https://arxiv.org/abs/2611.21885",
+          "hot": "331 分"
+        },
+        {
+          "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+          "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
+          "hot": "327 分"
+        },
+        {
+          "title": "We promoted developers into architects without informing them",
+          "url": "https://manidoraisamy.com/developer-to-architect.html",
+          "hot": "283 分"
+        },
+        {
+          "title": "Google Workers Tell Their Employer Not to Punish Schools That Don't Want AI",
+          "url": "https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/",
+          "hot": "258 分"
+        }
+      ]
+    },
+    {
+      "id": "devto",
+      "name": "dev.to",
+      "icon": "dev",
+      "color": "#6366f1",
+      "home": "https://dev.to/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Tell us your story, and we might read it on the CodeNewbie Podcast 🎙️",
+          "url": "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840",
+          "hot": "29 赞"
+        },
+        {
+          "title": "I can't believe the podcast I learned to code with is back!",
+          "url": "https://dev.to/codenewbie/i-cant-believe-the-podcast-i-learned-to-code-with-is-back-2gi5",
+          "hot": "28 赞"
+        },
+        {
+          "title": "Dev Opportunity Radar #26: $85K Claude Corps Fellowship, a16z FDE Fellowship, and Reddit's $35K Game Hackathon",
+          "url": "https://dev.to/devengers/dev-opportunity-radar-26-85k-claude-corps-fellowship-a16z-fde-fellowship-and-reddits-35k-2k2",
+          "hot": "52 赞"
+        },
+        {
+          "title": "Agentic engineering a smart home energy system with Antigravity and Gemini 4",
+          "url": "https://dev.to/googleai/agentic-engineering-a-smart-home-energy-system-with-antigravity-and-gemini-4-53md",
+          "hot": "22 赞"
+        },
+        {
+          "title": "Cozy Bytes 🍺 | Rust::Who Owns the Cat? 🐈🦀",
+          "url": "https://dev.to/_yourbrainbuffer_/cozy-bytes-rustwho-owns-the-cat-13ch",
+          "hot": "52 赞"
+        },
+        {
+          "title": "Everybody Has an AI Apocalypse Story. Almost Nobody Reads the Fine Print.",
+          "url": "https://dev.to/kenielzep97/everybody-has-an-ai-apocalypse-story-almost-nobody-reads-the-fine-print-43hm",
+          "hot": "34 赞"
+        },
+        {
+          "title": "Your Error Survived the Wrapper. Did Its Code Survive the Trace?",
+          "url": "https://dev.to/gde/your-error-survived-the-wrapper-did-its-code-survive-the-trace-17gg",
+          "hot": "27 赞"
+        },
+        {
+          "title": "Zombie Sweep on Google Cloud: A Daily Waste Report on AlloyDB Express, With a Database Bill You Can Predict",
+          "url": "https://dev.to/gde/zombie-sweep-on-google-cloud-a-daily-waste-report-on-alloydb-express-with-a-database-bill-you-can-305g",
+          "hot": "11 赞"
+        },
+        {
+          "title": "Making Offline Web AI RAG Universal: Introducing SourceDesk AI & Replaceable Subject Packs",
+          "url": "https://dev.to/gde/making-offline-web-ai-rag-universal-introducing-sourcedesk-ai-replaceable-subject-packs-4lbd",
+          "hot": "13 赞"
+        },
+        {
+          "title": "Marking a container unhealthy didn't stop it from taking traffic",
+          "url": "https://dev.to/alexgeorgiev17/marking-a-container-unhealthy-didnt-stop-it-from-taking-traffic-54lf",
+          "hot": "10 赞"
+        }
+      ]
+    }
+  ]
+}
