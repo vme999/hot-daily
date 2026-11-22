@@ -5,8 +5,8 @@ snapshots by date; each snapshot holds 9 sections and supports light / dark mode
 
 Site: <https://vme999.github.io/hot-daily/>
 
-Fixed entry <https://vme999.github.io/hot-daily/latest.html> always serves the
-newest snapshot in place, so the URL never changes.
+The root URL always shows the newest snapshot; past issues are listed at
+<https://vme999.github.io/hot-daily/directory.html>.
 
 ## Features
 
