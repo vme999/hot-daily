@@ -405,7 +405,7 @@ TEMPLATE = """<!DOCTYPE html>
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="%%DATE_SHORT%%今日摘要：9 个信息源的每日内容摘要。">
 <title>%%TITLE%%</title>
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="%%FAVICON%%" type="image/svg+xml">
 <script>%%THEME_INIT%%</script>
 <style>%%CSS%%</style>
 </head>
@@ -566,15 +566,17 @@ def render_index(records: list[dict]) -> str:
     return page
 
 
-def render(data: dict, archive: bool) -> str:
+def render(data: dict, archive: bool, root: bool = False) -> str:
     day = datetime.strptime(data["date"], "%Y-%m-%d")
     sources = data.get("sources") or []
     cards = "\n".join(render_card(s) for s in sources)
+    base = "" if root else "../"
     footer = (
-        '<footer class="footer"><a href="../index.html">返回日报目录</a></footer>'
+        f'<footer class="footer"><a href="{base}index.html">返回日报目录</a></footer>'
         if archive else ""
     )
     replacements = {
+        "%%FAVICON%%": f"{base}favicon.svg",
         "%%TITLE%%": f"今日摘要 · {day.month}月{day.day}日",
         "%%DATE_SHORT%%": f"{day.month}月{day.day}日",
         "%%DATE_LONG%%": f"{day.year} 年 {day.month} 月 {day.day} 日",
@@ -613,22 +615,20 @@ def write_favicon() -> str:
     return path
 
 
-def write_latest(records: list[dict]) -> str:
-    """生成固定地址 latest.html，始终跳到最新一期。"""
-    target = f'archive/{records[0]["date"]}.html' if records else "index.html"
-    page = (
-        "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n"
-        '<meta charset="utf-8">\n'
-        '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-        f'<meta http-equiv="refresh" content="0; url={target}">\n'
-        f'<link rel="canonical" href="{target}">\n'
-        '<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
-        "<title>今日摘要 · 最新一期</title>\n"
-        f'<script>location.replace("{target}");</script>\n'
-        "</head>\n<body>\n"
-        f'<p>正在打开最新一期：<a href="{target}">今日摘要</a></p>\n'
-        "</body>\n</html>\n"
-    )
+def write_latest(data: dict | None) -> str:
+    """生成固定地址 latest.html，直接展示最新一期内容（不跳转）。"""
+    if data:
+        page = render(data, archive=True, root=True)
+    else:
+        page = (
+            '<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n'
+            '<meta charset="utf-8">\n'
+            '<meta http-equiv="refresh" content="0; url=index.html">\n'
+            "<title>今日摘要</title>\n"
+            "</head>\n<body>\n"
+            '<p>还没有内容：<a href="index.html">返回日报目录</a></p>\n'
+            "</body>\n</html>\n"
+        )
     path = os.path.join(SITE_DIR, "latest.html")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(page)
@@ -655,10 +655,15 @@ def main() -> int:
             data["date"] = data.get("date") or os.path.basename(path)[:-5]
             print(write_archive(data))
 
-    records = [archive_record(load_json(path)) for path in data_files()]
+    files = data_files()
+    records = [archive_record(load_json(path)) for path in files]
+    newest = None
+    if files:
+        newest = load_json(max(files))
+        newest["date"] = newest.get("date") or os.path.basename(max(files))[:-5]
     print(write_favicon())
     print(write_index(records))
-    print(write_latest(records))
+    print(write_latest(newest))
     return 0
 
 
