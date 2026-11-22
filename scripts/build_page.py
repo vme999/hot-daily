@@ -125,15 +125,8 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: 84px 28px 34px;
 }
-.eyebrow {
-  margin: 0;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .06em;
-  color: var(--accent);
-}
 .hero h1 {
-  margin: 10px 0 0;
+  margin: 0;
   font-size: clamp(34px, 5.4vw, 56px);
   line-height: 1.07;
   letter-spacing: -.02em;
@@ -456,7 +449,6 @@ TEMPLATE = """<!DOCTYPE html>
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">阅读列表</p>
     <h1>今日摘要</h1>
     <p class="sub">%%DATE_LONG%% · %%TIME%% 更新</p>
   </section>
@@ -464,7 +456,7 @@ TEMPLATE = """<!DOCTYPE html>
 </main>
 %%FOOTER%%
 <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">
-  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><mask id="moonMask"><rect width="24" height="24" fill="#fff"/><circle cx="18" cy="6.6" r="9" fill="#000"/></mask><circle cx="12" cy="12" r="8.5" fill="currentColor" mask="url(#moonMask)"/></svg>
   <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
 </button>
 <script>%%THEME_JS%%</script>
@@ -487,9 +479,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">每日更新</p>
     <h1>热榜日报</h1>
-    <p class="sub">聚合公开信息源，每天自动生成内容摘要。</p>
+    <p class="sub">聚合公开信息源，每天自动抓取内容摘要。</p>
   </section>
 %%FILTERS%%
   <section class="timeline" aria-label="日报目录">
@@ -498,7 +489,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 </main>
 <footer class="footer"><a href="index.html">查看最新一期 →</a></footer>
 <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">
-  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><mask id="moonMask"><rect width="24" height="24" fill="#fff"/><circle cx="18" cy="6.6" r="9" fill="#000"/></mask><circle cx="12" cy="12" r="8.5" fill="currentColor" mask="url(#moonMask)"/></svg>
   <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
 </button>
 <script>%%INDEX_JS%%</script>
@@ -654,7 +645,7 @@ def render_index(records: list[dict]) -> str:
     if groups:
         year_chips = "".join(
             f'<button type="button" class="chip year-chip" data-year="{year}" '
-            f'aria-pressed="{str(index == 0).lower()}">{year}</button>'
+            f'aria-pressed="{str(index == 0).lower()}">{year}年</button>'
             for index, year in enumerate(years)
         )
         month_chips = "".join(
