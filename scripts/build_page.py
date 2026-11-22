@@ -262,14 +262,71 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: 0 28px 64px;
 }
+.filters {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 76px 14px 28px;
+  display: grid;
+  gap: 8px;
+  background: color-mix(in srgb, var(--bg) 76%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .filters { background: var(--bg); }
+}
+.year-row, .month-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+.year-row::-webkit-scrollbar, .month-row::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none;
+  appearance: none;
+  padding: 6px 13px;
+  border: 1px solid var(--line);
+  border-radius: 980px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.chip:hover { border-color: rgba(0, 113, 227, .45); }
+.chip[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent);
+}
+.month-row .chip { font-weight: 500; color: var(--muted); }
+.month-row .chip:hover { color: var(--text); }
+.month { scroll-margin-top: 112px; }
 .month-title {
-  margin: 34px 0 12px;
-  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 12px;
+  padding: 2px 4px;
+  list-style: none;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .06em;
   color: var(--muted);
+  cursor: pointer;
 }
+.month-title::-webkit-details-marker { display: none; }
+.month-count { margin-left: auto; font-weight: 500; }
+.month-chevron { transition: transform .2s ease; }
+details[open] > .month-title .month-chevron { transform: rotate(90deg); }
 .entries {
   list-style: none;
   margin: 0;
@@ -447,6 +504,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <h1>热榜日报</h1>
     <p class="sub">聚合公开信息源，每天自动生成内容摘要。</p>
   </section>
+%%FILTERS%%
   <section class="timeline" aria-label="日报目录">
 %%ENTRIES%%
   </section>
@@ -455,10 +513,52 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
   <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
   <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
 </button>
+<script>%%INDEX_JS%%</script>
 <script>%%THEME_JS%%</script>
 </body>
 </html>
 """
+
+INDEX_JS = """(function () {
+  var years = Array.prototype.slice.call(document.querySelectorAll(".year-chip"));
+  var months = Array.prototype.slice.call(document.querySelectorAll(".month-chip"));
+  function selectYear(year) {
+    years.forEach(function (chip) {
+      chip.setAttribute("aria-pressed", String(chip.dataset.year === year));
+    });
+    months.forEach(function (chip) {
+      chip.hidden = chip.dataset.year !== year;
+    });
+  }
+  function openMonth(section) {
+    var details = section && section.querySelector("details");
+    if (details) details.open = true;
+  }
+  function jump(section) {
+    if (!section) return;
+    selectYear(section.dataset.year);
+    openMonth(section);
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  years.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      jump(document.querySelector('.month[data-year="' + chip.dataset.year + '"]'));
+    });
+  });
+  months.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      jump(document.getElementById(chip.dataset.target));
+    });
+  });
+  var hash = location.hash.replace("#", "");
+  if (hash) {
+    var target = document.getElementById(hash);
+    if (target && target.classList.contains("month")) {
+      selectYear(target.dataset.year);
+      openMonth(target);
+    }
+  }
+})();"""
 
 
 def escape(value) -> str:
@@ -534,7 +634,7 @@ def render_index(records: list[dict]) -> str:
         groups.setdefault(record["date"][:7], []).append(record)
 
     sections = []
-    for year_month, rows in groups.items():
+    for position, (year_month, rows) in enumerate(groups.items()):
         year, month = year_month.split("-")
         entries = []
         for record in rows:
@@ -548,16 +648,51 @@ def render_index(records: list[dict]) -> str:
                 '<span class="entry-chevron" aria-hidden="true">›</span>'
                 "</a></li>".format(tag=tag, **record)
             )
+        opened = " open" if position == 0 else ""
         sections.append(
-            f'<section class="month"><h2 class="month-title">{year} 年 {int(month)} 月</h2>'
-            f'<ol class="entries">{"".join(entries)}</ol></section>'
+            f'<section class="month" id="m-{year_month}" data-year="{year}">'
+            f'<details class="month-details"{opened}>'
+            '<summary class="month-title">'
+            f"<span>{year} 年 {int(month)} 月</span>"
+            f'<span class="month-count">{len(rows)} 天</span>'
+            '<span class="month-chevron" aria-hidden="true">›</span>'
+            "</summary>"
+            f'<ol class="entries">{"".join(entries)}</ol>'
+            "</details></section>"
+        )
+
+    years: list[str] = []
+    for year_month in groups:
+        if not years or years[-1] != year_month[:4]:
+            years.append(year_month[:4])
+    filters = ""
+    if groups:
+        year_chips = "".join(
+            f'<button type="button" class="chip year-chip" data-year="{year}" '
+            f'aria-pressed="{str(index == 0).lower()}">{year}</button>'
+            for index, year in enumerate(years)
+        )
+        month_chips = "".join(
+            f'<button type="button" class="chip month-chip" data-year="{year_month[:4]}" '
+            f'data-target="m-{year_month}"'
+            f'{" hidden" if year_month[:4] != years[0] else ""}>'
+            f"{int(year_month[5:])}月</button>"
+            for year_month in groups
+        )
+        filters = (
+            '<nav class="filters" aria-label="按年月筛选">'
+            f'<div class="year-row">{year_chips}</div>'
+            f'<div class="month-row">{month_chips}</div>'
+            "</nav>"
         )
 
     replacements = {
         "%%CSS%%": CSS,
         "%%THEME_INIT%%": THEME_INIT,
         "%%THEME_JS%%": THEME_TOGGLE_JS,
+        "%%INDEX_JS%%": INDEX_JS,
         "%%COUNT%%": str(len(records)),
+        "%%FILTERS%%": filters,
         "%%ENTRIES%%": "".join(sections),
     }
     page = INDEX_TEMPLATE

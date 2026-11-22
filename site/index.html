@@ -248,14 +248,71 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: 0 28px 64px;
 }
+.filters {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 76px 14px 28px;
+  display: grid;
+  gap: 8px;
+  background: color-mix(in srgb, var(--bg) 76%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .filters { background: var(--bg); }
+}
+.year-row, .month-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+.year-row::-webkit-scrollbar, .month-row::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none;
+  appearance: none;
+  padding: 6px 13px;
+  border: 1px solid var(--line);
+  border-radius: 980px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.chip:hover { border-color: rgba(0, 113, 227, .45); }
+.chip[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent);
+}
+.month-row .chip { font-weight: 500; color: var(--muted); }
+.month-row .chip:hover { color: var(--text); }
+.month { scroll-margin-top: 112px; }
 .month-title {
-  margin: 34px 0 12px;
-  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 12px;
+  padding: 2px 4px;
+  list-style: none;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .06em;
   color: var(--muted);
+  cursor: pointer;
 }
+.month-title::-webkit-details-marker { display: none; }
+.month-count { margin-left: auto; font-weight: 500; }
+.month-chevron { transition: transform .2s ease; }
+details[open] > .month-title .month-chevron { transform: rotate(90deg); }
 .entries {
   list-style: none;
   margin: 0;
@@ -357,14 +414,55 @@ a:focus-visible, .theme-toggle:focus-visible {
     <h1>热榜日报</h1>
     <p class="sub">聚合公开信息源，每天自动生成内容摘要。</p>
   </section>
+<nav class="filters" aria-label="按年月筛选"><div class="year-row"><button type="button" class="chip year-chip" data-year="2026" aria-pressed="true">2026</button></div><div class="month-row"><button type="button" class="chip month-chip" data-year="2026" data-target="m-2026-11">11月</button></div></nav>
   <section class="timeline" aria-label="日报目录">
-<section class="month"><h2 class="month-title">2026 年 11 月</h2><ol class="entries"><li><a class="entry" href="archive/2026-11-22.html"><span class="entry-date"><b>11月22日</b><span>星期日</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="tag">最新</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-21.html"><span class="entry-date"><b>11月21日</b><span>星期六</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-20.html"><span class="entry-date"><b>11月20日</b><span>星期五</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-19.html"><span class="entry-date"><b>11月19日</b><span>星期四</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-18.html"><span class="entry-date"><b>11月18日</b><span>星期三</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-17.html"><span class="entry-date"><b>11月17日</b><span>星期二</span></span><span class="entry-meta">9 个板块 · 88 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li></ol></section>
+<section class="month" id="m-2026-11" data-year="2026"><details class="month-details" open><summary class="month-title"><span>2026 年 11 月</span><span class="month-count">6 天</span><span class="month-chevron" aria-hidden="true">›</span></summary><ol class="entries"><li><a class="entry" href="archive/2026-11-22.html"><span class="entry-date"><b>11月22日</b><span>星期日</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="tag">最新</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-21.html"><span class="entry-date"><b>11月21日</b><span>星期六</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-20.html"><span class="entry-date"><b>11月20日</b><span>星期五</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-19.html"><span class="entry-date"><b>11月19日</b><span>星期四</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-18.html"><span class="entry-date"><b>11月18日</b><span>星期三</span></span><span class="entry-meta">9 个板块 · 90 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li><li><a class="entry" href="archive/2026-11-17.html"><span class="entry-date"><b>11月17日</b><span>星期二</span></span><span class="entry-meta">9 个板块 · 88 条</span><span class="entry-chevron" aria-hidden="true">›</span></a></li></ol></details></section>
   </section>
 </main>
 <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">
   <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
   <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
 </button>
+<script>(function () {
+  var years = Array.prototype.slice.call(document.querySelectorAll(".year-chip"));
+  var months = Array.prototype.slice.call(document.querySelectorAll(".month-chip"));
+  function selectYear(year) {
+    years.forEach(function (chip) {
+      chip.setAttribute("aria-pressed", String(chip.dataset.year === year));
+    });
+    months.forEach(function (chip) {
+      chip.hidden = chip.dataset.year !== year;
+    });
+  }
+  function openMonth(section) {
+    var details = section && section.querySelector("details");
+    if (details) details.open = true;
+  }
+  function jump(section) {
+    if (!section) return;
+    selectYear(section.dataset.year);
+    openMonth(section);
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  years.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      jump(document.querySelector('.month[data-year="' + chip.dataset.year + '"]'));
+    });
+  });
+  months.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      jump(document.getElementById(chip.dataset.target));
+    });
+  });
+  var hash = location.hash.replace("#", "");
+  if (hash) {
+    var target = document.getElementById(hash);
+    if (target && target.classList.contains("month")) {
+      selectYear(target.dataset.year);
+      openMonth(target);
+    }
+  }
+})();</script>
 <script>(function () {
   var root = document.documentElement;
   var btn = document.getElementById("themeToggle");
