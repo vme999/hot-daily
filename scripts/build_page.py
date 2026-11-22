@@ -271,12 +271,9 @@ a:hover { text-decoration: underline; }
   padding: 12px 76px 14px 28px;
   display: grid;
   gap: 8px;
-  background: color-mix(in srgb, var(--bg) 76%, transparent);
+  background: transparent;
   -webkit-backdrop-filter: blur(18px) saturate(180%);
   backdrop-filter: blur(18px) saturate(180%);
-}
-@supports not (backdrop-filter: blur(1px)) {
-  .filters { background: var(--bg); }
 }
 .year-row, .month-row {
   display: flex;
@@ -364,16 +361,6 @@ details[open] > .month-title .month-chevron { transform: rotate(90deg); }
   font-size: 13px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
-}
-.tag {
-  flex: none;
-  padding: 3px 9px;
-  border-radius: 980px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .01em;
 }
 .entry-chevron {
   flex: none;
@@ -509,6 +496,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 %%ENTRIES%%
   </section>
 </main>
+<footer class="footer"><a href="index.html">查看最新一期 →</a></footer>
 <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换浅色 / 深色模式">
   <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.4A8.5 8.5 0 1 1 9.6 3.4a7 7 0 0 0 11 11Z"/></svg>
   <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.6 12h2.4M19 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
@@ -628,7 +616,6 @@ def archive_record(data: dict) -> dict:
 
 def render_index(records: list[dict]) -> str:
     records = sorted(records, key=lambda r: r["date"], reverse=True)
-    newest = records[0]["date"] if records else ""
     groups: dict[str, list[dict]] = {}
     for record in records:
         groups.setdefault(record["date"][:7], []).append(record)
@@ -638,15 +625,13 @@ def render_index(records: list[dict]) -> str:
         year, month = year_month.split("-")
         entries = []
         for record in rows:
-            tag = '<span class="tag">最新</span>' if record["date"] == newest else ""
             entries.append(
                 '<li><a class="entry" href="archive/{date}.html">'
                 '<span class="entry-date"><b>{month}月{day}日</b>'
                 "<span>星期{weekday}</span></span>"
                 '<span class="entry-meta">{sources} 个板块 · {items} 条</span>'
-                "{tag}"
                 '<span class="entry-chevron" aria-hidden="true">›</span>'
-                "</a></li>".format(tag=tag, **record)
+                "</a></li>".format(**record)
             )
         opened = " open" if position == 0 else ""
         sections.append(
@@ -707,7 +692,7 @@ def render(data: dict, archive: bool, root: bool = False) -> str:
     cards = "\n".join(render_card(s) for s in sources)
     base = "" if root else "../"
     footer = (
-        f'<footer class="footer"><a href="{base}index.html">返回日报目录</a></footer>'
+        f'<footer class="footer"><a href="{base}directory.html">查看往期日报</a></footer>'
         if archive else ""
     )
     replacements = {
@@ -736,8 +721,8 @@ def write_archive(data: dict) -> str:
     return path
 
 
-def write_index(records: list[dict]) -> str:
-    path = os.path.join(SITE_DIR, "index.html")
+def write_directory(records: list[dict]) -> str:
+    path = os.path.join(SITE_DIR, "directory.html")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(render_index(records))
     return path
@@ -750,21 +735,20 @@ def write_favicon() -> str:
     return path
 
 
-def write_latest(data: dict | None) -> str:
-    """生成固定地址 latest.html，直接展示最新一期内容（不跳转）。"""
+def write_home(data: dict | None) -> str:
+    """生成站点首页 index.html，直接展示最新一期内容。"""
     if data:
         page = render(data, archive=True, root=True)
     else:
         page = (
             '<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n'
             '<meta charset="utf-8">\n'
-            '<meta http-equiv="refresh" content="0; url=index.html">\n'
             "<title>今日摘要</title>\n"
             "</head>\n<body>\n"
-            '<p>还没有内容：<a href="index.html">返回日报目录</a></p>\n'
+            "<p>还没有内容，请先运行抓取脚本。</p>\n"
             "</body>\n</html>\n"
         )
-    path = os.path.join(SITE_DIR, "latest.html")
+    path = os.path.join(SITE_DIR, "index.html")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(page)
     return path
@@ -797,8 +781,11 @@ def main() -> int:
         newest = load_json(max(files))
         newest["date"] = newest.get("date") or os.path.basename(max(files))[:-5]
     print(write_favicon())
-    print(write_index(records))
-    print(write_latest(newest))
+    print(write_directory(records))
+    print(write_home(newest))
+    stale = os.path.join(SITE_DIR, "latest.html")
+    if os.path.exists(stale):
+        os.remove(stale)
     return 0
 
 
