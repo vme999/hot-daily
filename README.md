@@ -1,7 +1,8 @@
 # Hot List Daily
 
-A static daily digest of trending topics from 9 sources. The home page lists
-snapshots by date; each snapshot holds 9 sections and supports light / dark mode.
+A static daily digest of trending topics from 9 sources. The root page shows the
+newest snapshot; earlier ones are listed in a date directory. Light / dark mode
+is built in.
 
 Site: <https://vme999.github.io/hot-daily/>
 
