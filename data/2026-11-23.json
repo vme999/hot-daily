@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T09:00:43+08:00",
+  "time": "09:00",
+  "sources": [
+    {
+      "id": "zhihu",
+      "name": "知乎热榜",
+      "icon": "知",
+      "color": "#0084ff",
+      "home": "https://www.zhihu.com/hot",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "方力申耗时 8 小时 37 分 24 秒从香港游到澳门破吉尼斯纪录，完成这样的挑战难度有多大？",
+          "url": "https://www.zhihu.com/question/2107848989819326753",
+          "hot": "722 万热度"
+        },
+        {
+          "title": "在黎曼猜想被声称证明后，如何理解袁新意所说的「或许我们高估了黎曼猜想的难度」？",
+          "url": "https://www.zhihu.com/question/2107618428508792525",
+          "hot": "600 万热度"
+        },
+        {
+          "title": "编剧芦苇评价《给阿嬷的情书》是合格水准，但很难成为经典，劣币驱逐良币时代是良心之作，怎样理解这一说法？",
+          "url": "https://www.zhihu.com/question/2107906248599234133",
+          "hot": "510 万热度"
+        },
+        {
+          "title": "交易所打出稳市「组合拳」，沪深北交易所降低融资保证金比例下限至 80%，意味着什么？释放了哪些信号？",
+          "url": "https://www.zhihu.com/question/2107908002430677964",
+          "hot": "335 万热度"
+        },
+        {
+          "title": "2026年乒乓球德甲联赛第九轮，樊振东1：3负于约内斯库，怎么评价本场比赛？",
+          "url": "https://www.zhihu.com/question/2107985884800984526",
+          "hot": "262 万热度"
+        },
+        {
+          "title": "主播私闯果园直播带货糟蹋千斤苹果，起初仅愿赔偿6000元，官方通报其系误入，相关损失应如何认定和赔偿？",
+          "url": "https://www.zhihu.com/question/2107832519722791972",
+          "hot": "191 万热度"
+        },
+        {
+          "title": "你知道有多少冷知识？",
+          "url": "https://www.zhihu.com/question/652081252",
+          "hot": "188 万热度"
+        },
+        {
+          "title": "张水华黄石马拉松破个人纪录夺冠，6周连跑6场获5冠1亚，如何评价她的表现？",
+          "url": "https://www.zhihu.com/question/2107832295511913619",
+          "hot": "163 万热度"
+        },
+        {
+          "title": "如何看待曝 Tarzan 向 AL 提出解约？若Tarzan离队成功将会对AL产生哪些影响？",
+          "url": "https://www.zhihu.com/question/2107535407227172231",
+          "hot": "157 万热度"
+        },
+        {
+          "title": "曝 ShowMaker 宁愿大幅度降薪也希望留在 DK，如何评价他的选择？DK 目前情况有多糟？",
+          "url": "https://www.zhihu.com/question/2105979786103191265",
+          "hot": "139 万热度"
+        }
+      ]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "icon": "澎",
+      "color": "#e60012",
+      "home": "https://www.thepaper.cn/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "100%降至80%！融资保证金比例下调，预计4000亿增量资金在路上",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34534889",
+          "hot": ""
+        },
+        {
+          "title": "创业板将引入做市商制度：有哪些亮点安排，市场影响几何？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34535483",
+          "hot": ""
+        },
+        {
+          "title": "花五六十万连麦越聊越焦虑？“测测”被指诱导消费，平台坚称计费已明示",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34534267",
+          "hot": ""
+        },
+        {
+          "title": "中外嘉宾即将相聚，共探上海纽约双城合作新机遇",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34528828",
+          "hot": ""
+        },
+        {
+          "title": "美方拟禁止中国电信运营商直接获取美国互联网电话号码资源，商务部回应",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34532695",
+          "hot": ""
+        },
+        {
+          "title": "《学习时报》刊文梳理“伪史论”传播路径：算法机制放大高冲突、高争议内容",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34533204",
+          "hot": ""
+        },
+        {
+          "title": "中国石油天然气集团有限公司党组成员、副总经理谢军被查",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34533075",
+          "hot": ""
+        },
+        {
+          "title": "郎平获排球勋章后发文致谢：如果重新走一遍，我还会选择排球",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34533407",
+          "hot": ""
+        },
+        {
+          "title": "郎平获国际排联最高荣誉“排球勋章”：全球排球偶像，成就激励几代人",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34533102",
+          "hot": ""
+        },
+        {
+          "title": "张水华破个人纪录夺冠，辞职专心跑步，一个多月奖金超26万",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34533663",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "weibo",
+      "name": "微博热搜",
+      "icon": "微",
+      "color": "#e6162d",
+      "home": "https://s.weibo.com/top/summary",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "樊振东1比3约内斯库",
+          "url": "https://s.weibo.com/weibo?q=%E6%A8%8A%E6%8C%AF%E4%B8%9C1%E6%AF%943%E7%BA%A6%E5%86%85%E6%96%AF%E5%BA%93",
+          "hot": "56万"
+        },
+        {
+          "title": "央视主持人录节目假牙丢了",
+          "url": "https://s.weibo.com/weibo?q=%E5%A4%AE%E8%A7%86%E4%B8%BB%E6%8C%81%E4%BA%BA%E5%BD%95%E8%8A%82%E7%9B%AE%E5%81%87%E7%89%99%E4%B8%A2%E4%BA%86",
+          "hot": "41万"
+        },
+        {
+          "title": "诗词里的千年文脉",
+          "url": "https://s.weibo.com/weibo?q=%E8%AF%97%E8%AF%8D%E9%87%8C%E7%9A%84%E5%8D%83%E5%B9%B4%E6%96%87%E8%84%89",
+          "hot": "33万"
+        },
+        {
+          "title": "荣耀700系列新品发布会",
+          "url": "https://s.weibo.com/weibo?q=%E8%8D%A3%E8%80%80700%E7%B3%BB%E5%88%97%E6%96%B0%E5%93%81%E5%8F%91%E5%B8%83%E4%BC%9A",
+          "hot": "31万"
+        },
+        {
+          "title": "私闯果园糟蹋水果主播下架所有视频",
+          "url": "https://s.weibo.com/weibo?q=%E7%A7%81%E9%97%AF%E6%9E%9C%E5%9B%AD%E7%B3%9F%E8%B9%8B%E6%B0%B4%E6%9E%9C%E4%B8%BB%E6%92%AD%E4%B8%8B%E6%9E%B6%E6%89%80%E6%9C%89%E8%A7%86%E9%A2%91",
+          "hot": "29万"
+        },
+        {
+          "title": "主播糟蹋千斤苹果仅赔6000元",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%BB%E6%92%AD%E7%B3%9F%E8%B9%8B%E5%8D%83%E6%96%A4%E8%8B%B9%E6%9E%9C%E4%BB%85%E8%B5%946000%E5%85%83",
+          "hot": "15万"
+        },
+        {
+          "title": "中戏同学成顶流男演员却当NPC",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%AD%E6%88%8F%E5%90%8C%E5%AD%A6%E6%88%90%E9%A1%B6%E6%B5%81%E7%94%B7%E6%BC%94%E5%91%98%E5%8D%B4%E5%BD%93NPC",
+          "hot": "15万"
+        },
+        {
+          "title": "赵本山女儿和老公两地分居",
+          "url": "https://s.weibo.com/weibo?q=%E8%B5%B5%E6%9C%AC%E5%B1%B1%E5%A5%B3%E5%84%BF%E5%92%8C%E8%80%81%E5%85%AC%E4%B8%A4%E5%9C%B0%E5%88%86%E5%B1%85",
+          "hot": "15万"
+        },
+        {
+          "title": "2026亚太最具影响力青年男性TOP100",
+          "url": "https://s.weibo.com/weibo?q=2026%E4%BA%9A%E5%A4%AA%E6%9C%80%E5%85%B7%E5%BD%B1%E5%93%8D%E5%8A%9B%E9%9D%92%E5%B9%B4%E7%94%B7%E6%80%A7TOP100",
+          "hot": "15万"
+        },
+        {
+          "title": "青稚夺冠后直播热度",
+          "url": "https://s.weibo.com/weibo?q=%E9%9D%92%E7%A8%9A%E5%A4%BA%E5%86%A0%E5%90%8E%E7%9B%B4%E6%92%AD%E7%83%AD%E5%BA%A6",
+          "hot": "15万"
+        }
+      ]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "华为OSTA星芒 O1 Pro 评测：一台真正为 AI 而生的鸿蒙手机",
+          "url": "https://www.ifanr.com/1690613",
+          "hot": ""
+        },
+        {
+          "title": "早报｜曝苹果明年下半年发布iPhone 20与智能眼镜/丘成桐：AI证明黎曼猜想，数学进入新纪元/GTA6带动主机溢价，PS5 Pro涨至近1.6万元",
+          "url": "https://www.ifanr.com/1690857",
+          "hot": ""
+        },
+        {
+          "title": "iPhone 18 大更新，明年春天见！但苹果的挑战才刚刚开始",
+          "url": "https://www.ifanr.com/1690832",
+          "hot": ""
+        },
+        {
+          "title": "Claude 的黎曼猜想证明获 Lean 官方认证，马斯克直呼惊人成就",
+          "url": "https://www.ifanr.com/1690820",
+          "hot": ""
+        },
+        {
+          "title": "伟大的 GTA 6，「不好玩」的 GTA 6",
+          "url": "https://www.ifanr.com/1690801",
+          "hot": ""
+        },
+        {
+          "title": "美股一夜崩盘，AI 泡沫真要破了？",
+          "url": "https://www.ifanr.com/1690789",
+          "hot": ""
+        },
+        {
+          "title": "刚刚，曝黎曼猜想被证明，Claude 立大功",
+          "url": "https://www.ifanr.com/1690750",
+          "hot": ""
+        },
+        {
+          "title": "早报｜曝Claude证明黎曼猜想，陶哲轩回应/余承东更正发布会表述：开车不能睡觉/五月天公布Vision Pro演唱会，Apple Store可预约体验",
+          "url": "https://www.ifanr.com/1690759",
+          "hot": ""
+        },
+        {
+          "title": "理想造了一颗登上台积电讲台的芯片，却希望你在开车时彻底忘掉它",
+          "url": "https://www.ifanr.com/1690596",
+          "hot": ""
+        },
+        {
+          "title": "首款鸿蒙 AI 手机发布：华为全新子品牌 OSTA 星芒有一个「增援未来计划」",
+          "url": "https://www.ifanr.com/1690642",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "sspai",
+      "name": "少数派",
+      "icon": "少",
+      "color": "#1f8aa8",
+      "home": "https://sspai.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "派早报：Anthropic 研究员宣称用 Claude 证明黎曼猜想",
+          "url": "https://sspai.com/post/119418",
+          "hot": ""
+        },
+        {
+          "title": "从深圳到上海，少数派的共创故事还在继续",
+          "url": "https://sspai.com/post/119318",
+          "hot": ""
+        },
+        {
+          "title": "这群在鸿蒙写应用的年轻人，只想做点「用得上」的",
+          "url": "https://sspai.com/post/119291",
+          "hot": ""
+        },
+        {
+          "title": "本周看什么 | 最近值得一看的 10 部作品",
+          "url": "https://sspai.com/post/119337",
+          "hot": ""
+        },
+        {
+          "title": "游戏史最高分，不负 13 年的等待：《GTA 6》游玩体验",
+          "url": "https://sspai.com/post/119327",
+          "hot": ""
+        },
+        {
+          "title": "浮屏：截图即可「上岛」，还能帮你记录生活",
+          "url": "https://sspai.com/post/118879",
+          "hot": ""
+        },
+        {
+          "title": "派早报：Google 推出 Gemini 4 Neon 模型，网易 UU 远程将于 12 月推出付费会员等",
+          "url": "https://sspai.com/post/119311",
+          "hot": ""
+        },
+        {
+          "title": "给 Apple 的 2026 年打分，请你一起参与",
+          "url": "https://sspai.com/post/119191",
+          "hot": ""
+        },
+        {
+          "title": "新玩意 256｜少数派的编辑们最近买了啥？",
+          "url": "https://sspai.com/post/119287",
+          "hot": ""
+        },
+        {
+          "title": "有必要但欠平衡：浅评 macOS 27.3 新版权限控制机制",
+          "url": "https://sspai.com/prime/story/system-app-protection-override-macos-27-3",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "icon": "嗅",
+      "color": "#ff6a00",
+      "home": "https://www.huxiu.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "天崩开局，印度和中国的差距究竟有多大？",
+          "url": "https://www.huxiu.com/article/4906031.html",
+          "hot": "64.5万"
+        },
+        {
+          "title": "14年深圳老酒店，凭啥接下特朗普？",
+          "url": "https://www.huxiu.com/article/4906698.html",
+          "hot": "52.3万"
+        },
+        {
+          "title": "第一性原理正在失效：当最聪明的一群人突然穿起了同一双跑鞋",
+          "url": "https://www.huxiu.com/article/4906383.html",
+          "hot": "49.5万"
+        },
+        {
+          "title": "十家车企压了近万亿账款，中国车圈背着连环债的雷",
+          "url": "https://www.huxiu.com/article/4896154.html",
+          "hot": "47.7万"
+        },
+        {
+          "title": "耐克的中场战事",
+          "url": "https://www.huxiu.com/article/4906401.html",
+          "hot": "41.4万"
+        },
+        {
+          "title": "1280000000000美元，Anthropic一夜杀疯",
+          "url": "https://www.huxiu.com/article/4907024.html",
+          "hot": "41.2万"
+        },
+        {
+          "title": "黄仁勋开口想回来，英伟达反手就是三记耳光",
+          "url": "https://www.huxiu.com/article/4906512.html",
+          "hot": "38.2万"
+        },
+        {
+          "title": "裸辞8个月，我去三亚做义工，13天后对低成本生活祛魅了",
+          "url": "https://www.huxiu.com/article/4906405.html",
+          "hot": "34.5万"
+        },
+        {
+          "title": "销量跌40%后，一汽-大众砍掉了员工最后的体面",
+          "url": "https://www.huxiu.com/article/4905987.html",
+          "hot": "32.1万"
+        },
+        {
+          "title": "可能是今年高盛最好的中国报告",
+          "url": "https://www.huxiu.com/article/4906064.html",
+          "hot": "30.0万"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub 趋势",
+      "icon": "GH",
+      "color": "#24292f",
+      "home": "https://github.com/trending",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "elementalsouls / Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "hot": "1.8万"
+        },
+        {
+          "title": "obra / superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "hot": "32.4万"
+        },
+        {
+          "title": "HKUDS / CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "hot": "6.3万"
+        },
+        {
+          "title": "jingyaogong / minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "hot": "6.9万"
+        },
+        {
+          "title": "cursor / plugins",
+          "url": "https://github.com/cursor/plugins",
+          "hot": "1.8万"
+        },
+        {
+          "title": "firecrawl / firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "hot": "20.7万"
+        },
+        {
+          "title": "nginx / nginx",
+          "url": "https://github.com/nginx/nginx",
+          "hot": "3.3万"
+        },
+        {
+          "title": "openvinotoolkit / openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "hot": "1.2万"
+        },
+        {
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "hot": "7.0万"
+        },
+        {
+          "title": "mvanhorn / last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "hot": "7.3万"
+        }
+      ]
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "icon": "HN",
+      "color": "#ff6600",
+      "home": "https://news.ycombinator.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+          "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
+          "hot": "1181 分"
+        },
+        {
+          "title": "Perplexity and Intelligence",
+          "url": "https://openai.com/index/perplexity-and-intelligence/",
+          "hot": "466 分"
+        },
+        {
+          "title": "What Happened to Silicon Valley?",
+          "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+          "hot": "388 分"
+        },
+        {
+          "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+          "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+          "hot": "327 分"
+        },
+        {
+          "title": "Show HN: I built a game where you are an LLM's subagent",
+          "url": "https://github.com/gulivan/worker755",
+          "hot": "266 分"
+        },
+        {
+          "title": "Open Social Web Alliance",
+          "url": "https://osw-alliance.net/en/",
+          "hot": "218 分"
+        },
+        {
+          "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+          "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+          "hot": "172 分"
+        },
+        {
+          "title": "A miniature San Francisco with live buses, planes and boats",
+          "url": "https://smallsf.com/",
+          "hot": "125 分"
+        },
+        {
+          "title": "I joined the NTP Pool, but not with my Stratum 1 Pi",
+          "url": "https://www.jeffgeerling.com/blog/2026/i-joined-the-ntp-pool/",
+          "hot": "125 分"
+        },
+        {
+          "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+          "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+          "hot": "120 分"
+        }
+      ]
+    },
+    {
+      "id": "devto",
+      "name": "dev.to",
+      "icon": "dev",
+      "color": "#6366f1",
+      "home": "https://dev.to/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Necoz Is Building a New House!! 🛸 All Cats, Follow Me!! 🐈🚀",
+          "url": "https://dev.to/necoz/necoz-is-building-a-new-house-all-cats-follow-me-530n",
+          "hot": "71 赞"
+        },
+        {
+          "title": "I turned my GitHub contribution graph into a Bloomberg-style trading terminal",
+          "url": "https://dev.to/necoz/i-turned-my-github-contribution-graph-into-a-bloomberg-style-trading-terminal-31eh",
+          "hot": "45 赞"
+        },
+        {
+          "title": "The Third Cup: Five Elements, One IT Company",
+          "url": "https://dev.to/thethirdcup/the-third-cup-five-elements-one-it-company-1bca",
+          "hot": "75 赞"
+        },
+        {
+          "title": "I Made My RAG Safer. It Got Worse Under Load",
+          "url": "https://dev.to/ayush_singh_9b0d83152be5b/i-made-my-rag-safer-it-got-worse-under-load-3olm",
+          "hot": "30 赞"
+        },
+        {
+          "title": "Day 90: A Mask in the Way and a Policy Pointing at Nothing",
+          "url": "https://dev.to/ndcodes/day-90-a-mask-in-the-way-and-a-policy-pointing-at-nothing-390o",
+          "hot": "24 赞"
+        },
+        {
+          "title": "Monuments of India, Part 4: 100 New Monuments, from Harappan Dholavira to the Chenab Rail Bridge",
+          "url": "https://dev.to/amananandrai/monuments-of-india-part-4-100-new-monuments-from-harappan-dholavira-to-the-chenab-rail-bridge-3n6p",
+          "hot": "6 赞"
+        },
+        {
+          "title": "Glint: type and speak with your eyebrows and your breath",
+          "url": "https://dev.to/yashksaini/glint-type-and-speak-with-your-eyebrows-and-your-breath-569o",
+          "hot": "18 赞"
+        },
+        {
+          "title": "Peek: a horror game where your MacBook lid is your eyelids",
+          "url": "https://dev.to/kakeroth/peek-a-horror-game-where-your-macbook-lid-is-your-eyelids-3hdp",
+          "hot": "30 赞"
+        },
+        {
+          "title": "How long it actually takes a GPGME fix to reach Ubuntu",
+          "url": "https://dev.to/alexgeorgiev17/how-long-it-actually-takes-a-gpgme-fix-to-reach-ubuntu-30go",
+          "hot": "8 赞"
+        },
+        {
+          "title": "3Draft: Five Percent — 30 Minutes to Deadline",
+          "url": "https://dev.to/pengeszikra/3draft-five-percent-30-minutes-to-deadline-1kfk",
+          "hot": "20 赞"
+        }
+      ]
+    }
+  ]
+}
