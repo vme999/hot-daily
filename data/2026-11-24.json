@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T09:00:41+08:00",
+  "time": "09:00",
+  "sources": [
+    {
+      "id": "zhihu",
+      "name": "知乎热榜",
+      "icon": "知",
+      "color": "#0084ff",
+      "home": "https://www.zhihu.com/hot",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "U17世界杯小组赛，中国U17男足补时读秒阶段遭绝平，最终2比2摩洛哥，怎样评价本场比赛？",
+          "url": "https://www.zhihu.com/question/2108346189238067728",
+          "hot": "364 万热度"
+        },
+        {
+          "title": "懂车帝回应「测试内容大调整」，称不再开放对比类内容等信息失实，具体是怎么回事？实际有哪些调整？",
+          "url": "https://www.zhihu.com/question/2108257367678613356",
+          "hot": "319 万热度"
+        },
+        {
+          "title": "黄仁勋辞任后 11 天被全票请回，这波极限拉扯到底谁输谁赢？这次回归，他真能就此高枕无忧吗？",
+          "url": "https://www.zhihu.com/question/2108357079689860788",
+          "hot": "274 万热度"
+        },
+        {
+          "title": "幼儿园要招两岁孩子了，新政策支持幼儿园改造扩建，举办两至三岁幼儿的托班，该举措对家长和孩子有哪些好处？",
+          "url": "https://www.zhihu.com/question/2108198291775165166",
+          "hot": "236 万热度"
+        },
+        {
+          "title": "骑手一句「treetree的」带火披萨店炸鸡，老板直言爆单做不过来，为啥此类视频能迅速调起大众购买欲？",
+          "url": "https://www.zhihu.com/question/2108166891873072954",
+          "hot": "184 万热度"
+        },
+        {
+          "title": "黄仁勋称将以最大的谦卑和新的承诺承担这一责任，英伟达接下来将怎样发展？此前的策略会发生变化吗？",
+          "url": "https://www.zhihu.com/question/2108335183820579086",
+          "hot": "170 万热度"
+        },
+        {
+          "title": "Digital Foundry 称《GTA6》即便高端 PC 也难稳 60 帧，其核心瓶颈要如何解决？",
+          "url": "https://www.zhihu.com/question/2107441603245876469",
+          "hot": "156 万热度"
+        },
+        {
+          "title": "有哪些化学冷知识？",
+          "url": "https://www.zhihu.com/question/38488404",
+          "hot": "139 万热度"
+        },
+        {
+          "title": "黄仁勋「熹妃回宫」特朗普帮了多大的忙？对特朗普会有哪些好处？",
+          "url": "https://www.zhihu.com/question/2108326762346017716",
+          "hot": "135 万热度"
+        },
+        {
+          "title": "某部委员工与间谍签署「保密与忠诚」条款、窃取百余份情报被判死刑，哪些信息值得关注？",
+          "url": "https://www.zhihu.com/question/2108143417800615253",
+          "hot": "130 万热度"
+        }
+      ]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "icon": "澎",
+      "color": "#e60012",
+      "home": "https://www.thepaper.cn/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "首批18只主动ETF上市，360亿增量资金来了",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34539385",
+          "hot": ""
+        },
+        {
+          "title": "从哈德逊河到“一江一河”，《奔流》第三季上海场续谈未来合作",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34538199",
+          "hot": ""
+        },
+        {
+          "title": "叛变投敌人员何畏竟被一些自媒体演绎为“悲情将领”，琼海市委党史研究中心澄清",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34540979",
+          "hot": ""
+        },
+        {
+          "title": "山东13岁少年被控杀害5岁男孩案一审开庭，被害人家属：作案前曾踩点并画逃跑路线",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34540649",
+          "hot": ""
+        },
+        {
+          "title": "视频丨055大驱、歼-35等海军多型舰机将亮相中国航展",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34537823",
+          "hot": ""
+        },
+        {
+          "title": "马上评丨价值20万摩托车隔空被盗，货拉拉“贼货”也拉？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34542062",
+          "hot": ""
+        },
+        {
+          "title": "黄仁勋回归，重任CEO！英伟达盘前暴涨超26%",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34541483",
+          "hot": ""
+        },
+        {
+          "title": "某部委机关干部被境外势力“俘获”，窃取我国百余份情报被判死刑",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34537269",
+          "hot": ""
+        },
+        {
+          "title": "《教材管理条例（征求意见稿）》面向社会公开征求意见",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34539431",
+          "hot": ""
+        },
+        {
+          "title": "广西、贵州多地查处非法捕鸟、食鸟问题，广西八地林长被集中约谈",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34538317",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "weibo",
+      "name": "微博热搜",
+      "icon": "微",
+      "color": "#e6162d",
+      "home": "https://s.weibo.com/top/summary",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "黄仁勋复职原因",
+          "url": "https://s.weibo.com/weibo?q=%E9%BB%84%E4%BB%81%E5%8B%8B%E5%A4%8D%E8%81%8C%E5%8E%9F%E5%9B%A0",
+          "hot": "119万"
+        },
+        {
+          "title": "U17国足第99分钟被绝平",
+          "url": "https://s.weibo.com/weibo?q=U17%E5%9B%BD%E8%B6%B3%E7%AC%AC99%E5%88%86%E9%92%9F%E8%A2%AB%E7%BB%9D%E5%B9%B3",
+          "hot": "52万"
+        },
+        {
+          "title": "E法同行向上向海",
+          "url": "https://s.weibo.com/weibo?q=E%E6%B3%95%E5%90%8C%E8%A1%8C%E5%90%91%E4%B8%8A%E5%90%91%E6%B5%B7",
+          "hot": "42万"
+        },
+        {
+          "title": "自己借钱还钱买房名义上妈妈买的",
+          "url": "https://s.weibo.com/weibo?q=%E8%87%AA%E5%B7%B1%E5%80%9F%E9%92%B1%E8%BF%98%E9%92%B1%E4%B9%B0%E6%88%BF%E5%90%8D%E4%B9%89%E4%B8%8A%E5%A6%88%E5%A6%88%E4%B9%B0%E7%9A%84",
+          "hot": "30万"
+        },
+        {
+          "title": "黄仁勋恢复英伟达CEO职务",
+          "url": "https://s.weibo.com/weibo?q=%E9%BB%84%E4%BB%81%E5%8B%8B%E6%81%A2%E5%A4%8D%E8%8B%B1%E4%BC%9F%E8%BE%BECEO%E8%81%8C%E5%8A%A1",
+          "hot": "27万"
+        },
+        {
+          "title": "李雪琴居然这么瘦了",
+          "url": "https://s.weibo.com/weibo?q=%E6%9D%8E%E9%9B%AA%E7%90%B4%E5%B1%85%E7%84%B6%E8%BF%99%E4%B9%88%E7%98%A6%E4%BA%86",
+          "hot": "25万"
+        },
+        {
+          "title": "MG4新增530从容版上市7.88万",
+          "url": "https://s.weibo.com/weibo?q=MG4%E6%96%B0%E5%A2%9E530%E4%BB%8E%E5%AE%B9%E7%89%88%E4%B8%8A%E5%B8%827.88%E4%B8%87",
+          "hot": "25万"
+        },
+        {
+          "title": "文吉儿风波的导火索",
+          "url": "https://s.weibo.com/weibo?q=%E6%96%87%E5%90%89%E5%84%BF%E9%A3%8E%E6%B3%A2%E7%9A%84%E5%AF%BC%E7%81%AB%E7%B4%A2",
+          "hot": "22万"
+        },
+        {
+          "title": "金价",
+          "url": "https://s.weibo.com/weibo?q=%E9%87%91%E4%BB%B7",
+          "hot": "15万"
+        },
+        {
+          "title": "美股芯片股涨疯了",
+          "url": "https://s.weibo.com/weibo?q=%E7%BE%8E%E8%82%A1%E8%8A%AF%E7%89%87%E8%82%A1%E6%B6%A8%E7%96%AF%E4%BA%86",
+          "hot": "12万"
+        }
+      ]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "早报｜黄仁勋回归，英伟达股价一夜暴涨31%/《复仇者联盟5》发布终极预告/3399起，荣耀700系列发布",
+          "url": "https://www.ifanr.com/1691119",
+          "hot": ""
+        },
+        {
+          "title": "刚刚，黄仁勋重返英伟达！董事会全票通过，盘前大涨 30%",
+          "url": "https://www.ifanr.com/1691103",
+          "hot": ""
+        },
+        {
+          "title": "突发！黄仁勋恢复英伟达 CEO 职位，董事会全票通过",
+          "url": "https://www.ifanr.com/1691096",
+          "hot": ""
+        },
+        {
+          "title": "AI 降本增笑，全世界都在被迫接受审美大降级",
+          "url": "https://www.ifanr.com/1691079",
+          "hot": ""
+        },
+        {
+          "title": "自变量发布 WALL-API-1.0，主流榜单超越 Astra，扛起具身智能「预训练」的大旗",
+          "url": "https://www.ifanr.com/1691043",
+          "hot": ""
+        },
+        {
+          "title": "33.99 万起买 400V 与 8 秒零百前驱车，纯电雷克萨斯 ES 贵过头了",
+          "url": "https://www.ifanr.com/1691012",
+          "hot": ""
+        },
+        {
+          "title": "鸿蒙版醒图新版本上线：AI修图「不烧心」",
+          "url": "https://www.ifanr.com/1690991",
+          "hot": ""
+        },
+        {
+          "title": "XREAL AURA 体验：科幻电影的未来，这么近那么远",
+          "url": "https://www.ifanr.com/1690660",
+          "hot": ""
+        },
+        {
+          "title": "华为OSTA星芒 O1 Pro 评测：一台真正为 AI 而生的鸿蒙手机",
+          "url": "https://www.ifanr.com/1690613",
+          "hot": ""
+        },
+        {
+          "title": "早报｜曝苹果明年下半年发布iPhone 20与智能眼镜/丘成桐：AI证明黎曼猜想，数学进入新纪元/GTA6带动主机溢价，PS5 Pro涨至近1.6万元",
+          "url": "https://www.ifanr.com/1690857",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "sspai",
+      "name": "少数派",
+      "icon": "少",
+      "color": "#1f8aa8",
+      "home": "https://sspai.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "派评 | 近期值得关注的 App",
+          "url": "https://sspai.com/post/119438",
+          "hot": ""
+        },
+        {
+          "title": "怪手机们要回来了吗？",
+          "url": "https://sspai.com/prime/story/weird-phones-are-returning",
+          "hot": ""
+        },
+        {
+          "title": "养鱼更省心，造景更自由：米家智能鱼缸 2 Pro 体验",
+          "url": "https://sspai.com/post/119023",
+          "hot": ""
+        },
+        {
+          "title": "新手问号 | 用智能插座为旧款 Apple 设备设置「充电上限」",
+          "url": "https://sspai.com/post/118705",
+          "hot": ""
+        },
+        {
+          "title": "派早报：Anthropic 研究员宣称用 Claude 证明黎曼猜想",
+          "url": "https://sspai.com/post/119418",
+          "hot": ""
+        },
+        {
+          "title": "从深圳到上海，少数派的共创故事还在继续",
+          "url": "https://sspai.com/post/119318",
+          "hot": ""
+        },
+        {
+          "title": "这群在鸿蒙写应用的年轻人，只想做点「用得上」的",
+          "url": "https://sspai.com/post/119291",
+          "hot": ""
+        },
+        {
+          "title": "本周看什么 | 最近值得一看的 10 部作品",
+          "url": "https://sspai.com/post/119337",
+          "hot": ""
+        },
+        {
+          "title": "游戏史最高分，不负 13 年的等待：《GTA 6》游玩体验",
+          "url": "https://sspai.com/post/119327",
+          "hot": ""
+        },
+        {
+          "title": "浮屏：截图即可「上岛」，还能帮你记录生活",
+          "url": "https://sspai.com/post/118879",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "icon": "嗅",
+      "color": "#ff6a00",
+      "home": "https://www.huxiu.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "14年深圳老酒店，凭啥接下特朗普？",
+          "url": "https://www.huxiu.com/article/4906698.html",
+          "hot": "56.0万"
+        },
+        {
+          "title": "第一性原理正在失效：当最聪明的一群人突然穿起了同一双跑鞋",
+          "url": "https://www.huxiu.com/article/4906383.html",
+          "hot": "52.7万"
+        },
+        {
+          "title": "十家车企压了近万亿账款，中国车圈背着连环债的雷",
+          "url": "https://www.huxiu.com/article/4896154.html",
+          "hot": "50.5万"
+        },
+        {
+          "title": "我最近听到最有水平的两句话",
+          "url": "https://www.huxiu.com/article/4907013.html",
+          "hot": "47.3万"
+        },
+        {
+          "title": "1280000000000美元，Anthropic一夜杀疯",
+          "url": "https://www.huxiu.com/article/4907024.html",
+          "hot": "42.8万"
+        },
+        {
+          "title": "耐克的中场战事",
+          "url": "https://www.huxiu.com/article/4906401.html",
+          "hot": "42.0万"
+        },
+        {
+          "title": "腾讯到最危险的时刻了？",
+          "url": "https://www.huxiu.com/article/4906811.html",
+          "hot": "43.5万"
+        },
+        {
+          "title": "黄仁勋开口想回来，英伟达反手就是三记耳光",
+          "url": "https://www.huxiu.com/article/4906512.html",
+          "hot": "39.5万"
+        },
+        {
+          "title": "裸辞8个月，我去三亚做义工，13天后对低成本生活祛魅了",
+          "url": "https://www.huxiu.com/article/4906405.html",
+          "hot": "37.1万"
+        },
+        {
+          "title": "销量跌40%后，一汽-大众砍掉了员工最后的体面",
+          "url": "https://www.huxiu.com/article/4905987.html",
+          "hot": "33.5万"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub 趋势",
+      "icon": "GH",
+      "color": "#24292f",
+      "home": "https://github.com/trending",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "elementalsouls / Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "hot": "2.0万"
+        },
+        {
+          "title": "obra / superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "hot": "32.5万"
+        },
+        {
+          "title": "HKUDS / CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "hot": "6.4万"
+        },
+        {
+          "title": "jingyaogong / minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "hot": "6.9万"
+        },
+        {
+          "title": "cursor / plugins",
+          "url": "https://github.com/cursor/plugins",
+          "hot": "1.9万"
+        },
+        {
+          "title": "firecrawl / firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "hot": "20.8万"
+        },
+        {
+          "title": "nginx / nginx",
+          "url": "https://github.com/nginx/nginx",
+          "hot": "3.3万"
+        },
+        {
+          "title": "openvinotoolkit / openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "hot": "1.2万"
+        },
+        {
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "hot": "7.1万"
+        },
+        {
+          "title": "mvanhorn / last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "hot": "7.3万"
+        }
+      ]
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "icon": "HN",
+      "color": "#ff6600",
+      "home": "https://news.ycombinator.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Nvidia Reinstates Jensen Huang as CEO",
+          "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+          "hot": "2034 分"
+        },
+        {
+          "title": "Ladybird is now in alpha",
+          "url": "https://ladybird.org/posts/alpha/",
+          "hot": "1380 分"
+        },
+        {
+          "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
+          "url": "https://twitter.com/ylecun/status/2124550037912920090",
+          "hot": "1090 分"
+        },
+        {
+          "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+          "url": "https://z.ai/blog/glm-5.4",
+          "hot": "1041 分"
+        },
+        {
+          "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+          "url": "https://spelunkr.tv",
+          "hot": "938 分"
+        },
+        {
+          "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
+          "url": "https://arm.jonpalmisc.com/",
+          "hot": "823 分"
+        },
+        {
+          "title": "Apple removed my open-source app from EU App Stores after 9 years",
+          "url": "https://github.com/glushchenko/fsnotes/discussions/2056",
+          "hot": "499 分"
+        },
+        {
+          "title": "Kagi Mail (public beta)",
+          "url": "https://blog.kagi.com/kagi-mail-public-beta",
+          "hot": "347 分"
+        },
+        {
+          "title": "Spacecraft reaches Mercury on second-ever mission to enter its orbit",
+          "url": "https://www.theguardian.com/science/2026/nov/20/spacecraft-mercury-second-ever-mission-orbit-bepicolombo",
+          "hot": "291 分"
+        },
+        {
+          "title": "Nospeaker ─ Make your MacBook's trackpad talk using its haptic motor",
+          "url": "https://github.com/os6/nospeaker",
+          "hot": "271 分"
+        }
+      ]
+    },
+    {
+      "id": "devto",
+      "name": "dev.to",
+      "icon": "dev",
+      "color": "#6366f1",
+      "home": "https://dev.to/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "What are you Grateful for this Thanksgiving?",
+          "url": "https://dev.to/francistrdev/what-are-you-grateful-for-this-thanksgiving-4570",
+          "hot": "96 赞"
+        },
+        {
+          "title": "The Third Cup: Change Never Sleeps",
+          "url": "https://dev.to/thethirdcup/the-third-cup-change-never-sleeps-2ldf",
+          "hot": "94 赞"
+        },
+        {
+          "title": "Netlify Isn't Just a Static CDN: How Atomic Deploys, Edge Isolates, and Content-Addressed Storage Actually Work Under the Hood",
+          "url": "https://dev.to/smtahosin/netlify-isnt-just-a-static-cdn-how-atomic-deploys-edge-isolates-and-content-addressed-storage-5136",
+          "hot": "9 赞"
+        },
+        {
+          "title": "Wrist vs Camera: Can I Trust a Camera Pulse on My Own Laptop?",
+          "url": "https://dev.to/dannwaneri/wrist-vs-camera-can-i-trust-a-camera-pulse-on-my-own-laptop-4g3o",
+          "hot": "25 赞"
+        },
+        {
+          "title": "C# 15 Unpacked: Practical Use Cases for Unions with Real Examples",
+          "url": "https://dev.to/georgekobaidze/c-15-unpacked-practical-use-cases-for-unions-with-real-examples-e32",
+          "hot": "33 赞"
+        },
+        {
+          "title": "Proofreader vs. Rewriter vs. Prompt API: Test the Task, Not the Demo",
+          "url": "https://dev.to/gde/proofreader-vs-rewriter-vs-prompt-api-test-the-task-not-the-demo-pi9",
+          "hot": "22 赞"
+        },
+        {
+          "title": "🎨 NECOZ Art Class: The Day 35 Cats Painted a Portrait of the King 👑 | How Pixels Work",
+          "url": "https://dev.to/necoz/necoz-art-class-the-day-35-cats-painted-a-portrait-of-the-king-how-pixels-work-10en",
+          "hot": "56 赞"
+        },
+        {
+          "title": "Blobasaur and the 4th Cross way: how Zerodha's ~35-person tech team keeps shipping open source",
+          "url": "https://dev.to/amananandrai/blobasaur-and-the-4th-cross-way-how-zerodhas-35-person-tech-team-keeps-shipping-open-source-39o9",
+          "hot": "6 赞"
+        },
+        {
+          "title": "8 Best MCP Gateways",
+          "url": "https://dev.to/varshithvhegde/8-best-mcp-gateways-4ddf",
+          "hot": "25 赞"
+        },
+        {
+          "title": "Rent the Job. Own the Life.",
+          "url": "https://dev.to/aws-heroes/rent-the-job-own-the-life-12g3",
+          "hot": "6 赞"
+        }
+      ]
+    }
+  ]
+}
