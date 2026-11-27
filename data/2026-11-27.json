@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T09:00:42+08:00",
+  "time": "09:00",
+  "sources": [
+    {
+      "id": "zhihu",
+      "name": "知乎热榜",
+      "icon": "知",
+      "color": "#0084ff",
+      "home": "https://www.zhihu.com/hot",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "U17世界杯男足小组赛，中国U17男足 8-0 斐济U17男足，如何评价本场比赛？",
+          "url": "https://www.zhihu.com/question/2109332098678879742",
+          "hot": "986 万热度"
+        },
+        {
+          "title": "斯坦福学者与 AI 提出引力理论与量子力学统一的新理论，如何理解该事件？",
+          "url": "https://www.zhihu.com/question/2109335761182876043",
+          "hot": "266 万热度"
+        },
+        {
+          "title": "巴基斯坦航天员随神舟二十四入住天宫，是否预示着美国、日本或者其他国家航天员今后也可以？",
+          "url": "https://www.zhihu.com/question/2108915782302421410",
+          "hot": "250 万热度"
+        },
+        {
+          "title": "高中生武术比赛滑倒尝试鲤鱼打挺失败仍获亚军，官方称仅 3 人参赛无违规，该结果是否合理？",
+          "url": "https://www.zhihu.com/question/2108924693923341664",
+          "hot": "174 万热度"
+        },
+        {
+          "title": "沈阳最帅保洁大叔宣布辞职，如何评价他的选择？他接下来可能会去干什么？",
+          "url": "https://www.zhihu.com/question/2109025597510739022",
+          "hot": "169 万热度"
+        },
+        {
+          "title": "东北人好像比别的地方更痴迷于始祖鸟、可隆、迪桑特这些高价低性价比运动服饰，为什么会这样？",
+          "url": "https://www.zhihu.com/question/2107954937695163825",
+          "hot": "165 万热度"
+        },
+        {
+          "title": "男篮世预赛，中国男篮80-82 不敌沙特阿拉伯男篮，出线形势堪忧，如何评价本场比赛？",
+          "url": "https://www.zhihu.com/question/2109332292363444639",
+          "hot": "130 万热度"
+        },
+        {
+          "title": "网飞版《三体》第二季预告曝光，定档 2027 年 1 月 14 日，你在本季里最期待看到哪些内容？",
+          "url": "https://www.zhihu.com/question/2105965880248983738",
+          "hot": "128 万热度"
+        },
+        {
+          "title": "《后会友期》让许飞厉娜对质，却始终没厘清消息传递的关键环节，节目为何回避传话人的身份？传话人可能是谁？",
+          "url": "https://www.zhihu.com/question/2109292648997417772",
+          "hot": "128 万热度"
+        },
+        {
+          "title": "如何评价极客湾发布的手机影像大横评视频？",
+          "url": "https://www.zhihu.com/question/2108960337538164548",
+          "hot": "122 万热度"
+        }
+      ]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "icon": "澎",
+      "color": "#e60012",
+      "home": "https://www.thepaper.cn/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "北大教师右眼被注入工业气体获赔388万：法院顶格适用惩罚性赔偿",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34563677",
+          "hot": ""
+        },
+        {
+          "title": "适时开展6G网络建设、推动制定电信法，新一代通信网建设实施方案有哪些亮点？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34566582",
+          "hot": ""
+        },
+        {
+          "title": "中国首例无线侵入式汉语脑机接口临床试验完成，让渐冻症患者“开口说话”",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34567525",
+          "hot": ""
+        },
+        {
+          "title": "言短意长｜让家长自我贬损的家庭教育，都要高度警惕",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34568217",
+          "hot": ""
+        },
+        {
+          "title": "欧方将玉沙集团移出欧盟涉俄出口管制制裁清单，商务部：欢迎",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34563211",
+          "hot": ""
+        },
+        {
+          "title": "大学应有的模样｜大学课堂，该如何重新活跃起来",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34511395",
+          "hot": ""
+        },
+        {
+          "title": "马上评｜为正当防卫少年彻底正名：法治绝不委屈被欺凌者",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34562338",
+          "hot": ""
+        },
+        {
+          "title": "王兴兴预测：5-10年内中国机器人产量或超汽车，年产量超2000万台",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34563169",
+          "hot": ""
+        },
+        {
+          "title": "中央宣传部原副部长，原国家新闻出版广电总局党组书记、局长蔡赴朝严重违纪违法被开除党籍",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34566465",
+          "hot": ""
+        },
+        {
+          "title": "武大通报教师曾某某被举报事件：违规使用科研经费给予免职",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34567109",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "weibo",
+      "name": "微博热搜",
+      "icon": "微",
+      "color": "#e6162d",
+      "home": "https://s.weibo.com/top/summary",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "三只松鼠致歉声明",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%89%E5%8F%AA%E6%9D%BE%E9%BC%A0%E8%87%B4%E6%AD%89%E5%A3%B0%E6%98%8E",
+          "hot": "59万"
+        },
+        {
+          "title": "U17国足8比0斐济",
+          "url": "https://s.weibo.com/weibo?q=U17%E5%9B%BD%E8%B6%B38%E6%AF%940%E6%96%90%E6%B5%8E",
+          "hot": "44万"
+        },
+        {
+          "title": "从5到24看载人航天之路",
+          "url": "https://s.weibo.com/weibo?q=%E4%BB%8E5%E5%88%B024%E7%9C%8B%E8%BD%BD%E4%BA%BA%E8%88%AA%E5%A4%A9%E4%B9%8B%E8%B7%AF",
+          "hot": "33万"
+        },
+        {
+          "title": "9系之上唯有世家",
+          "url": "https://s.weibo.com/weibo?q=9%E7%B3%BB%E4%B9%8B%E4%B8%8A%E5%94%AF%E6%9C%89%E4%B8%96%E5%AE%B6",
+          "hot": "32万"
+        },
+        {
+          "title": "算了吧许飞别爱了",
+          "url": "https://s.weibo.com/weibo?q=%E7%AE%97%E4%BA%86%E5%90%A7%E8%AE%B8%E9%A3%9E%E5%88%AB%E7%88%B1%E4%BA%86",
+          "hot": "31万"
+        },
+        {
+          "title": "厉娜远远没有麦琳承受的多",
+          "url": "https://s.weibo.com/weibo?q=%E5%8E%89%E5%A8%9C%E8%BF%9C%E8%BF%9C%E6%B2%A1%E6%9C%89%E9%BA%A6%E7%90%B3%E6%89%BF%E5%8F%97%E7%9A%84%E5%A4%9A",
+          "hot": "22万"
+        },
+        {
+          "title": "全球首个乙肝治愈新药中国获批",
+          "url": "https://s.weibo.com/weibo?q=%E5%85%A8%E7%90%83%E9%A6%96%E4%B8%AA%E4%B9%99%E8%82%9D%E6%B2%BB%E6%84%88%E6%96%B0%E8%8D%AF%E4%B8%AD%E5%9B%BD%E8%8E%B7%E6%89%B9",
+          "hot": "19万"
+        },
+        {
+          "title": "在广州车展遇见美好的奇瑞",
+          "url": "https://s.weibo.com/weibo?q=%E5%9C%A8%E5%B9%BF%E5%B7%9E%E8%BD%A6%E5%B1%95%E9%81%87%E8%A7%81%E7%BE%8E%E5%A5%BD%E7%9A%84%E5%A5%87%E7%91%9E",
+          "hot": "19万"
+        },
+        {
+          "title": "东北老丈人搭大炕全村围观",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%9C%E5%8C%97%E8%80%81%E4%B8%88%E4%BA%BA%E6%90%AD%E5%A4%A7%E7%82%95%E5%85%A8%E6%9D%91%E5%9B%B4%E8%A7%82",
+          "hot": "19万"
+        },
+        {
+          "title": "徐璐在一众欧美模特里也丝毫不输",
+          "url": "https://s.weibo.com/weibo?q=%E5%BE%90%E7%92%90%E5%9C%A8%E4%B8%80%E4%BC%97%E6%AC%A7%E7%BE%8E%E6%A8%A1%E7%89%B9%E9%87%8C%E4%B9%9F%E4%B8%9D%E6%AF%AB%E4%B8%8D%E8%BE%93",
+          "hot": "14万"
+        }
+      ]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "早报｜双11手机销量降17%，前五都是iPhone/马斯克：美国每名儿童赠送两股SpaceX/小红书处置逾万篇虚假人设笔记",
+          "url": "https://www.ifanr.com/1695611",
+          "hot": ""
+        },
+        {
+          "title": "2026 年，国产模型还能追上 Opus 5.5 吗",
+          "url": "https://www.ifanr.com/1695555",
+          "hot": ""
+        },
+        {
+          "title": "ChatGPT即将到来的大更新，为何让老用户集体破防",
+          "url": "https://www.ifanr.com/1695589",
+          "hot": ""
+        },
+        {
+          "title": "荣耀 700 Pro 上手：4099 元起，主流价位档里的手机异类",
+          "url": "https://www.ifanr.com/1695371",
+          "hot": ""
+        },
+        {
+          "title": "首款鸿蒙小折叠电脑正式发布，生态创新重新定义折叠电脑体验",
+          "url": "https://www.ifanr.com/1695349",
+          "hot": ""
+        },
+        {
+          "title": "OPPO Reno17 Pro 体验：在手机里装进一只猫，分几步？",
+          "url": "https://www.ifanr.com/1691222",
+          "hot": ""
+        },
+        {
+          "title": "专访《影之刃零》梁其伟：我想让年轻人觉得，中国功夫很酷丨多样性公司",
+          "url": "https://www.ifanr.com/1695256",
+          "hot": ""
+        },
+        {
+          "title": "Robotaxi 即将开启无人运营、机器人脱稿演讲，小鹏科技日迎来了自己的「奇点时刻」",
+          "url": "https://www.ifanr.com/1695212",
+          "hot": ""
+        },
+        {
+          "title": "A社曝光了一份AI整顿职场魔幻实录，请甩给你那位沉迷AI提效的老板",
+          "url": "https://www.ifanr.com/1691748",
+          "hot": ""
+        },
+        {
+          "title": "早报｜手机厂商集体下调明年出货目标，曝小米降幅达25%/小鹏悠游开启主驾无人载客/宕机后，微软进入「红色警报」",
+          "url": "https://www.ifanr.com/1695128",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "sspai",
+      "name": "少数派",
+      "icon": "少",
+      "color": "#1f8aa8",
+      "home": "https://sspai.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "App+1｜Agora：开源、易用、好用，给 Android 用户的 LLM 聊天工具",
+          "url": "https://sspai.com/post/116773",
+          "hot": ""
+        },
+        {
+          "title": "论文作图不求人，用 ChatGPT 和 Keynote 免费搞定机理图",
+          "url": "https://sspai.com/post/119563",
+          "hot": ""
+        },
+        {
+          "title": "我用AI做了一张两千年的中国历史地图",
+          "url": "https://sspai.com/post/117510",
+          "hot": ""
+        },
+        {
+          "title": "派早报：蔚来举办 2026 创新科技日、Tidal 将拒绝 AI 音乐等",
+          "url": "https://sspai.com/post/119560",
+          "hot": ""
+        },
+        {
+          "title": "翻开 2027， 值得入手的新年日历推荐",
+          "url": "https://sspai.com/post/119264",
+          "hot": ""
+        },
+        {
+          "title": "App+1｜Yab：开源、AI 友好的双内核浏览器，给舍不得 Arc 的你",
+          "url": "https://sspai.com/post/119310",
+          "hot": ""
+        },
+        {
+          "title": "怀旧手记｜Palm Pre：内藏「划时代」系统的手机",
+          "url": "https://sspai.com/post/118791",
+          "hot": ""
+        },
+        {
+          "title": "社区速递 167｜迪卡侬折叠车、静电白板贴与跨系统设备协同",
+          "url": "https://sspai.com/post/119492",
+          "hot": ""
+        },
+        {
+          "title": "[限时特惠] 从构思到完稿，让长文写作更有条理：妙笔",
+          "url": "https://sspai.com/post/119035",
+          "hot": ""
+        },
+        {
+          "title": "写在动荡之后：漫步巴黎的寻常一日",
+          "url": "https://sspai.com/post/119412",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "icon": "嗅",
+      "color": "#ff6a00",
+      "home": "https://www.huxiu.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "我最近听到最有水平的两句话",
+          "url": "https://www.huxiu.com/article/4907013.html",
+          "hot": "77.0万"
+        },
+        {
+          "title": "黄仁勋杀回来了，英伟达却回不去了",
+          "url": "https://www.huxiu.com/article/4907867.html",
+          "hot": "63.9万"
+        },
+        {
+          "title": "腾讯到最危险的时刻了？",
+          "url": "https://www.huxiu.com/article/4906811.html",
+          "hot": "59.6万"
+        },
+        {
+          "title": "B站盈利的代价",
+          "url": "https://www.huxiu.com/article/4908174.html",
+          "hot": "41.1万"
+        },
+        {
+          "title": "家门口的养老院正在消失",
+          "url": "https://www.huxiu.com/article/4907382.html",
+          "hot": "37.7万"
+        },
+        {
+          "title": "贬值世代",
+          "url": "https://www.huxiu.com/article/4907424.html",
+          "hot": "36.9万"
+        },
+        {
+          "title": "如果你离异带娃，想再婚，一定要格外慎重",
+          "url": "https://www.huxiu.com/article/4907477.html",
+          "hot": "35.3万"
+        },
+        {
+          "title": "产品经理，被全部裁了",
+          "url": "https://www.huxiu.com/article/4907421.html",
+          "hot": "32.3万"
+        },
+        {
+          "title": "我发现，真正的高手都很会闲聊",
+          "url": "https://www.huxiu.com/article/4908203.html",
+          "hot": "32.1万"
+        },
+        {
+          "title": "10个看人极准的细节",
+          "url": "https://www.huxiu.com/article/4908518.html",
+          "hot": "32.2万"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub 趋势",
+      "icon": "GH",
+      "color": "#24292f",
+      "home": "https://github.com/trending",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "elementalsouls / Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "hot": "2.5万"
+        },
+        {
+          "title": "obra / superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "hot": "32.7万"
+        },
+        {
+          "title": "HKUDS / CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "hot": "6.6万"
+        },
+        {
+          "title": "jingyaogong / minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "hot": "7.2万"
+        },
+        {
+          "title": "cursor / plugins",
+          "url": "https://github.com/cursor/plugins",
+          "hot": "2.0万"
+        },
+        {
+          "title": "firecrawl / firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "hot": "21.1万"
+        },
+        {
+          "title": "nginx / nginx",
+          "url": "https://github.com/nginx/nginx",
+          "hot": "3.4万"
+        },
+        {
+          "title": "openvinotoolkit / openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "hot": "1.3万"
+        },
+        {
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "hot": "7.4万"
+        },
+        {
+          "title": "mvanhorn / last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "hot": "7.6万"
+        }
+      ]
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "icon": "HN",
+      "color": "#ff6600",
+      "home": "https://news.ycombinator.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+          "url": "https://scottaaronson.blog/?p=10379",
+          "hot": "1980 分"
+        },
+        {
+          "title": "1Password Security Incident",
+          "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+          "hot": "1631 分"
+        },
+        {
+          "title": "Tell HN: Happy Thanksgiving",
+          "url": "https://news.ycombinator.com/item?id=50655664",
+          "hot": "583 分"
+        },
+        {
+          "title": "Intel One Mono font (2023)",
+          "url": "https://github.com/intel/intel-one-mono",
+          "hot": "456 分"
+        },
+        {
+          "title": "Nextcloud Office Desktop app",
+          "url": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
+          "hot": "395 分"
+        },
+        {
+          "title": "AMD-specific fork of llama.cpp",
+          "url": "https://devnull.land/amd-specific-llama-cpp",
+          "hot": "275 分"
+        },
+        {
+          "title": "OpenAI may be in cost control mode",
+          "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
+          "hot": "259 分"
+        },
+        {
+          "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+          "url": "https://github.com/antonpictures/youtube-punisher",
+          "hot": "249 分"
+        },
+        {
+          "title": "AI made self-hosting fun again",
+          "url": "https://janlukas.blog/posts/ai-self-hosting",
+          "hot": "249 分"
+        },
+        {
+          "title": "Moat: OpenRouter replacement",
+          "url": "https://commandcode.ai/moat",
+          "hot": "246 分"
+        }
+      ]
+    },
+    {
+      "id": "devto",
+      "name": "dev.to",
+      "icon": "dev",
+      "color": "#6366f1",
+      "home": "https://dev.to/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Nostalgia and the AI Productivity Paradox",
+          "url": "https://dev.to/gramli/nostalgia-and-the-ai-productivity-paradox-4f33",
+          "hot": "60 赞"
+        },
+        {
+          "title": "I Built AI Test Automation. Today, I Went Back to Manual Testing.",
+          "url": "https://dev.to/thethirdcup/i-built-ai-test-automation-today-i-went-back-to-manual-testing-mlh",
+          "hot": "83 赞"
+        },
+        {
+          "title": "On reviewing AI-generated code",
+          "url": "https://dev.to/nfrankel/on-reviewing-ai-generated-code-3olj",
+          "hot": "16 赞"
+        },
+        {
+          "title": "Your Second Brain Is Just A Digital Hoarding Pile (And How To Fix It)",
+          "url": "https://dev.to/johnnylemonny/your-second-brain-is-just-a-digital-hoarding-pile-and-how-to-fix-it-3n1o",
+          "hot": "14 赞"
+        },
+        {
+          "title": "From a feed full of Fable 5.2 demos to a 20-episode Indian epic: how I built \"The Eighteen Days\"",
+          "url": "https://dev.to/amananandrai/from-a-feed-full-of-fable-52-demos-to-a-20-episode-indian-epic-how-i-built-the-eighteen-days-14mm",
+          "hot": "8 赞"
+        },
+        {
+          "title": "Why Can't We Just #include \"functions.c\" in \"main.c\"? 🤔",
+          "url": "https://dev.to/necoz/why-cant-we-just-include-functionsc-in-mainc-1a73",
+          "hot": "47 赞"
+        },
+        {
+          "title": "My Simulation Exaggerated the Cost of My Own Safety Feature",
+          "url": "https://dev.to/ayush_singh321/my-simulation-exaggerated-the-cost-of-my-own-safety-feature-565p",
+          "hot": "24 赞"
+        },
+        {
+          "title": "Before You Trust the Canary, Plant a Bug",
+          "url": "https://dev.to/copyleftdev/before-you-trust-the-canary-plant-a-bug-1k5a",
+          "hot": "10 赞"
+        },
+        {
+          "title": "Benchmarking Gemma 4 E2B with Long Contexts",
+          "url": "https://dev.to/gde/benchmarking-gemma-4-e2b-with-long-contexts-1jb9",
+          "hot": "7 赞"
+        },
+        {
+          "title": "What a cold start actually costs on DigitalOcean Functions",
+          "url": "https://dev.to/alexgeorgiev17/how-slow-a-digitalocean-function-is-before-anyone-has-called-it-278e",
+          "hot": "8 赞"
+        }
+      ]
+    }
+  ]
+}
