@@ -1,7 +1,7 @@
 {
   "date": "2026-11-28",
-  "generated_at": "2026-11-28T09:00:45+08:00",
-  "time": "09:00",
+  "generated_at": "2026-11-28T13:00:42+08:00",
+  "time": "13:00",
   "sources": [
     {
       "id": "zhihu",
@@ -13,54 +13,54 @@
       "error": "",
       "items": [
         {
-          "title": "国常会的通稿首次使用了「国家队」、类「平准基金」这些提法，释放了哪些信号？",
-          "url": "https://www.zhihu.com/question/2109697976268321407",
-          "hot": "261 万热度"
+          "title": "如何看待女子称因年龄超 40 岁被酒店拒绝入住？预订平台没有醒目提示，这种规定合法吗？",
+          "url": "https://www.zhihu.com/question/2109585824480236082",
+          "hot": "767 万热度"
         },
         {
           "title": "《后会友期》「告密门」播出后，厉娜风评光速下滑，网友要求她向许飞道歉，她们的矛盾真的只是友情问题吗？",
           "url": "https://www.zhihu.com/question/2109309669831172560",
-          "hot": "228 万热度"
+          "hot": "687 万热度"
         },
         {
-          "title": "如何评价冯骥在《后 AI 时代最重要的问题》一文中的思考和想法？",
-          "url": "https://www.zhihu.com/question/2109705664087816135",
-          "hot": "196 万热度"
+          "title": "国常会的通稿首次使用了「国家队」、类「平准基金」这些提法，释放了哪些信号？",
+          "url": "https://www.zhihu.com/question/2109697976268321407",
+          "hot": "608 万热度"
         },
         {
           "title": "模特七海发博表示 「我的脸已经成 AI 短剧里的赛博恶役」，AI 融脸为什么维权难？",
           "url": "https://www.zhihu.com/question/2109242936701478494",
-          "hot": "187 万热度"
+          "hot": "353 万热度"
+        },
+        {
+          "title": "如何看待济南医保官方视频号工作人员误以为直播结束，骂咨询者脑子有病，医保局回应称已批评教育并要求道歉？",
+          "url": "https://www.zhihu.com/question/2109655670127605450",
+          "hot": "320 万热度"
+        },
+        {
+          "title": "雅迪、爱玛、九号等15家电动自行车企业被点名，部分企业涉违法出售不合格产品情况，哪些信息值得关注？",
+          "url": "https://www.zhihu.com/question/2109686222276622101",
+          "hot": "296 万热度"
+        },
+        {
+          "title": "董明珠直播中数次训斥员工，魏建军帮忙解围，怎样看待魏建军的处理和董明珠对员工的管理方式？",
+          "url": "https://www.zhihu.com/question/2109929626264760542",
+          "hot": "272 万热度"
         },
         {
           "title": "特斯拉和 SpaceX 冲刺年底合并，将成人类史上最大并购案，马斯克为何要合并两家公司？",
           "url": "https://www.zhihu.com/question/2109592384853861548",
-          "hot": "160 万热度"
+          "hot": "236 万热度"
         },
         {
-          "title": "商务部开新闻发布会称机关单位带头过紧日子，透露了什么信号？可能有哪些影响？",
-          "url": "https://www.zhihu.com/question/2109592991497189095",
-          "hot": "128 万热度"
+          "title": "如何评价冯骥在《后 AI 时代最重要的问题》一文中的思考和想法？",
+          "url": "https://www.zhihu.com/question/2109705664087816135",
+          "hot": "187 万热度"
         },
         {
-          "title": "武汉一烧烤店员工餐有鲍鱼生蚝，大闸蟹基围虾随便吃，老板称「吃饱才有力气干活」，这个福利怎么样？",
-          "url": "https://www.zhihu.com/question/2108558920985863590",
-          "hot": "117 万热度"
-        },
-        {
-          "title": "海康威视辟谣网传工作新规，称反对以在岗时间替代价值贡献的无效「内卷」，对此你怎么看？",
-          "url": "https://www.zhihu.com/question/2109666479654297616",
-          "hot": "110 万热度"
-        },
-        {
-          "title": "三只松鼠被曝CEO与员工薪资相差 23 倍，这个薪资差距在行业里属于什么水平？算高吗？",
-          "url": "https://www.zhihu.com/question/2109669812406334189",
-          "hot": "108 万热度"
-        },
-        {
-          "title": "招聘为何更看重第一学历而非最高学历？",
-          "url": "https://www.zhihu.com/question/2082987252792169939",
-          "hot": "105 万热度"
+          "title": "中国一旦解决EUV光刻机技术，高端芯片能实现白菜价吗？",
+          "url": "https://www.zhihu.com/question/2020866489717139044",
+          "hot": "187 万热度"
         }
       ]
     },
@@ -73,11 +73,6 @@
       "ok": true,
       "error": "",
       "items": [
-        {
-          "title": "经纬度｜引资结构优化绝不等于 “外资跑路”",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34556525",
-          "hot": ""
-        },
         {
           "title": "央行发布人民币存贷款利率管理新规：取消贷款罚息利率的上下限",
           "url": "https://www.thepaper.cn/newsDetail_forward_34576324",
@@ -94,13 +89,18 @@
           "hot": ""
         },
         {
+          "title": "新华社评国少队大胜出线：时隔21年，这痛快久违了！",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34576720",
+          "hot": ""
+        },
+        {
           "title": "雅迪、台铃、爱玛、小牛等15家电动自行车企业被集中约谈",
           "url": "https://www.thepaper.cn/newsDetail_forward_34574923",
           "hot": ""
         },
         {
-          "title": "四川德阳一体校回应“教练当学生面连摔多部手机”：可能处理问题比较简单粗暴",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34572642",
+          "title": "解读丨一个月两次定调资本市场！国常会首提“国家队”表述，释放哪些信号？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34574976",
           "hot": ""
         },
         {
@@ -114,13 +114,13 @@
           "hot": ""
         },
         {
-          "title": "暖侬心｜72岁老人跳下3米深河救起6岁幼童：这份善良不声张，也不算账",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34541801",
+          "title": "经济日报刊文：“399元羽绒服卖断货”是消费降级吗？",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34579821",
           "hot": ""
         },
         {
-          "title": "产业观察丨制造基地迈向产业高地：南昌针纺产业集群的破局攀登",
-          "url": "https://www.thepaper.cn/newsDetail_forward_34562763",
+          "title": "暖侬心｜72岁老人跳下3米深河救起6岁幼童：这份善良不声张，也不算账",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34541801",
           "hot": ""
         }
       ]
@@ -135,54 +135,54 @@
       "error": "",
       "items": [
         {
+          "title": "董明珠让拿手机员工没动她急了",
+          "url": "https://s.weibo.com/weibo?q=%E8%91%A3%E6%98%8E%E7%8F%A0%E8%AE%A9%E6%8B%BF%E6%89%8B%E6%9C%BA%E5%91%98%E5%B7%A5%E6%B2%A1%E5%8A%A8%E5%A5%B9%E6%80%A5%E4%BA%86",
+          "hot": "117万"
+        },
+        {
           "title": "董明珠现场发火魏建军解围",
           "url": "https://s.weibo.com/weibo?q=%E8%91%A3%E6%98%8E%E7%8F%A0%E7%8E%B0%E5%9C%BA%E5%8F%91%E7%81%AB%E9%AD%8F%E5%BB%BA%E5%86%9B%E8%A7%A3%E5%9B%B4",
-          "hot": "59万"
+          "hot": "86万"
+        },
+        {
+          "title": "工业经济新动能澎湃",
+          "url": "https://s.weibo.com/weibo?q=%E5%B7%A5%E4%B8%9A%E7%BB%8F%E6%B5%8E%E6%96%B0%E5%8A%A8%E8%83%BD%E6%BE%8E%E6%B9%83",
+          "hot": "69万"
+        },
+        {
+          "title": "夜间买药上淘宝闪购",
+          "url": "https://s.weibo.com/weibo?q=%E5%A4%9C%E9%97%B4%E4%B9%B0%E8%8D%AF%E4%B8%8A%E6%B7%98%E5%AE%9D%E9%97%AA%E8%B4%AD",
+          "hot": "69万"
+        },
+        {
+          "title": "女子身高153难买衣服怒而自己做",
+          "url": "https://s.weibo.com/weibo?q=%E5%A5%B3%E5%AD%90%E8%BA%AB%E9%AB%98153%E9%9A%BE%E4%B9%B0%E8%A1%A3%E6%9C%8D%E6%80%92%E8%80%8C%E8%87%AA%E5%B7%B1%E5%81%9A",
+          "hot": "65万"
         },
         {
           "title": "千万不要用纸巾包贵重物品",
           "url": "https://s.weibo.com/weibo?q=%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E7%94%A8%E7%BA%B8%E5%B7%BE%E5%8C%85%E8%B4%B5%E9%87%8D%E7%89%A9%E5%93%81",
-          "hot": "41万"
+          "hot": "38万"
         },
         {
-          "title": "180秒回顾神24发射任务",
-          "url": "https://s.weibo.com/weibo?q=180%E7%A7%92%E5%9B%9E%E9%A1%BE%E7%A5%9E24%E5%8F%91%E5%B0%84%E4%BB%BB%E5%8A%A1",
-          "hot": "35万"
+          "title": "陆翊称拒绝调解文吉儿王子璇",
+          "url": "https://s.weibo.com/weibo?q=%E9%99%86%E7%BF%8A%E7%A7%B0%E6%8B%92%E7%BB%9D%E8%B0%83%E8%A7%A3%E6%96%87%E5%90%89%E5%84%BF%E7%8E%8B%E5%AD%90%E7%92%87",
+          "hot": "36万"
         },
         {
-          "title": "30万级唯一四激光千伏奕境X9",
-          "url": "https://s.weibo.com/weibo?q=30%E4%B8%87%E7%BA%A7%E5%94%AF%E4%B8%80%E5%9B%9B%E6%BF%80%E5%85%89%E5%8D%83%E4%BC%8F%E5%A5%95%E5%A2%83X9",
-          "hot": "20万"
+          "title": "买新能源认准上汽大众",
+          "url": "https://s.weibo.com/weibo?q=%E4%B9%B0%E6%96%B0%E8%83%BD%E6%BA%90%E8%AE%A4%E5%87%86%E4%B8%8A%E6%B1%BD%E5%A4%A7%E4%BC%97",
+          "hot": "33万"
         },
         {
-          "title": "许飞 天娱前员工",
-          "url": "https://s.weibo.com/weibo?q=%E8%AE%B8%E9%A3%9E+%E5%A4%A9%E5%A8%B1%E5%89%8D%E5%91%98%E5%B7%A5",
-          "hot": "10万"
+          "title": "牧民遇4只雪豹五方都愣住了",
+          "url": "https://s.weibo.com/weibo?q=%E7%89%A7%E6%B0%91%E9%81%874%E5%8F%AA%E9%9B%AA%E8%B1%B9%E4%BA%94%E6%96%B9%E9%83%BD%E6%84%A3%E4%BD%8F%E4%BA%86",
+          "hot": "33万"
         },
         {
-          "title": "见到真正的非暴力沟通了",
-          "url": "https://s.weibo.com/weibo?q=%E8%A7%81%E5%88%B0%E7%9C%9F%E6%AD%A3%E7%9A%84%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A%E4%BA%86",
-          "hot": "10万"
-        },
-        {
-          "title": "厉娜前经纪人张阿瞳发文",
-          "url": "https://s.weibo.com/weibo?q=%E5%8E%89%E5%A8%9C%E5%89%8D%E7%BB%8F%E7%BA%AA%E4%BA%BA%E5%BC%A0%E9%98%BF%E7%9E%B3%E5%8F%91%E6%96%87",
-          "hot": "9万"
-        },
-        {
-          "title": "纵横新派越野标配华为乾崑技术",
-          "url": "https://s.weibo.com/weibo?q=%E7%BA%B5%E6%A8%AA%E6%96%B0%E6%B4%BE%E8%B6%8A%E9%87%8E%E6%A0%87%E9%85%8D%E5%8D%8E%E4%B8%BA%E4%B9%BE%E5%B4%91%E6%8A%80%E6%9C%AF",
-          "hot": "9万"
-        },
-        {
-          "title": "马天宇 我都40了肯定有过亲密关系啊",
-          "url": "https://s.weibo.com/weibo?q=%E9%A9%AC%E5%A4%A9%E5%AE%87+%E6%88%91%E9%83%BD40%E4%BA%86%E8%82%AF%E5%AE%9A%E6%9C%89%E8%BF%87%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E5%95%8A",
-          "hot": "9万"
-        },
-        {
-          "title": "后会友期第三次飞行嘉宾阵容",
-          "url": "https://s.weibo.com/weibo?q=%E5%90%8E%E4%BC%9A%E5%8F%8B%E6%9C%9F%E7%AC%AC%E4%B8%89%E6%AC%A1%E9%A3%9E%E8%A1%8C%E5%98%89%E5%AE%BE%E9%98%B5%E5%AE%B9",
-          "hot": "8万"
+          "title": "外网评价肖战研讨会背头造型",
+          "url": "https://s.weibo.com/weibo?q=%E5%A4%96%E7%BD%91%E8%AF%84%E4%BB%B7%E8%82%96%E6%88%98%E7%A0%94%E8%AE%A8%E4%BC%9A%E8%83%8C%E5%A4%B4%E9%80%A0%E5%9E%8B",
+          "hot": "22万"
         }
       ]
     },
@@ -257,6 +257,16 @@
       "error": "",
       "items": [
         {
+          "title": "「黑五」值得买：不容错过的数码硬件优惠",
+          "url": "https://sspai.com/post/119651",
+          "hot": ""
+        },
+        {
+          "title": "本月玩什么｜GTA VI、塞尔达传说 时之笛、魔兽世界：无限",
+          "url": "https://sspai.com/post/119686",
+          "hot": ""
+        },
+        {
           "title": "本周看什么 | 最近值得一看的 8 部作品",
           "url": "https://sspai.com/post/119658",
           "hot": ""
@@ -295,16 +305,6 @@
           "title": "翻开 2027， 值得入手的新年日历推荐",
           "url": "https://sspai.com/post/119264",
           "hot": ""
-        },
-        {
-          "title": "App+1｜Yab：开源、AI 友好的双内核浏览器，给舍不得 Arc 的你",
-          "url": "https://sspai.com/post/119310",
-          "hot": ""
-        },
-        {
-          "title": "怀旧手记｜Palm Pre：内藏「划时代」系统的手机",
-          "url": "https://sspai.com/post/118791",
-          "hot": ""
         }
       ]
     },
@@ -320,52 +320,52 @@
         {
           "title": "我最近听到最有水平的两句话",
           "url": "https://www.huxiu.com/article/4907013.html",
-          "hot": "81.9万"
+          "hot": "82.6万"
         },
         {
           "title": "黄仁勋杀回来了，英伟达却回不去了",
           "url": "https://www.huxiu.com/article/4907867.html",
-          "hot": "65.4万"
+          "hot": "65.6万"
         },
         {
           "title": "腾讯到最危险的时刻了？",
           "url": "https://www.huxiu.com/article/4906811.html",
-          "hot": "61.0万"
+          "hot": "61.2万"
         },
         {
           "title": "B站盈利的代价",
           "url": "https://www.huxiu.com/article/4908174.html",
-          "hot": "44.3万"
+          "hot": "44.6万"
         },
         {
           "title": "10个看人极准的细节",
           "url": "https://www.huxiu.com/article/4908518.html",
-          "hot": "43.0万"
+          "hot": "44.8万"
         },
         {
           "title": "我发现，真正的高手都很会闲聊",
           "url": "https://www.huxiu.com/article/4908203.html",
-          "hot": "40.7万"
+          "hot": "41.3万"
         },
         {
           "title": "家门口的养老院正在消失",
           "url": "https://www.huxiu.com/article/4907382.html",
-          "hot": "38.8万"
+          "hot": "38.9万"
         },
         {
           "title": "贬值世代",
           "url": "https://www.huxiu.com/article/4907424.html",
-          "hot": "38.0万"
+          "hot": "38.1万"
         },
         {
           "title": "朋友圈进入集体大失声时代",
           "url": "https://www.huxiu.com/article/4908188.html",
-          "hot": "37.4万"
+          "hot": "38.1万"
         },
         {
           "title": "如果你离异带娃，想再婚，一定要格外慎重",
           "url": "https://www.huxiu.com/article/4907477.html",
-          "hot": "36.4万"
+          "hot": "36.6万"
         }
       ]
     },
@@ -421,7 +421,7 @@
         {
           "title": "cathrynlavery / diagram-design",
           "url": "https://github.com/cathrynlavery/diagram-design",
-          "hot": "7.4万"
+          "hot": "7.5万"
         },
         {
           "title": "mvanhorn / last30days-skill",
@@ -440,54 +440,54 @@
       "error": "",
       "items": [
         {
-          "title": "Claude sabotaging ML research tasks?",
-          "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
-          "hot": "587 分"
-        },
-        {
           "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
           "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
-          "hot": "412 分"
+          "hot": "473 分"
         },
         {
           "title": "Michael Nielsen took down his book on neural nets",
           "url": "https://neuralnetworksanddeeplearning.com/",
-          "hot": "367 分"
-        },
-        {
-          "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
-          "url": "https://bouncemarket.minhanhday.com/",
-          "hot": "323 分"
+          "hot": "450 分"
         },
         {
           "title": "GPT 6.2 Astra Solves a Historical Mystery",
           "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
-          "hot": "287 分"
+          "hot": "376 分"
+        },
+        {
+          "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+          "url": "https://bouncemarket.minhanhday.com/",
+          "hot": "344 分"
         },
         {
           "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
           "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
-          "hot": "248 分"
+          "hot": "321 分"
         },
         {
           "title": "Convex skills send the user's app idea to a remote server without telling them",
           "url": "https://github.com/convex/convex-backend-skill/issues/64",
-          "hot": "221 分"
+          "hot": "257 分"
         },
         {
-          "title": "First images of the impact of DART asteroid deflection experiment",
-          "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
-          "hot": "184 分"
+          "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+          "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+          "hot": "230 分"
         },
         {
           "title": "False computer-checked proofs",
           "url": "https://cr.yp.to/proofs/falseccp.html",
-          "hot": "175 分"
+          "hot": "200 分"
         },
         {
-          "title": "I am scared: Careless People – Sarah Wynn-Williams on living under a gag order",
-          "url": "https://www.theguardian.com/books/2026/nov/27/careless-people-author-sarah-wynn-williams-the-silence-is-mine-it-doesnt-have-to-be-yours",
-          "hot": "139 分"
+          "title": "First images of the impact of DART asteroid deflection experiment",
+          "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+          "hot": "198 分"
+        },
+        {
+          "title": "The Balatro Timeline",
+          "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+          "hot": "180 分"
         }
       ]
     },
@@ -503,12 +503,12 @@
         {
           "title": "What was your win this week!?",
           "url": "https://dev.to/devteam/what-was-your-win-this-week-h3d",
-          "hot": "73 赞"
+          "hot": "75 赞"
         },
         {
           "title": "How I built my own OS",
           "url": "https://dev.to/cloudwerx/how-i-built-my-own-os-942",
-          "hot": "29 赞"
+          "hot": "31 赞"
         },
         {
           "title": "Writing Is Really Fun, But My Luck Had Other Plans 🐿",
@@ -518,22 +518,22 @@
         {
           "title": "Thinking on Constrained Deployments: Gemma E4B on 4GB 1650",
           "url": "https://dev.to/gde/thinking-on-constrained-deployments-gemma-e4b-on-4gb-1650-2cc6",
-          "hot": "7 赞"
-        },
-        {
-          "title": "The Best Café in Town Turns People Away. Your System Should Too",
-          "url": "https://dev.to/thethirdcup/the-best-cafe-in-town-turns-people-away-your-system-should-too-5ehh",
-          "hot": "30 赞"
+          "hot": "8 赞"
         },
         {
           "title": "Zero Repeat Regressions: The Golden Metric & The Future of Agentic Trust",
           "url": "https://dev.to/gde/zero-repeat-regressions-the-golden-metric-the-future-of-agentic-trust-4857",
-          "hot": "9 赞"
+          "hot": "10 赞"
+        },
+        {
+          "title": "The Best Café in Town Turns People Away. Your System Should Too",
+          "url": "https://dev.to/thethirdcup/the-best-cafe-in-town-turns-people-away-your-system-should-too-5ehh",
+          "hot": "35 赞"
         },
         {
           "title": "Porting an ADK Research and Judge Loop to Strands on Bedrock AgentCore, With A2A 1.x",
           "url": "https://dev.to/aws-builders/porting-an-adk-research-and-judge-loop-to-strands-on-bedrock-agentcore-with-a2a-1x-209j",
-          "hot": "11 赞"
+          "hot": "13 赞"
         },
         {
           "title": "Introducing a Website That Absolutely Nobody Asked For",
@@ -546,9 +546,9 @@
           "hot": "12 赞"
         },
         {
-          "title": "I Got Two AI Agents Talking. Then I Found Out They Weren't Hearing Each Other.",
-          "url": "https://dev.to/kenielzep97/i-got-two-ai-agents-talking-then-i-found-out-they-werent-hearing-each-other-1fn6",
-          "hot": "35 赞"
+          "title": "How to Add Crash Reporting and Session Replay to a React Native App",
+          "url": "https://dev.to/studio1hq/how-to-add-crash-reporting-and-session-replay-to-a-react-native-app-bgh",
+          "hot": "20 赞"
         }
       ]
     }
