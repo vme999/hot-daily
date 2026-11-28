@@ -1,0 +1,556 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T09:00:45+08:00",
+  "time": "09:00",
+  "sources": [
+    {
+      "id": "zhihu",
+      "name": "知乎热榜",
+      "icon": "知",
+      "color": "#0084ff",
+      "home": "https://www.zhihu.com/hot",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "国常会的通稿首次使用了「国家队」、类「平准基金」这些提法，释放了哪些信号？",
+          "url": "https://www.zhihu.com/question/2109697976268321407",
+          "hot": "261 万热度"
+        },
+        {
+          "title": "《后会友期》「告密门」播出后，厉娜风评光速下滑，网友要求她向许飞道歉，她们的矛盾真的只是友情问题吗？",
+          "url": "https://www.zhihu.com/question/2109309669831172560",
+          "hot": "228 万热度"
+        },
+        {
+          "title": "如何评价冯骥在《后 AI 时代最重要的问题》一文中的思考和想法？",
+          "url": "https://www.zhihu.com/question/2109705664087816135",
+          "hot": "196 万热度"
+        },
+        {
+          "title": "模特七海发博表示 「我的脸已经成 AI 短剧里的赛博恶役」，AI 融脸为什么维权难？",
+          "url": "https://www.zhihu.com/question/2109242936701478494",
+          "hot": "187 万热度"
+        },
+        {
+          "title": "特斯拉和 SpaceX 冲刺年底合并，将成人类史上最大并购案，马斯克为何要合并两家公司？",
+          "url": "https://www.zhihu.com/question/2109592384853861548",
+          "hot": "160 万热度"
+        },
+        {
+          "title": "商务部开新闻发布会称机关单位带头过紧日子，透露了什么信号？可能有哪些影响？",
+          "url": "https://www.zhihu.com/question/2109592991497189095",
+          "hot": "128 万热度"
+        },
+        {
+          "title": "武汉一烧烤店员工餐有鲍鱼生蚝，大闸蟹基围虾随便吃，老板称「吃饱才有力气干活」，这个福利怎么样？",
+          "url": "https://www.zhihu.com/question/2108558920985863590",
+          "hot": "117 万热度"
+        },
+        {
+          "title": "海康威视辟谣网传工作新规，称反对以在岗时间替代价值贡献的无效「内卷」，对此你怎么看？",
+          "url": "https://www.zhihu.com/question/2109666479654297616",
+          "hot": "110 万热度"
+        },
+        {
+          "title": "三只松鼠被曝CEO与员工薪资相差 23 倍，这个薪资差距在行业里属于什么水平？算高吗？",
+          "url": "https://www.zhihu.com/question/2109669812406334189",
+          "hot": "108 万热度"
+        },
+        {
+          "title": "招聘为何更看重第一学历而非最高学历？",
+          "url": "https://www.zhihu.com/question/2082987252792169939",
+          "hot": "105 万热度"
+        }
+      ]
+    },
+    {
+      "id": "thepaper",
+      "name": "澎湃新闻",
+      "icon": "澎",
+      "color": "#e60012",
+      "home": "https://www.thepaper.cn/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "经纬度｜引资结构优化绝不等于 “外资跑路”",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34556525",
+          "hot": ""
+        },
+        {
+          "title": "央行发布人民币存贷款利率管理新规：取消贷款罚息利率的上下限",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34576324",
+          "hot": ""
+        },
+        {
+          "title": "合力稳市！“国家队”护盘过程中各类机构均为净买入，股票型ETF十月以来净申购近8000亿",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34576889",
+          "hot": ""
+        },
+        {
+          "title": "受贿5.87亿余元，广西自治区政府原主席蓝天立一审被判死缓",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34574989",
+          "hot": ""
+        },
+        {
+          "title": "雅迪、台铃、爱玛、小牛等15家电动自行车企业被集中约谈",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34574923",
+          "hot": ""
+        },
+        {
+          "title": "四川德阳一体校回应“教练当学生面连摔多部手机”：可能处理问题比较简单粗暴",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34572642",
+          "hot": ""
+        },
+        {
+          "title": "日产汽车在华销量大减，计划首次将与中国合资生产汽车“反向进口”至日本销售",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34572966",
+          "hot": ""
+        },
+        {
+          "title": "初中生刺伤霸凌者羁押336天后被判正当防卫，检察院已张贴公告道歉",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34573017",
+          "hot": ""
+        },
+        {
+          "title": "暖侬心｜72岁老人跳下3米深河救起6岁幼童：这份善良不声张，也不算账",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34541801",
+          "hot": ""
+        },
+        {
+          "title": "产业观察丨制造基地迈向产业高地：南昌针纺产业集群的破局攀登",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34562763",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "weibo",
+      "name": "微博热搜",
+      "icon": "微",
+      "color": "#e6162d",
+      "home": "https://s.weibo.com/top/summary",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "董明珠现场发火魏建军解围",
+          "url": "https://s.weibo.com/weibo?q=%E8%91%A3%E6%98%8E%E7%8F%A0%E7%8E%B0%E5%9C%BA%E5%8F%91%E7%81%AB%E9%AD%8F%E5%BB%BA%E5%86%9B%E8%A7%A3%E5%9B%B4",
+          "hot": "59万"
+        },
+        {
+          "title": "千万不要用纸巾包贵重物品",
+          "url": "https://s.weibo.com/weibo?q=%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E7%94%A8%E7%BA%B8%E5%B7%BE%E5%8C%85%E8%B4%B5%E9%87%8D%E7%89%A9%E5%93%81",
+          "hot": "41万"
+        },
+        {
+          "title": "180秒回顾神24发射任务",
+          "url": "https://s.weibo.com/weibo?q=180%E7%A7%92%E5%9B%9E%E9%A1%BE%E7%A5%9E24%E5%8F%91%E5%B0%84%E4%BB%BB%E5%8A%A1",
+          "hot": "35万"
+        },
+        {
+          "title": "30万级唯一四激光千伏奕境X9",
+          "url": "https://s.weibo.com/weibo?q=30%E4%B8%87%E7%BA%A7%E5%94%AF%E4%B8%80%E5%9B%9B%E6%BF%80%E5%85%89%E5%8D%83%E4%BC%8F%E5%A5%95%E5%A2%83X9",
+          "hot": "20万"
+        },
+        {
+          "title": "许飞 天娱前员工",
+          "url": "https://s.weibo.com/weibo?q=%E8%AE%B8%E9%A3%9E+%E5%A4%A9%E5%A8%B1%E5%89%8D%E5%91%98%E5%B7%A5",
+          "hot": "10万"
+        },
+        {
+          "title": "见到真正的非暴力沟通了",
+          "url": "https://s.weibo.com/weibo?q=%E8%A7%81%E5%88%B0%E7%9C%9F%E6%AD%A3%E7%9A%84%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A%E4%BA%86",
+          "hot": "10万"
+        },
+        {
+          "title": "厉娜前经纪人张阿瞳发文",
+          "url": "https://s.weibo.com/weibo?q=%E5%8E%89%E5%A8%9C%E5%89%8D%E7%BB%8F%E7%BA%AA%E4%BA%BA%E5%BC%A0%E9%98%BF%E7%9E%B3%E5%8F%91%E6%96%87",
+          "hot": "9万"
+        },
+        {
+          "title": "纵横新派越野标配华为乾崑技术",
+          "url": "https://s.weibo.com/weibo?q=%E7%BA%B5%E6%A8%AA%E6%96%B0%E6%B4%BE%E8%B6%8A%E9%87%8E%E6%A0%87%E9%85%8D%E5%8D%8E%E4%B8%BA%E4%B9%BE%E5%B4%91%E6%8A%80%E6%9C%AF",
+          "hot": "9万"
+        },
+        {
+          "title": "马天宇 我都40了肯定有过亲密关系啊",
+          "url": "https://s.weibo.com/weibo?q=%E9%A9%AC%E5%A4%A9%E5%AE%87+%E6%88%91%E9%83%BD40%E4%BA%86%E8%82%AF%E5%AE%9A%E6%9C%89%E8%BF%87%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E5%95%8A",
+          "hot": "9万"
+        },
+        {
+          "title": "后会友期第三次飞行嘉宾阵容",
+          "url": "https://s.weibo.com/weibo?q=%E5%90%8E%E4%BC%9A%E5%8F%8B%E6%9C%9F%E7%AC%AC%E4%B8%89%E6%AC%A1%E9%A3%9E%E8%A1%8C%E5%98%89%E5%AE%BE%E9%98%B5%E5%AE%B9",
+          "hot": "8万"
+        }
+      ]
+    },
+    {
+      "id": "ifanr",
+      "name": "爱范儿",
+      "icon": "爱",
+      "color": "#ff5a36",
+      "home": "https://www.ifanr.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "24.99 万元起！宝马新世代 i3 正式上市，纯电续航高达 1028km丨广州车展",
+          "url": "https://www.ifanr.com/1695987",
+          "hot": ""
+        },
+        {
+          "title": "9.69 万元，奇瑞 QQ3 变身一辆可以开咖啡馆的「QQ 啡车」丨广州车展",
+          "url": "https://www.ifanr.com/1695964",
+          "hot": ""
+        },
+        {
+          "title": "从「中国特供」变全球旗舰，搭载 Momenta 智驾的本田冠道来了｜广州车展",
+          "url": "https://www.ifanr.com/1695948",
+          "hot": ""
+        },
+        {
+          "title": "启源 Q06 迎来大升级！长安发布天枢领航 Ultra 2.0，明年 1 月推车位到车位｜广州车展",
+          "url": "https://www.ifanr.com/1695936",
+          "hot": ""
+        },
+        {
+          "title": "捷途纵横 R700 发布：华为乾崑智驾配大梁，家用硬派两手抓｜广州车展",
+          "url": "https://www.ifanr.com/1695926",
+          "hot": ""
+        },
+        {
+          "title": "43.99 万元，只有一个配置，岚图泰山纯电版带来了三腔空悬｜广州车展",
+          "url": "https://www.ifanr.com/1695915",
+          "hot": ""
+        },
+        {
+          "title": "限时 11.99 万元起，日产 NX7 标配宁德时代电池，还有Momenta 智驾｜广州车展",
+          "url": "https://www.ifanr.com/1695904",
+          "hot": ""
+        },
+        {
+          "title": "Agent 上车元年，支付宝造了一个行动座舱",
+          "url": "https://www.ifanr.com/1695888",
+          "hot": ""
+        },
+        {
+          "title": "阿维塔 T09 中国首秀，这是一辆可以在四座和六座之间切换的旗舰 SUV丨广州车展",
+          "url": "https://www.ifanr.com/1695875",
+          "hot": ""
+        },
+        {
+          "title": "Claude Opus 5.6 做出了史上最牛的 PPT，直接杀死比赛？",
+          "url": "https://www.ifanr.com/1695831",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "sspai",
+      "name": "少数派",
+      "icon": "少",
+      "color": "#1f8aa8",
+      "home": "https://sspai.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "本周看什么 | 最近值得一看的 8 部作品",
+          "url": "https://sspai.com/post/119658",
+          "hot": ""
+        },
+        {
+          "title": "「黑五」值得买：不容错过的 App 和服务优惠",
+          "url": "https://sspai.com/post/119601",
+          "hot": ""
+        },
+        {
+          "title": "派早报：1Password 确认内部系统遭入侵等",
+          "url": "https://sspai.com/post/119632",
+          "hot": ""
+        },
+        {
+          "title": "App+1｜Agora：开源、易用、好用，给 Android 用户的 LLM 聊天工具",
+          "url": "https://sspai.com/post/116773",
+          "hot": ""
+        },
+        {
+          "title": "论文作图不求人，用 ChatGPT 和 Keynote 免费搞定机理图",
+          "url": "https://sspai.com/post/119563",
+          "hot": ""
+        },
+        {
+          "title": "我用AI做了一张两千年的中国历史地图",
+          "url": "https://sspai.com/post/117510",
+          "hot": ""
+        },
+        {
+          "title": "派早报：蔚来举办 2026 创新科技日、Tidal 将拒绝 AI 音乐等",
+          "url": "https://sspai.com/post/119560",
+          "hot": ""
+        },
+        {
+          "title": "翻开 2027， 值得入手的新年日历推荐",
+          "url": "https://sspai.com/post/119264",
+          "hot": ""
+        },
+        {
+          "title": "App+1｜Yab：开源、AI 友好的双内核浏览器，给舍不得 Arc 的你",
+          "url": "https://sspai.com/post/119310",
+          "hot": ""
+        },
+        {
+          "title": "怀旧手记｜Palm Pre：内藏「划时代」系统的手机",
+          "url": "https://sspai.com/post/118791",
+          "hot": ""
+        }
+      ]
+    },
+    {
+      "id": "huxiu",
+      "name": "虎嗅",
+      "icon": "嗅",
+      "color": "#ff6a00",
+      "home": "https://www.huxiu.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "我最近听到最有水平的两句话",
+          "url": "https://www.huxiu.com/article/4907013.html",
+          "hot": "81.9万"
+        },
+        {
+          "title": "黄仁勋杀回来了，英伟达却回不去了",
+          "url": "https://www.huxiu.com/article/4907867.html",
+          "hot": "65.4万"
+        },
+        {
+          "title": "腾讯到最危险的时刻了？",
+          "url": "https://www.huxiu.com/article/4906811.html",
+          "hot": "61.0万"
+        },
+        {
+          "title": "B站盈利的代价",
+          "url": "https://www.huxiu.com/article/4908174.html",
+          "hot": "44.3万"
+        },
+        {
+          "title": "10个看人极准的细节",
+          "url": "https://www.huxiu.com/article/4908518.html",
+          "hot": "43.0万"
+        },
+        {
+          "title": "我发现，真正的高手都很会闲聊",
+          "url": "https://www.huxiu.com/article/4908203.html",
+          "hot": "40.7万"
+        },
+        {
+          "title": "家门口的养老院正在消失",
+          "url": "https://www.huxiu.com/article/4907382.html",
+          "hot": "38.8万"
+        },
+        {
+          "title": "贬值世代",
+          "url": "https://www.huxiu.com/article/4907424.html",
+          "hot": "38.0万"
+        },
+        {
+          "title": "朋友圈进入集体大失声时代",
+          "url": "https://www.huxiu.com/article/4908188.html",
+          "hot": "37.4万"
+        },
+        {
+          "title": "如果你离异带娃，想再婚，一定要格外慎重",
+          "url": "https://www.huxiu.com/article/4907477.html",
+          "hot": "36.4万"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub 趋势",
+      "icon": "GH",
+      "color": "#24292f",
+      "home": "https://github.com/trending",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "elementalsouls / Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "hot": "2.6万"
+        },
+        {
+          "title": "obra / superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "hot": "32.8万"
+        },
+        {
+          "title": "HKUDS / CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "hot": "6.7万"
+        },
+        {
+          "title": "jingyaogong / minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "hot": "7.2万"
+        },
+        {
+          "title": "cursor / plugins",
+          "url": "https://github.com/cursor/plugins",
+          "hot": "2.0万"
+        },
+        {
+          "title": "firecrawl / firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "hot": "21.2万"
+        },
+        {
+          "title": "nginx / nginx",
+          "url": "https://github.com/nginx/nginx",
+          "hot": "3.4万"
+        },
+        {
+          "title": "openvinotoolkit / openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "hot": "1.3万"
+        },
+        {
+          "title": "cathrynlavery / diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "hot": "7.4万"
+        },
+        {
+          "title": "mvanhorn / last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "hot": "7.6万"
+        }
+      ]
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "icon": "HN",
+      "color": "#ff6600",
+      "home": "https://news.ycombinator.com/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "Claude sabotaging ML research tasks?",
+          "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
+          "hot": "587 分"
+        },
+        {
+          "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+          "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+          "hot": "412 分"
+        },
+        {
+          "title": "Michael Nielsen took down his book on neural nets",
+          "url": "https://neuralnetworksanddeeplearning.com/",
+          "hot": "367 分"
+        },
+        {
+          "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+          "url": "https://bouncemarket.minhanhday.com/",
+          "hot": "323 分"
+        },
+        {
+          "title": "GPT 6.2 Astra Solves a Historical Mystery",
+          "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+          "hot": "287 分"
+        },
+        {
+          "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+          "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+          "hot": "248 分"
+        },
+        {
+          "title": "Convex skills send the user's app idea to a remote server without telling them",
+          "url": "https://github.com/convex/convex-backend-skill/issues/64",
+          "hot": "221 分"
+        },
+        {
+          "title": "First images of the impact of DART asteroid deflection experiment",
+          "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+          "hot": "184 分"
+        },
+        {
+          "title": "False computer-checked proofs",
+          "url": "https://cr.yp.to/proofs/falseccp.html",
+          "hot": "175 分"
+        },
+        {
+          "title": "I am scared: Careless People – Sarah Wynn-Williams on living under a gag order",
+          "url": "https://www.theguardian.com/books/2026/nov/27/careless-people-author-sarah-wynn-williams-the-silence-is-mine-it-doesnt-have-to-be-yours",
+          "hot": "139 分"
+        }
+      ]
+    },
+    {
+      "id": "devto",
+      "name": "dev.to",
+      "icon": "dev",
+      "color": "#6366f1",
+      "home": "https://dev.to/",
+      "ok": true,
+      "error": "",
+      "items": [
+        {
+          "title": "What was your win this week!?",
+          "url": "https://dev.to/devteam/what-was-your-win-this-week-h3d",
+          "hot": "73 赞"
+        },
+        {
+          "title": "How I built my own OS",
+          "url": "https://dev.to/cloudwerx/how-i-built-my-own-os-942",
+          "hot": "29 赞"
+        },
+        {
+          "title": "Writing Is Really Fun, But My Luck Had Other Plans 🐿",
+          "url": "https://dev.to/thethirdcup/writing-is-really-fun-but-my-luck-had-other-plans-493m",
+          "hot": "42 赞"
+        },
+        {
+          "title": "Thinking on Constrained Deployments: Gemma E4B on 4GB 1650",
+          "url": "https://dev.to/gde/thinking-on-constrained-deployments-gemma-e4b-on-4gb-1650-2cc6",
+          "hot": "7 赞"
+        },
+        {
+          "title": "The Best Café in Town Turns People Away. Your System Should Too",
+          "url": "https://dev.to/thethirdcup/the-best-cafe-in-town-turns-people-away-your-system-should-too-5ehh",
+          "hot": "30 赞"
+        },
+        {
+          "title": "Zero Repeat Regressions: The Golden Metric & The Future of Agentic Trust",
+          "url": "https://dev.to/gde/zero-repeat-regressions-the-golden-metric-the-future-of-agentic-trust-4857",
+          "hot": "9 赞"
+        },
+        {
+          "title": "Porting an ADK Research and Judge Loop to Strands on Bedrock AgentCore, With A2A 1.x",
+          "url": "https://dev.to/aws-builders/porting-an-adk-research-and-judge-loop-to-strands-on-bedrock-agentcore-with-a2a-1x-209j",
+          "hot": "11 赞"
+        },
+        {
+          "title": "Introducing a Website That Absolutely Nobody Asked For",
+          "url": "https://dev.to/gnomeman4201/introducing-a-website-that-absolutely-nobody-asked-for-3bng",
+          "hot": "6 赞"
+        },
+        {
+          "title": "Chasing down why Ansible stalled on a fresh Ubuntu 26.04 box",
+          "url": "https://dev.to/alexgeorgiev17/chasing-down-why-ansible-stalled-on-a-fresh-ubuntu-2604-box-5678",
+          "hot": "12 赞"
+        },
+        {
+          "title": "I Got Two AI Agents Talking. Then I Found Out They Weren't Hearing Each Other.",
+          "url": "https://dev.to/kenielzep97/i-got-two-ai-agents-talking-then-i-found-out-they-werent-hearing-each-other-1fn6",
+          "hot": "35 赞"
+        }
+      ]
+    }
+  ]
+}
